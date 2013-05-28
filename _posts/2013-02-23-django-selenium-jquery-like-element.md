@@ -9,30 +9,26 @@ categories:
 - selenium
 ---
 
-You might know about <a href="https://pypi.python.org/pypi/django-selenium/0.9.5">django-selenium</a>,
-the tool <a href="https://github.com/dragoon/django-selenium/blob/master/AUTHORS">we developed</a>&nbsp;for
+You might know about [django-selenium](https://pypi.python.org/pypi/django-selenium/0.9.5),
+the tool [we developed](https://github.com/dragoon/django-selenium/blob/master/AUTHORS) for
 django to provide the ability to write selenium tests as easy as normal django tests.
-Alongside we've also added numerous<b> helper methods</b>&nbsp;that incorporated common use
+Alongside we've also added numerous *helper methods* that incorporated common use
 cases of our (and hopefully other people's) selenium test writing experience (full list of
-methods is available at: <a href="https://django-selenium.readthedocs.org/en/latest/#mydriver-class">https://django-selenium.readthedocs.org/en/latest/#mydriver-class</a>)
-<p>
+methods is available at: [https://django-selenium.readthedocs.org/en/latest/#mydriver-class](https://django-selenium.readthedocs.org/en/latest/#mydriver-class))
+
 Until recently, there still remained an annoying problem: django-selenium's find method could only
 operate on single (first) element of the css selector. That means when you need other
-element than the first one, you had to switch to native selenium' "<span
-    style="font-family: Courier New, Courier, monospace;"><a
-    href="http://selenium-python.readthedocs.org/en/latest/api.html#selenium.webdriver.remote.webdriver.find_elements_by_css_selector">find_elements_by_css_selector</a></span>"
+element than the first one, you had to switch to native selenium's
+[find_elements_by_css_selector](http://selenium-python.readthedocs.org/en/latest/api.html#selenium.webdriver.remote.webdriver.find_elements_by_css_selector)
 method. Luckily, this problem is solved beautifully in jquery, where by default you can
 operate on whole list of elements returned by selector, but at the same time single-element
 operations are applied to the first element of the list.
-</p>
-<p>
-So, I decided to implement
-the same behaviour for django-selenium. In python it can be easily achieved using the
-special <span style="font-family: Courier New, Courier, monospace;"><a
-    href="http://docs.python.org/2/reference/datamodel.html#object.__getattribute__">__getattribute__ </a></span>method,
+
+So, I decided to implement the same behaviour for django-selenium. In python it can be easily achieved using the
+special [__getattribute__](http://docs.python.org/2/reference/datamodel.html#object.__getattribute__) method,
 which allows to intercept every attribute access. Here is the first version of code for
 SeleniumElement that serves as a proxy to real selenium elements in django-selenium 0.9.5:
-</p>
+
 {% highlight python %}
 class SeleniumElement(object):
     def __init__(self, elements, selector):
@@ -50,15 +46,13 @@ class SeleniumElement(object):
         """
         return object.__getattribute__(self, 'elements')[key]
 {% endhighlight %}
-<p>
-Shorty, __getattribute__ method overwrite will proxy every function call/attribute access to
-the underlying first element of the element list returned by selector, and __getitem__
+
+Shorty, `__getattribute_` method overwrite will proxy every function call/attribute access to
+the underlying first element of the element list returned by selector, and `__getitem__`
 method overwrite will be called each time the element is accessed by index, thus returning
 the underlying element from the elements list.
-</p>
 
 Example from the tests:
-
 {% highlight python %}
 def test_multiple_elements(self):
     test_list = ['one string', 'another string']
