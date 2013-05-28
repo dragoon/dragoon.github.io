@@ -1,4 +1,6 @@
-@import "compass/reset";
+@import url(pygment_trac.css);
+
+@import "normalize";
 @import "compass/css3";
 @import "compass/utilities";
 
@@ -13,4 +15,5 @@
 
 $social: sprite-map("social/*.png");
 
+@import "base";
 @import "social";
