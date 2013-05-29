@@ -3,6 +3,10 @@ layout: post
 title: "Демократия на demotivation.me"
 date: 2012-09-12
 comments: false
+categories:
+ - demotivation
+ - Путин
+ - демократия
 ---
 
 
