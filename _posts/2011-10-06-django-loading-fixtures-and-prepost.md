@@ -24,11 +24,11 @@ IntegrityError: (1062, "Duplicate entry 'cwdm.tex' for key 'literal_id'")
 </pre>
 Also, a lot of tests just didn't pass.
 
-After doing some research I found that the problem is related to the newly created <b><a href="https://docs.djangoproject.com/en/dev/topics/signals/">signals code</a></b> attached to my models.
+After doing some research I found that the problem is related to the newly created **<a href="https://docs.djangoproject.com/en/dev/topics/signals/">signals code</a>** attached to my models.
 
-In fact, when django <b>loads fixtures</b> for your application, it also <b>implicitly executes all signals</b> attached to the models, not just plain database population, and this behavior may seem somewhat odd. There is a a ticket about that in django tracker (<a href="https://code.djangoproject.com/ticket/12610">https://code.djangoproject.com/ticket/12610</a>), but the future of this ticket is undecided yet.
+In fact, when django **loads fixtures** for your application, it also **implicitly executes all signals** attached to the models, not just plain database population, and this behavior may seem somewhat odd. There is a a ticket about that in django tracker (<a href="https://code.djangoproject.com/ticket/12610">https://code.djangoproject.com/ticket/12610</a>), but the future of this ticket is undecided yet.
 
-So right now you can use undocumented <i>'raw' </i>parameter in the <b>signal function</b> to suppress such behavior if required:
+So right now you can use undocumented <i>'raw' </i>parameter in the **signal function** to suppress such behavior if required:
 <pre style="background-color: #eeeeee; border: 1px dashed; margin: 0; padding: 5px;">def my_signal(sender, instance, created, **kwargs):
     if kwargs.get('raw'):
         return

@@ -13,4 +13,4 @@ Few links on django best practices and on creating django reusable apps in parti
 
 The discussion on how to support multiple settings (first link) is especially interesting, because django doesn't give any clue on how to create such configurations.
 
-Personally I ended up using <b>dj-skeletor</b> app from github: <a href="https://github.com/senko/dj-skeletor">https://github.com/senko/dj-skeletor</a>, which basically has a special settings folder, one base settings file, and then specific setting files that import everything from base. To use either of them, you just symlink the right file to <b>local.py</b>.
+Personally I ended up using **dj-skeletor** app from github: <a href="https://github.com/senko/dj-skeletor">https://github.com/senko/dj-skeletor</a>, which basically has a special settings folder, one base settings file, and then specific setting files that import everything from base. To use either of them, you just symlink the right file to **local.py**.

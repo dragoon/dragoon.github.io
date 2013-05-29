@@ -14,8 +14,8 @@ Sometimes, or may be quite often, you want to run an asynchronous task on the ob
 
 For example, you want to populate some additional attributes, and this operation involves requests to external resources. Such requests, obviously, should be performed asynchronously, otherwise it is possible that you system will never respond to the request, waiting for external resources.
 
-So you create a <b><a href="http://celeryproject.org/">celery</a> </b>task<b> </b>for it, and that's it, right? NO!
-By default, all requests in django are run <i>within a transaction</i>, therefore your celery task could start before the transaction is finished, and you get an <b>IntegrityError </b>on non-existing primary key or something similar.
+So you create a **<a href="http://celeryproject.org/">celery</a> **task ****for it, and that's it, right? NO!
+By default, all requests in django are run <i>within a transaction</i>, therefore your celery task could start before the transaction is finished, and you get an **IntegrityError **on non-existing primary key or something similar.
 
 There are a number of ways to solve this problem, and people are also discussing a possibility to add a <span style="font-family: 'Courier New', Courier, monospace;">on_tranaction_commit</span> signal to django: <a href="https://code.djangoproject.com/ticket/14051">https://code.djangoproject.com/ticket/14051</a>. This feature would definitely solve all the problems, but right now it even haven't passed decision phase.
 

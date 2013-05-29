@@ -16,8 +16,3 @@ And here is the html file that I used to print it:
 
 and a heart image:
 <a href="http://4.bp.blogspot.com/-Z58ApA-eho8/Tz5yeyaT69I/AAAAAAAADU0/vMjtuEEbTzo/s1600/heart.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-Z58ApA-eho8/Tz5yeyaT69I/AAAAAAAADU0/vMjtuEEbTzo/s1600/heart.png" /></a>
-<h2>Comments</h2>
-
-
-Anonymous
-lol

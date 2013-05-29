@@ -10,7 +10,7 @@ categories:
 ---
 
 
-Пару месяцев назад я выложил свой <b>Prestashop</b>-модуль интеграции Яндекс-Метрики в открытый  доступ, при этом добавив на странице настроек модуля небольшое информационное сообщение о сервисе <b><a href="http://prestashop-sync.com/">Prestashop-Sync</a></b>:
+Пару месяцев назад я выложил свой **Prestashop**-модуль интеграции Яндекс-Метрики в открытый  доступ, при этом добавив на странице настроек модуля небольшое информационное сообщение о сервисе **<a href="http://prestashop-sync.com/">Prestashop-Sync</a>**:
 <a href="http://4.bp.blogspot.com/-hE0bophm6q0/TtlZ9gHo5LI/AAAAAAAADFs/kOxsgoKahck/s1600/metrika_adv.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="211" src="http://4.bp.blogspot.com/-hE0bophm6q0/TtlZ9gHo5LI/AAAAAAAADFs/kOxsgoKahck/s640/metrika_adv.png" width="640" /></a>
 
 За все это время файл скачали примерно 20 раз.

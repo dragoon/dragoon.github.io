@@ -6,5 +6,5 @@ comments: false
 ---
 
 
-Статья по настройке Nginx в качестве фронт-энда для Apache в применении к платформе интернет-магазина <b>Prestashop</b>:
+Статья по настройке Nginx в качестве фронт-энда для Apache в применении к платформе интернет-магазина **Prestashop**:
 <a href="http://prestashop-sync.com/articles/2011/ru/nastrojka-prestashop-i-nginx/">http://prestashop-sync.com/articles/2011/ru/nastrojka-prestashop-i-nginx/</a>

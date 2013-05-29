@@ -9,7 +9,7 @@ categories:
 
 
     Sometimes is it useful to make
-        <b>PyCharm </b>know what type of variable you're using inside the function. For example, it
+        **PyCharm **know what type of variable you're using inside the function. For example, it
         enables the <i>auto-complete</i> feature for the variable methods and quick navigation
         to the method source with Ctrl/Cmd + click.
 
@@ -26,7 +26,7 @@ categories:
             notation)
 </code>
 </pre>
-        the documentation about such feature for local variables is buried in the <b>JetBrains</b>
+        the documentation about such feature for local variables is buried in the **JetBrains**
         forum threads and issue tracker (<a href="http://youtrack.jetbrains.com/issue/PY-4083">http://youtrack.jetbrains.com/issue/PY-4083</a>).
         Here is the solution that worked for me:
 

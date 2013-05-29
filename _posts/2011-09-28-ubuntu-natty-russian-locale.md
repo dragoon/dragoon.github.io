@@ -9,7 +9,7 @@ categories:
 ---
 
 
-Если после апрейда до <b>Ubuntu Natty</b> при установке новых пакетов появляется сообщение:
+Если после апрейда до **Ubuntu Natty** при установке новых пакетов появляется сообщение:
 <pre style="background-color: #eeeeee; border: 1px dashed; margin: 0; padding: 5px;">perl: warning: Setting locale failed.
 perl: warning: Please check that your locale settings:
  LANGUAGE = "en",

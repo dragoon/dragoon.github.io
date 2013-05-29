@@ -11,9 +11,9 @@ categories:
 ---
 
 
-При обновлении ubuntu до<b> natty narwal</b>, и вместе с ней питона до версии <b>2.7</b>, наткнулся на баг (<a href="http://bugs.python.org/issue12398">http://bugs.python.org/issue12398</a>) в библиотеке <b>httplib</b>, которого небыло в <b>2.6</b> версии.
+При обновлении ubuntu до **natty narwal**, и вместе с ней питона до версии **2.7**, наткнулся на баг (<a href="http://bugs.python.org/issue12398">http://bugs.python.org/issue12398</a>) в библиотеке **httplib**, которого небыло в **2.6** версии.
 
-Суть бага проста: когда производится http запрос с помощью функции <span style="font-size: small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">urllib2.urlopen</span></span>, при этом либо данные, либо url запроса являются строкой unicode, а также если url либо данные содержат<b> не только ascii-символы</b> то просходит ошибка с примерно таким трейсом:
+Суть бага проста: когда производится http запрос с помощью функции <span style="font-size: small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">urllib2.urlopen</span></span>, при этом либо данные, либо url запроса являются строкой unicode, а также если url либо данные содержат **не только ascii-символы** то просходит ошибка с примерно таким трейсом:
 
 <pre style="background-color: #eeeeee; border: 1px dashed; margin: 0; overflow: auto; padding: 5px;"> File "/usr/lib/python2.7/urllib2.py", line 126, in urlopen
    return _opener.open(url, data, timeout)

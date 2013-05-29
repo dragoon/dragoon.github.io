@@ -19,12 +19,12 @@ So that was an introduction, and in this post I'd like show how to configure <a 
 
 At work we're using super nice <a href="http://www.redmine.org/">Redmine</a> tracker, and here is the issue navigation pattern for it:
 
-<b>Issue ID:</b> <span style="font-family: 'Courier New', Courier, monospace;">#(\d+)</span>
-<b>Issue Link:</b> <span style="font-family: 'Courier New', Courier, monospace;">http://redmine.<i>yoursite.com</i>/issues/$1</span>
+**Issue ID:** <span style="font-family: 'Courier New', Courier, monospace;">#(\d+)</span>
+**Issue Link:** <span style="font-family: 'Courier New', Courier, monospace;">http://redmine.<i>yoursite.com</i>/issues/$1</span>
 
 For my personal projects I prefer <a href="https://bitbucket.org/">bitbucket</a>, because it gives you private repositories for free, of course:
-<b>Issue ID:</b> <span style="font-family: 'Courier New', Courier, monospace;">#(\d+)</span>
-<b>Issue Link:</b> <span style="font-family: 'Courier New', Courier, monospace;">https://bitbucket.org/<i>username</i>/prestashop-sync/issue/$1</span>
+**Issue ID:** <span style="font-family: 'Courier New', Courier, monospace;">#(\d+)</span>
+**Issue Link:** <span style="font-family: 'Courier New', Courier, monospace;">https://bitbucket.org/<i>username</i>/prestashop-sync/issue/$1</span>
 
 As you may see, this configuration is really simple, and other issue tracking systems can be linked easily based on my examples.
 
