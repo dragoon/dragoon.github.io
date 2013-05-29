@@ -10,4 +10,24 @@ categories:
 ---
 
 
-<a href="http://3.bp.blogspot.com/-ex8sfbybYF4/Tx83ODk-o_I/AAAAAAAADUA/y_OaWMHTpKw/s1600/header_pycharm20.png" imageanchor="1" style="margin-bottom: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-ex8sfbybYF4/Tx83ODk-o_I/AAAAAAAADUA/y_OaWMHTpKw/s1600/header_pycharm20.png" /></a><br /><br /></div>I fell in love with <a href="http://www.jetbrains.com/pycharm/">PyCharm</a>&nbsp;since 2010 when it was first announced, and even earlier I was a big fan of<br /><a href="http://www.jetbrains.com/idea/">Intellij IDEA</a>&nbsp;IDE for Java. Actually I think all JetBrains IDEs are first-class products, because they are built on the same platform.<br /><br />So that was an introduction, and in this post I'd like show how to configure <a href="http://www.jetbrains.com/pycharm/webhelp/issue-navigation.html">Issue Navigation in PyCharm</a>, because as you may see, official&nbsp;documentation&nbsp;just gives some bare description to the fields.<br /><br />At work we're using super nice <a href="http://www.redmine.org/">Redmine</a> tracker, and here is the issue navigation pattern for it:<br /><br /><b>Issue ID:</b>&nbsp;<span style="font-family: 'Courier New', Courier, monospace;">#(\d+)</span><br /><b>Issue Link:</b>&nbsp;<span style="font-family: 'Courier New', Courier, monospace;">http://redmine.<i>yoursite.com</i>/issues/$1</span><br /><br />For my personal projects I prefer <a href="https://bitbucket.org/">bitbucket</a>,&nbsp;because it gives you private repositories for free, of course:<br /><b>Issue ID:</b>&nbsp;<span style="font-family: 'Courier New', Courier, monospace;">#(\d+)</span><br /><b>Issue Link:</b>&nbsp;<span style="font-family: 'Courier New', Courier, monospace;">https://bitbucket.org/<i>username</i>/prestashop-sync/issue/$1</span><br /><br />As you may see, this configuration is really simple, and other issue tracking systems can be linked easily based on my examples.<br /><br />In the end you should see commit history with hyperlinks to the issues:<br /><a href="http://4.bp.blogspot.com/-467_frlJeM8/TyBi8myNC3I/AAAAAAAADUI/BSmcoVzqNGw/s1600/history.png" imageanchor="1" style="margin-bottom: 1em; margin-right: 1em;"><img border="0" height="158" src="http://4.bp.blogspot.com/-467_frlJeM8/TyBi8myNC3I/AAAAAAAADUI/BSmcoVzqNGw/s640/history.png" width="640" /></a></div><br /></div>
+<a href="http://3.bp.blogspot.com/-ex8sfbybYF4/Tx83ODk-o_I/AAAAAAAADUA/y_OaWMHTpKw/s1600/header_pycharm20.png" imageanchor="1" style="margin-bottom: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-ex8sfbybYF4/Tx83ODk-o_I/AAAAAAAADUA/y_OaWMHTpKw/s1600/header_pycharm20.png" /></a>
+
+I fell in love with <a href="http://www.jetbrains.com/pycharm/">PyCharm</a> since 2010 when it was first announced, and even earlier I was a big fan of
+<a href="http://www.jetbrains.com/idea/">Intellij IDEA</a> IDE for Java. Actually I think all JetBrains IDEs are first-class products, because they are built on the same platform.
+
+So that was an introduction, and in this post I'd like show how to configure <a href="http://www.jetbrains.com/pycharm/webhelp/issue-navigation.html">Issue Navigation in PyCharm</a>, because as you may see, official documentation just gives some bare description to the fields.
+
+At work we're using super nice <a href="http://www.redmine.org/">Redmine</a> tracker, and here is the issue navigation pattern for it:
+
+<b>Issue ID:</b> <span style="font-family: 'Courier New', Courier, monospace;">#(\d+)</span>
+<b>Issue Link:</b> <span style="font-family: 'Courier New', Courier, monospace;">http://redmine.<i>yoursite.com</i>/issues/$1</span>
+
+For my personal projects I prefer <a href="https://bitbucket.org/">bitbucket</a>, because it gives you private repositories for free, of course:
+<b>Issue ID:</b> <span style="font-family: 'Courier New', Courier, monospace;">#(\d+)</span>
+<b>Issue Link:</b> <span style="font-family: 'Courier New', Courier, monospace;">https://bitbucket.org/<i>username</i>/prestashop-sync/issue/$1</span>
+
+As you may see, this configuration is really simple, and other issue tracking systems can be linked easily based on my examples.
+
+In the end you should see commit history with hyperlinks to the issues:
+<a href="http://4.bp.blogspot.com/-467_frlJeM8/TyBi8myNC3I/AAAAAAAADUI/BSmcoVzqNGw/s1600/history.png" imageanchor="1" style="margin-bottom: 1em; margin-right: 1em;"><img border="0" height="158" src="http://4.bp.blogspot.com/-467_frlJeM8/TyBi8myNC3I/AAAAAAAADUI/BSmcoVzqNGw/s640/history.png" width="640" /></a>
+

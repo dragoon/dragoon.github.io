@@ -10,16 +10,30 @@ categories:
 
     Sometimes is it useful to make
         <b>PyCharm </b>know what type of variable you're using inside the function. For example, it
-        enables the&nbsp;<i>auto-complete</i> feature for the variable methods and quick navigation
-        to the method source with Ctrl/Cmd&nbsp;+ click.<br/>
+        enables the <i>auto-complete</i> feature for the variable methods and quick navigation
+        to the method source with Ctrl/Cmd + click.
 
-        <br/>        While for the <i>function arguments</i>&nbsp;you can easily specify the type using the
+
+
+        While for the <i>function arguments</i> you can easily specify the type using the
             <i>docstring</i> notation like:
-                <pre><code><br/>"""<br/>:type arg1: list<br/>:type arg2: dict<br/>"""<br/>(reStructured Text
-            notation)<br/></code><br/></pre>
+                <pre><code>
+"""
+:type arg1: list
+:type arg2: dict
+"""
+(reStructured Text
+            notation)
+</code>
+</pre>
         the documentation about such feature for local variables is buried in the <b>JetBrains</b>
         forum threads and issue tracker (<a href="http://youtrack.jetbrains.com/issue/PY-4083">http://youtrack.jetbrains.com/issue/PY-4083</a>).
-        Here is the solution that worked for me:<br/>
-        <pre><code><br/>var1 = a.object<br/>""":type: MyModel"""<br/></code><br/></pre>
+        Here is the solution that worked for me:
+
+        <pre><code>
+var1 = a.object
+""":type: MyModel"""
+</code>
+</pre>
         which means that <span style="font-family: inherit;"><i>var1</i></span> will be treated as
         <span style="font-family: inherit;"><i>MyModel</i></span> type.

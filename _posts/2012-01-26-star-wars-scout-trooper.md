@@ -8,4 +8,7 @@ categories:
 ---
 
 
-Home-made plasticine trooper, not super-detailed, but still has some likeness with the original :)<br /><br /><a href="http://1.bp.blogspot.com/-VEliMOF0_B8/Tx26kBsHBfI/AAAAAAAADTk/WcSU6kT9U9Q/s1600/IMG_3137.JPG" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="320" src="http://1.bp.blogspot.com/-VEliMOF0_B8/Tx26kBsHBfI/AAAAAAAADTk/WcSU6kT9U9Q/s320/IMG_3137.JPG" width="240" /></a></div><br /></div>
+Home-made plasticine trooper, not super-detailed, but still has some likeness with the original :)
+
+<a href="http://1.bp.blogspot.com/-VEliMOF0_B8/Tx26kBsHBfI/AAAAAAAADTk/WcSU6kT9U9Q/s1600/IMG_3137.JPG" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="320" src="http://1.bp.blogspot.com/-VEliMOF0_B8/Tx26kBsHBfI/AAAAAAAADTk/WcSU6kT9U9Q/s320/IMG_3137.JPG" width="240" /></a>
+
