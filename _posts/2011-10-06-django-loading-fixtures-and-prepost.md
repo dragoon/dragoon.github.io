@@ -1,0 +1,12 @@
+---
+layout: post
+title: "Django loading fixtures and pre/post save signals"
+date: 2011-10-06
+comments: false
+categories:
+ - django-signals
+ - django
+---
+
+
+Recently I was trying to restore tests for Django application. After doing some refactoring, I encountered a new error that had happened in every test during fixture loading:<br /><pre style="background-color: #eeeeee; border: 1px dashed; margin: 0; padding: 5px;">Problem installing fixture 'articles_data.json': Traceback:<br />  File ".../django/core/management/commands/loaddata.py", line 172, in handle<br />    obj.save(using=using)<br />  File ".../django/core/serializers/base.py", line 165, in save<br />    models.Model.save_base(self.object, using=using, raw=True)<br />  File ".../django/db/models/base.py", line 500, in save_base<br />    rows = manager.using(using).filter(pk=pk_val)._update(values)<br />  File ".../django/db/models/query.py", line 491, in _update<br />    return query.get_compiler(self.db).execute_sql(None)<br />...<br />IntegrityError: (1062, "Duplicate entry 'cwdm.tex' for key 'literal_id'")<br /></pre><br />Also, a lot of tests just didn't pass.<br /><br />After doing some research I found that the problem is related to the newly created <b><a href="https://docs.djangoproject.com/en/dev/topics/signals/">signals code</a></b> attached to my models.<br /><br />In fact, when django <b>loads fixtures</b> for your application, it also <b>implicitly executes all signals</b> attached to the models, not just plain database population, and this behavior may seem somewhat odd. There is a a ticket about that in django tracker (<a href="https://code.djangoproject.com/ticket/12610">https://code.djangoproject.com/ticket/12610</a>), but the future of this ticket is undecided yet.<br /><br />So right now you can use undocumented <i>'raw' </i>parameter in the <b>signal function</b> to suppress such behavior if required:<br /><pre style="background-color: #eeeeee; border: 1px dashed; margin: 0; padding: 5px;">def my_signal(sender, instance, created, **kwargs):<br />    if kwargs.get('raw'):<br />        return<br />    ....<br />models.signals.post_save.connect(my_signal, sender=MyModel)<br /></pre><br /><i>'raw' parameter</i> is used in django internals, and it equals <i>True</i> when the fixture is loaded.

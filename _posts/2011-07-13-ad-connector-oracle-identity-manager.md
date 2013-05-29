@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Баг в AD Connector для Oracle Identity Manager"
+date: 2011-07-13
+comments: false
+categories:
+ - юмор
+ - bug
+ - Oracle
+---
+
+
+See short English version below.<br />Сегодня наконец-то закончилась недельная эпопея борьбы с OIM, в итоге удалось успешно подсоединиться к Active Directory, но это неважно. Важно то, что в процессе поиска неисправностей я дошёл до декомпиляции кода коннектора Oracle, приведу здесь небольшой сниппет:<br /><br /><pre style="background-image: URL(http://2.bp.blogspot.com/_z5ltvMQPaa8/SjJXr_U2YBI/AAAAAAAAAAM/46OqEP32CJ8/s320/codebg.gif); background: #f0f0f0; border: 1px dashed #CCCCCC; color: black; font-family: arial; font-size: 12px; height: auto; line-height: 20px; overflow: auto; padding: 0px; text-align: left; width: 99%;"><code style="color: black; word-wrap: normal;">   if(i &lt;= as.length)  <br />     break;  <br />   if(as[i].equalsIgnoreCase("IT Resource.Key"))  <br />   {  <br />     l = tcresultset.getLongValue(as[i]);  <br />     break;  <br />   }  <br /></code></pre><br />Обратите внимание на вшитую константу - "IT Resource.Key", которая есть не что иное, как название столбца в базе данных, из которого следует извлечь значение. А название настоящего столбца в базе данных - "IT Resource<u><b>s</b></u>.Key", поэтому коннектор никогда не мог извлечь из таблицы правильное значение ключа (оно получалось нулевым) и, следовательно, не работал :(<br />Вот так небольшая опечатка в коде приводит к полной неработоспособности целого модуля и является причиной головной боли у системных администраторов.<br /><br />Написал в Oracle о проблеме и попросил другую версию коннектора.<br /><br />P.S. На всякий случай приведу здесь сообщение&nbsp; об ошибки для индексации поисковиками, вдруг кому-то поможет:<br /><pre style="background-image: URL(http://2.bp.blogspot.com/_z5ltvMQPaa8/SjJXr_U2YBI/AAAAAAAAAAM/46OqEP32CJ8/s320/codebg.gif); background: #f0f0f0; border: 1px dashed #CCCCCC; color: black; font-family: arial; font-size: 12px; height: auto; line-height: 20px; overflow: auto; padding: 0px; text-align: left; width: 99%;"><code style="color: black; word-wrap: normal;">"The error indicated some resource key is invalid  with  statement<br />  "com.thortech.xl.exception.ConnectorException: ITResource Key cant be less than or equal to zero"<br /></code></pre><br />If you see the stack trace like the one above while trying to perform Active Directory Reconciliation with Oracle Identity Manager, then you should use another AD Connector version, the version you are using have hard-coded bug in it.<h2>Comments</h2>
+
+
+Roman Prokofyev
+Когда я готовил демо-стенд то просто перекомпилировал коннектор с исправленной опечаткой. Новую версию Оракл не прислал, только более старую - 9.1.1.5, с ней вроде бы тоже заработало.
+Stas Kazbek
+инетресная бага, рандомная, сколько раз ставил всегда работало, а тут именно ее и поймал. версия коннектора 9.1.1.7.0, подскажите удалось ли справиться? если да, подскажите пожалуйста. прислали из оракла обновку?
