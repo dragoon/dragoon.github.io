@@ -1,5 +1,4 @@
 @import url(pygment_trac.css);
-@import url(pygment_trac.css);
 /* line 17, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -72,7 +71,7 @@ by Jason Costello, @jsncostello
 /*******************************************************************************
 Theme Styles
 *******************************************************************************/
-/* line 12, ../scss/_base.scss */
+/* line 10, ../scss/_base.scss */
 body {
   box-sizing: border-box;
   color: #373737;
@@ -83,7 +82,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 22, ../scss/_base.scss */
+/* line 20, ../scss/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
   font-weight: 700;
@@ -92,50 +91,50 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -1px;
 }
 
-/* line 30, ../scss/_base.scss */
+/* line 28, ../scss/_base.scss */
 h1 {
   font-size: 36px;
   font-weight: 700;
 }
 
-/* line 35, ../scss/_base.scss */
+/* line 33, ../scss/_base.scss */
 h2 {
   padding-bottom: 10px;
   font-size: 32px;
   background: url("../images/bg_hr.png") repeat-x bottom;
 }
 
-/* line 41, ../scss/_base.scss */
+/* line 39, ../scss/_base.scss */
 h3 {
   font-size: 24px;
 }
 
-/* line 45, ../scss/_base.scss */
+/* line 43, ../scss/_base.scss */
 h4 {
   font-size: 21px;
 }
 
-/* line 49, ../scss/_base.scss */
+/* line 47, ../scss/_base.scss */
 h5 {
   font-size: 18px;
 }
 
-/* line 53, ../scss/_base.scss */
+/* line 51, ../scss/_base.scss */
 h6 {
   font-size: 16px;
 }
 
-/* line 57, ../scss/_base.scss */
+/* line 55, ../scss/_base.scss */
 p {
   margin: 10px 0 15px 0;
 }
 
-/* line 61, ../scss/_base.scss */
+/* line 59, ../scss/_base.scss */
 footer p {
   color: #f2f2f2;
 }
 
-/* line 65, ../scss/_base.scss */
+/* line 63, ../scss/_base.scss */
 a {
   text-decoration: none;
   color: #007edf;
@@ -152,29 +151,29 @@ a {
   -ms-transition: text-shadow 0.5s ease;
 }
 
-/* line 82, ../scss/_base.scss */
+/* line 80, ../scss/_base.scss */
 #main_content a:hover {
   color: #0069ba;
   text-shadow: #0090ff 0px 0px 2px;
 }
 
-/* line 87, ../scss/_base.scss */
+/* line 85, ../scss/_base.scss */
 footer a:hover {
   color: #43adff;
   text-shadow: #0090ff 0px 0px 2px;
 }
 
-/* line 92, ../scss/_base.scss */
+/* line 90, ../scss/_base.scss */
 em {
   font-style: italic;
 }
 
-/* line 96, ../scss/_base.scss */
+/* line 94, ../scss/_base.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 100, ../scss/_base.scss */
+/* line 98, ../scss/_base.scss */
 img {
   position: relative;
   margin: 0 auto;
@@ -189,7 +188,7 @@ img {
   -ms-box-shadow: 0 0 5px #ebebeb;
 }
 
-/* line 115, ../scss/_base.scss */
+/* line 113, ../scss/_base.scss */
 pre, code {
   width: 100%;
   color: #222;
@@ -201,7 +200,7 @@ pre, code {
   -webkit-border-radius: 2px;
 }
 
-/* line 128, ../scss/_base.scss */
+/* line 126, ../scss/_base.scss */
 pre {
   width: 100%;
   padding: 10px;
@@ -209,20 +208,20 @@ pre {
   overflow: auto;
 }
 
-/* line 135, ../scss/_base.scss */
+/* line 133, ../scss/_base.scss */
 code {
   padding: 3px;
   margin: 0 3px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* line 141, ../scss/_base.scss */
+/* line 139, ../scss/_base.scss */
 pre code {
   display: block;
   box-shadow: none;
 }
 
-/* line 146, ../scss/_base.scss */
+/* line 144, ../scss/_base.scss */
 blockquote {
   color: #666;
   margin-bottom: 20px;
@@ -230,41 +229,41 @@ blockquote {
   border-left: 3px solid #bbb;
 }
 
-/* line 153, ../scss/_base.scss */
+/* line 151, ../scss/_base.scss */
 ul, ol, dl {
   margin-bottom: 15px;
 }
 
-/* line 157, ../scss/_base.scss */
+/* line 155, ../scss/_base.scss */
 ul li {
   list-style: inside;
   padding-left: 20px;
 }
 
-/* line 162, ../scss/_base.scss */
+/* line 160, ../scss/_base.scss */
 ol li {
   list-style: decimal inside;
   padding-left: 20px;
 }
 
-/* line 167, ../scss/_base.scss */
+/* line 165, ../scss/_base.scss */
 dl dt {
   font-weight: bold;
 }
 
-/* line 171, ../scss/_base.scss */
+/* line 169, ../scss/_base.scss */
 dl dd {
   padding-left: 20px;
   font-style: italic;
 }
 
-/* line 176, ../scss/_base.scss */
+/* line 174, ../scss/_base.scss */
 dl p {
   padding-left: 20px;
   font-style: italic;
 }
 
-/* line 181, ../scss/_base.scss */
+/* line 179, ../scss/_base.scss */
 hr {
   height: 1px;
   margin-bottom: 5px;
@@ -272,14 +271,14 @@ hr {
   background: url("../images/bg_hr.png") repeat-x center;
 }
 
-/* line 188, ../scss/_base.scss */
+/* line 186, ../scss/_base.scss */
 table {
   border: 1px solid #373737;
   margin-bottom: 20px;
   text-align: left;
 }
 
-/* line 194, ../scss/_base.scss */
+/* line 192, ../scss/_base.scss */
 th {
   font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 10px;
@@ -287,19 +286,19 @@ th {
   color: #fff;
 }
 
-/* line 201, ../scss/_base.scss */
+/* line 199, ../scss/_base.scss */
 td {
   padding: 10px;
   border: 1px solid #373737;
 }
 
-/* line 206, ../scss/_base.scss */
+/* line 204, ../scss/_base.scss */
 form {
   background: #f2f2f2;
   padding: 20px;
 }
 
-/* line 211, ../scss/_base.scss */
+/* line 209, ../scss/_base.scss */
 img {
   width: 100%;
   max-width: 100%;
@@ -308,20 +307,20 @@ img {
 /*******************************************************************************
 Full-Width Styles
 *******************************************************************************/
-/* line 220, ../scss/_base.scss */
+/* line 218, ../scss/_base.scss */
 .outer {
   width: 100%;
 }
 
-/* line 224, ../scss/_base.scss */
+/* line 222, ../scss/_base.scss */
 .inner {
   position: relative;
-  max-width: 640px;
+  max-width: 800px;
   padding: 20px 10px;
   margin: 0 auto;
 }
 
-/* line 231, ../scss/_base.scss */
+/* line 229, ../scss/_base.scss */
 #forkme_banner {
   display: block;
   position: absolute;
@@ -337,17 +336,17 @@ Full-Width Styles
   border-bottom-right-radius: 2px;
 }
 
-/* line 246, ../scss/_base.scss */
+/* line 244, ../scss/_base.scss */
 #header_wrap {
   background: #212121;
 }
 
-/* line 250, ../scss/_base.scss */
+/* line 248, ../scss/_base.scss */
 #header_wrap .inner {
   padding: 50px 10px 30px 10px;
 }
 
-/* line 254, ../scss/_base.scss */
+/* line 252, ../scss/_base.scss */
 #project_title {
   margin: 0;
   color: #fff;
@@ -356,7 +355,7 @@ Full-Width Styles
   text-shadow: #111 0px 0px 10px;
 }
 
-/* line 262, ../scss/_base.scss */
+/* line 260, ../scss/_base.scss */
 #project_tagline {
   color: #fff;
   font-size: 24px;
@@ -365,63 +364,19 @@ Full-Width Styles
   text-shadow: #111 0px 0px 10px;
 }
 
-/* line 270, ../scss/_base.scss */
-#downloads {
-  position: absolute;
-  width: 210px;
-  z-index: 10;
-  bottom: -40px;
-  right: 0;
-  height: 70px;
-  background: url("../images/icon_download.png") no-repeat 0% 90%;
-}
-
-/* line 280, ../scss/_base.scss */
-.zip_download_link {
-  display: block;
-  float: right;
-  width: 90px;
-  height: 70px;
-  text-indent: -5000px;
-  overflow: hidden;
-  background: url(../images/sprite_download.png) no-repeat bottom left;
-}
-
-/* line 290, ../scss/_base.scss */
-.tar_download_link {
-  display: block;
-  float: right;
-  width: 90px;
-  height: 70px;
-  text-indent: -5000px;
-  overflow: hidden;
-  background: url(../images/sprite_download.png) no-repeat bottom right;
-  margin-left: 10px;
-}
-
-/* line 301, ../scss/_base.scss */
-.zip_download_link:hover {
-  background: url(../images/sprite_download.png) no-repeat top left;
-}
-
-/* line 305, ../scss/_base.scss */
-.tar_download_link:hover {
-  background: url(../images/sprite_download.png) no-repeat top right;
-}
-
-/* line 309, ../scss/_base.scss */
+/* line 268, ../scss/_base.scss */
 #main_content_wrap {
   background: #f2f2f2;
   border-top: 1px solid #111;
   border-bottom: 1px solid #111;
 }
 
-/* line 315, ../scss/_base.scss */
+/* line 274, ../scss/_base.scss */
 #main_content {
   padding-top: 40px;
 }
 
-/* line 319, ../scss/_base.scss */
+/* line 278, ../scss/_base.scss */
 #footer_wrap {
   background: #212121;
 }
@@ -430,58 +385,58 @@ Full-Width Styles
 Small Device Styles
 *******************************************************************************/
 @media screen and (max-width: 480px) {
-  /* line 328, ../scss/_base.scss */
+  /* line 287, ../scss/_base.scss */
   body {
     font-size: 14px;
   }
 
-  /* line 332, ../scss/_base.scss */
+  /* line 291, ../scss/_base.scss */
   #downloads {
     display: none;
   }
 
-  /* line 336, ../scss/_base.scss */
+  /* line 295, ../scss/_base.scss */
   .inner {
     min-width: 320px;
     max-width: 480px;
   }
 
-  /* line 341, ../scss/_base.scss */
+  /* line 300, ../scss/_base.scss */
   #project_title {
     font-size: 32px;
   }
 
-  /* line 345, ../scss/_base.scss */
+  /* line 304, ../scss/_base.scss */
   h1 {
     font-size: 28px;
   }
 
-  /* line 349, ../scss/_base.scss */
+  /* line 308, ../scss/_base.scss */
   h2 {
     font-size: 24px;
   }
 
-  /* line 353, ../scss/_base.scss */
+  /* line 312, ../scss/_base.scss */
   h3 {
     font-size: 21px;
   }
 
-  /* line 357, ../scss/_base.scss */
+  /* line 316, ../scss/_base.scss */
   h4 {
     font-size: 18px;
   }
 
-  /* line 361, ../scss/_base.scss */
+  /* line 320, ../scss/_base.scss */
   h5 {
     font-size: 14px;
   }
 
-  /* line 365, ../scss/_base.scss */
+  /* line 324, ../scss/_base.scss */
   h6 {
     font-size: 12px;
   }
 
-  /* line 369, ../scss/_base.scss */
+  /* line 328, ../scss/_base.scss */
   code, pre {
     min-width: 320px;
     max-width: 480px;

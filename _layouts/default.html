@@ -16,18 +16,27 @@
 
 <!-- HEADER -->
 <div class="wrapper">
-    <section>
-        <div id="title">
-            <h1>Faraway Technologies</h1>
-
-            <p>thoughts &amp; experiments.</p>
-            <hr>
-                <span class="credits left">Built with <a
-                        href="https://jekyllrb.com/">Jekyll</a> and hosted on <a
-                        href="http://pages.github.com">GitHub Pages</a></span>
-        </div>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <h1 id="project_title">Faraway Technologies</h1>
+          <h2 id="project_tagline">thoughts &amp; experiments.</h2>
+        </header>
+    </div>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         {{ content }}
-    </section>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Build with <a href="https://jekyllrb.com/">Jekyll</a>
+        and published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
 </div>
 </body>
 </html>
