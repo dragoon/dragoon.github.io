@@ -1,4 +1,4 @@
-auto:        true
 permalink:   /:year/:month/:title.html
 timezone:    Europe/Zurich
 pygments:    true
+markdown:    rdiscount
