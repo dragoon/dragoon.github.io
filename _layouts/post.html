@@ -3,6 +3,11 @@ layout: default
 ---
 
 <h2 class="content">{{page.title}}</h2>
+{{ page.date | date: "%d %B %Y" }}
+
+{% for cat in page.categories %}
+    {{ cat }}
+{% endfor %}
 <div class='post'>
     {{ content }}
 </div>
