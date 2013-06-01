@@ -5,6 +5,7 @@ date: 2013-01-23
 comments: false
 categories:
  - pycharm
+ - en
 ---
 
 Sometimes is it useful to make **PyCharm **know what type of variable you're using inside the function.

@@ -3,6 +3,10 @@ layout: post
 title: "Django best practices resources, reusable apps with django"
 date: 2012-12-06
 comments: false
+categories:
+ - en
+ - django
+ - best practices
 ---
 
 

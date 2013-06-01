@@ -3,6 +3,9 @@ layout: post
 title: "Настройка Nginx в качестве фронт-энда для Prestashop"
 date: 2011-08-28
 comments: false
+categories:
+ - nginx
+ - prestashop
 ---
 
 

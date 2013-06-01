@@ -5,6 +5,7 @@ date: 2012-01-26
 comments: false
 categories:
  - handmade
+ - starwars
 ---
 
 

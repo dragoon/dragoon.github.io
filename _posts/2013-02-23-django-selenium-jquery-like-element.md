@@ -7,6 +7,7 @@ categories:
 - django-selenium
 - django
 - selenium
+- en
 ---
 
 You might know about [django-selenium](https://pypi.python.org/pypi/django-selenium/0.9.5),

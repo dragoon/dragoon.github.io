@@ -3,6 +3,8 @@ layout: post
 title: "Возможность блокировки сайтов в гугле"
 date: 2011-10-21
 comments: false
+categories:
+ - google site block
 ---
 
 

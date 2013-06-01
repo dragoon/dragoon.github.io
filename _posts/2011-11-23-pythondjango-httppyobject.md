@@ -2,7 +2,9 @@
 layout: post
 title: "Вопросы для собеседования по python/django"
 date: 2011-11-23
-comments: false
+categories:
+ - собеседование
+ - python
 ---
 
 
