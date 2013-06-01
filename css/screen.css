@@ -377,62 +377,87 @@ Full-Width Styles
   background: #212121;
 }
 
+/* line 274, ../scss/_base.scss */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 283, ../scss/_base.scss */
+.clearfix {
+  display: inline-block;
+}
+
+/* line 287, ../scss/_base.scss */
+html[xmlns] .clearfix {
+  display: block;
+}
+
+/* line 291, ../scss/_base.scss */
+* html .clearfix {
+  height: 1%;
+}
+
 /*******************************************************************************
 Small Device Styles
 *******************************************************************************/
 @media screen and (max-width: 480px) {
-  /* line 279, ../scss/_base.scss */
+  /* line 300, ../scss/_base.scss */
   body {
     font-size: 14px;
   }
 
-  /* line 283, ../scss/_base.scss */
+  /* line 304, ../scss/_base.scss */
   #downloads {
     display: none;
   }
 
-  /* line 287, ../scss/_base.scss */
+  /* line 308, ../scss/_base.scss */
   .inner {
     min-width: 320px;
     max-width: 480px;
   }
 
-  /* line 292, ../scss/_base.scss */
+  /* line 313, ../scss/_base.scss */
   #project_title {
     font-size: 32px;
   }
 
-  /* line 296, ../scss/_base.scss */
+  /* line 317, ../scss/_base.scss */
   h1 {
     font-size: 28px;
   }
 
-  /* line 300, ../scss/_base.scss */
+  /* line 321, ../scss/_base.scss */
   h2 {
     font-size: 24px;
   }
 
-  /* line 304, ../scss/_base.scss */
+  /* line 325, ../scss/_base.scss */
   h3 {
     font-size: 21px;
   }
 
-  /* line 308, ../scss/_base.scss */
+  /* line 329, ../scss/_base.scss */
   h4 {
     font-size: 18px;
   }
 
-  /* line 312, ../scss/_base.scss */
+  /* line 333, ../scss/_base.scss */
   h5 {
     font-size: 14px;
   }
 
-  /* line 316, ../scss/_base.scss */
+  /* line 337, ../scss/_base.scss */
   h6 {
     font-size: 12px;
   }
 
-  /* line 320, ../scss/_base.scss */
+  /* line 341, ../scss/_base.scss */
   code, pre {
     min-width: 320px;
     max-width: 480px;
@@ -715,4 +740,74 @@ Small Device Styles
   -ms-transform: rotate(25deg);
   -o-transform: rotate(25deg);
   transform: rotate(25deg);
+}
+
+/* line 65, ../scss/_labels.scss */
+.tags {
+  margin: 0;
+  padding: 0;
+}
+/* line 69, ../scss/_labels.scss */
+.tags li, .tags a {
+  float: left;
+  height: 24px;
+  line-height: 24px;
+  position: relative;
+  font-size: 11px;
+  list-style-type: none;
+  padding: 0;
+}
+/* line 79, ../scss/_labels.scss */
+.tags a {
+  margin-left: 20px;
+  padding: 0 10px 0 12px;
+  background: #0089e0;
+  color: #fff;
+  text-decoration: none;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+/* line 88, ../scss/_labels.scss */
+.tags a:hover {
+  background: #555;
+}
+/* line 90, ../scss/_labels.scss */
+.tags a:hover:before {
+  border-color: transparent #555555 transparent transparent;
+}
+/* line 95, ../scss/_labels.scss */
+.tags a:before {
+  content: "";
+  float: left;
+  position: absolute;
+  top: 0;
+  left: -12px;
+  width: 0;
+  height: 0;
+  border-color: transparent #0089e0 transparent transparent;
+  border-style: solid;
+  border-width: 12px 12px 12px 0;
+}
+/* line 108, ../scss/_labels.scss */
+.tags a:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  float: left;
+  width: 4px;
+  height: 4px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  background: #fff;
+  -webkit-box-shadow: -1px -1px 2px #004977;
+  -moz-box-shadow: -1px -1px 2px #004977;
+  box-shadow: -1px -1px 2px #004977;
 }

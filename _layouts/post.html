@@ -12,9 +12,11 @@ layout: default
         <div class="right ribbon-piece"></div>
     </div>
 </div>
-{% for cat in page.categories %}
-    {{ cat }}
-{% endfor %}
+<ul class="tags clearfix">
+    {% for cat in page.categories %}
+    <li><a href="#">{{ cat }}</a></li>
+    {% endfor %}
+</ul>
 <div class='post'>
     {{ content }}
 </div>
