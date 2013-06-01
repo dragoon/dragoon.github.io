@@ -3,20 +3,8 @@ layout: default
 ---
 
 <h2 class="content">{{page.title}}</h2>
-
-<div class="ribbon-date" title="{{ page.date | date: '%d %B %Y' }}">
-    <div class="top ribbon-piece">{{ page.date | date: "%d" }}</div>
-    <div class="bottom ribbon-piece">{{ page.date | date: "%b" }}<br>{{ page.date | date: "%Y" }}</div>
-    <div class="tail">
-        <div class="left ribbon-piece"></div>
-        <div class="right ribbon-piece"></div>
-    </div>
-</div>
-<ul class="tags clearfix">
-    {% for cat in page.categories %}
-    <li><a href="#">{{ cat }}</a></li>
-    {% endfor %}
-</ul>
+{% assign post = page %}
+{% include post-meta.html %}
 <div class='post'>
     {{ content }}
 </div>
