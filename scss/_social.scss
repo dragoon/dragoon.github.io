@@ -1,4 +1,3 @@
-
 .social {
     margin-bottom: -132px;
     margin-left: 55px;
@@ -23,26 +22,38 @@
     width: 100%;
     height: 100%;
     @include transform(rotate(-60deg));
-    }
+}
+
 .hexagon-in2 {
     width: 100%;
     height: 100%;
     background: #f2f2f2 no-repeat 50%;
     visibility: visible;
     @include transform(rotate(-60deg));
-    }
+}
 
 .linkedin {
     background-image: url(../images/social/linkedin.png);
 }
+
 .github {
     background-image: url(../images/social/github.png);
 }
+
 .twitter {
     background-image: url(../images/social/twitter.png);
 }
+
 .google {
     background-image: url(../images/social/google.png);
+}
+
+.dblp {
+    background-image: url(../images/social/dblp.png);
+}
+
+.careers {
+    background-image: url(../images/social/careers.png);
 }
 
 

@@ -464,13 +464,13 @@ Small Device Styles
     font-size: 11px;
   }
 }
-/* line 2, ../scss/_social.scss */
+/* line 1, ../scss/_social.scss */
 .social {
   margin-bottom: -132px;
   margin-left: 55px;
 }
 
-/* line 7, ../scss/_social.scss */
+/* line 6, ../scss/_social.scss */
 .hexagon {
   overflow: hidden;
   visibility: hidden;
@@ -484,12 +484,12 @@ Small Device Styles
   display: inline-block;
   opacity: 0.7;
 }
-/* line 16, ../scss/_social.scss */
+/* line 15, ../scss/_social.scss */
 .hexagon:hover {
   opacity: 1;
 }
 
-/* line 21, ../scss/_social.scss */
+/* line 20, ../scss/_social.scss */
 .hexagon-in1 {
   overflow: hidden;
   width: 100%;
@@ -519,144 +519,29 @@ Small Device Styles
   background-image: url(../images/social/linkedin.png);
 }
 
-/* line 38, ../scss/_social.scss */
+/* line 39, ../scss/_social.scss */
 .github {
   background-image: url(../images/social/github.png);
 }
 
-/* line 41, ../scss/_social.scss */
+/* line 43, ../scss/_social.scss */
 .twitter {
   background-image: url(../images/social/twitter.png);
 }
 
-/* line 44, ../scss/_social.scss */
+/* line 47, ../scss/_social.scss */
 .google {
   background-image: url(../images/social/google.png);
 }
 
-/* line 47, ../scss/_social.scss */
+/* line 51, ../scss/_social.scss */
 .dblp {
   background-image: url(../images/social/dblp.png);
 }
 
-/* line 50, ../scss/_social.scss */
+/* line 55, ../scss/_social.scss */
 .careers {
   background-image: url(../images/social/careers.png);
-}
-
-/* line 54, ../scss/_social.scss */
-.hex.hex-gap {
-  margin-left: 79px;
-}
-
-/* line 58, ../scss/_social.scss */
-.hex {
-  width: 150px;
-  height: 86px;
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: 70px auto;
-  position: relative;
-  margin: 20px 2px;
-  text-align: center;
-  zoom: 1;
-  display: inline-block;
-}
-/* line 71, ../scss/_social.scss */
-.hex.linkedin {
-  background-color: #007ab8;
-  background-size: auto;
-}
-/* line 76, ../scss/_social.scss */
-.hex.github {
-  background-color: #333;
-  background-size: auto;
-}
-/* line 81, ../scss/_social.scss */
-.hex.careers {
-  background-color: #fff;
-  background-size: auto;
-}
-/* line 86, ../scss/_social.scss */
-.hex.twitter {
-  background-color: #5b8ec9;
-  background-size: auto;
-}
-/* line 91, ../scss/_social.scss */
-.hex a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-indent: -9999em;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-/* line 101, ../scss/_social.scss */
-.hex .corner-1, .hex .corner-2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  z-index: -2;
-  overflow: hidden;
-  -webkit-backface-visibility: hidden;
-}
-/* line 113, ../scss/_social.scss */
-.hex .corner-1 {
-  z-index: -1;
-  -webkit-transform: rotate(60deg);
-  -moz-transform: rotate(60deg);
-  -ms-transform: rotate(60deg);
-  -o-transform: rotate(60deg);
-  transform: rotate(60deg);
-}
-/* line 118, ../scss/_social.scss */
-.hex .corner-2 {
-  -webkit-transform: rotate(-60deg);
-  -moz-transform: rotate(-60deg);
-  -ms-transform: rotate(-60deg);
-  -o-transform: rotate(-60deg);
-  transform: rotate(-60deg);
-}
-/* line 122, ../scss/_social.scss */
-.hex .corner-1:before, .hex .corner-2:before {
-  width: 173px;
-  height: 173px;
-  content: '';
-  position: absolute;
-  background: inherit;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  background: inherit;
-  background-repeat: no-repeat;
-  -webkit-backface-visibility: hidden;
-}
-/* line 136, ../scss/_social.scss */
-.hex .corner-1:before {
-  -webkit-transform: rotate(-60deg) translate(-87px, 0px);
-  -moz-transform: rotate(-60deg) translate(-87px, 0px);
-  -ms-transform: rotate(-60deg) translate(-87px, 0px);
-  -o-transform: rotate(-60deg) translate(-87px, 0px);
-  transform: rotate(-60deg) translate(-87px, 0px);
-  -webkit-transform-origin: 0 0;
-  -moz-transform-origin: 0 0;
-  -ms-transform-origin: 0 0;
-  -o-transform-origin: 0 0;
-  transform-origin: 0 0;
-}
-/* line 141, ../scss/_social.scss */
-.hex .corner-2:before {
-  -webkit-transform: rotate(60deg) translate(-48px, -11px);
-  -moz-transform: rotate(60deg) translate(-48px, -11px);
-  -ms-transform: rotate(60deg) translate(-48px, -11px);
-  -o-transform: rotate(60deg) translate(-48px, -11px);
-  transform: rotate(60deg) translate(-48px, -11px);
-  bottom: 0;
 }
 
 /* line 1, ../scss/_labels.scss */
