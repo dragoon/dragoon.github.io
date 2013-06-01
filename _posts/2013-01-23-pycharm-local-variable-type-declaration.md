@@ -7,33 +7,24 @@ categories:
  - pycharm
 ---
 
+Sometimes is it useful to make **PyCharm **know what type of variable you're using inside the function.
+For example, it enables the <i>auto-complete</i> feature for the variable methods and quick navigation
+to the method source with Ctrl/Cmd + click.
 
-    Sometimes is it useful to make
-        **PyCharm **know what type of variable you're using inside the function. For example, it
-        enables the <i>auto-complete</i> feature for the variable methods and quick navigation
-        to the method source with Ctrl/Cmd + click.
-
-
-
-        While for the <i>function arguments</i> you can easily specify the type using the
-            <i>docstring</i> notation like:
-                <pre><code>
+While for the <i>function arguments</i> you can easily specify the type using the
+<i>docstring</i> notation like:
+{% highlight python %}
+# (reStructured Text notation)
 """
 :type arg1: list
 :type arg2: dict
 """
-(reStructured Text
-            notation)
-</code>
-</pre>
-        the documentation about such feature for local variables is buried in the **JetBrains**
-        forum threads and issue tracker (<a href="http://youtrack.jetbrains.com/issue/PY-4083">http://youtrack.jetbrains.com/issue/PY-4083</a>).
-        Here is the solution that worked for me:
-
-        <pre><code>
+{% endhighlight%}
+the documentation about such feature for local variables is buried in the **JetBrains**
+forum threads and issue tracker (<a href="http://youtrack.jetbrains.com/issue/PY-4083">http://youtrack.jetbrains.com/issue/PY-4083</a>).
+Here is the solution that worked for me:
+{% highlight python %}
 var1 = a.object
 """:type: MyModel"""
-</code>
-</pre>
-        which means that <span style="font-family: inherit;"><i>var1</i></span> will be treated as
-        <span style="font-family: inherit;"><i>MyModel</i></span> type.
+{% endhighlight%}
+which means that *var1* will be treated as *MyModel* type.
