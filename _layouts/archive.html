@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<div class="archives">
+    <h2>{{ page.title }}</h2>
+    {% for post in page.posts %}
+    <div class="recent-entry">
+        <h3><a href="{{ post.url }}" rel="bookmark" title="Permanent link to ">{{ post.title }}</a>
+        </h3>
+        {% include post-meta.html %}
+        <br><br>
+    </div>
+    {% endfor %}
+    <br>
+</div>
