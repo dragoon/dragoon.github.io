@@ -753,7 +753,7 @@ Small Device Styles
   height: 24px;
   line-height: 24px;
   position: relative;
-  font-size: 11px;
+  font-size: 14px;
   list-style-type: none;
   padding: 0;
 }
@@ -761,7 +761,7 @@ Small Device Styles
 .tags a {
   margin-left: 20px;
   padding: 0 10px 0 12px;
-  background: #0089e0;
+  background: #0069ba;
   color: #fff;
   text-decoration: none;
   -moz-border-radius-bottomright: 4px;
@@ -773,13 +773,15 @@ Small Device Styles
 }
 /* line 88, ../scss/_labels.scss */
 .tags a:hover {
-  background: #555;
+  background: #0089e0;
+  color: white !important;
+  text-shadow: none !important;
 }
-/* line 90, ../scss/_labels.scss */
+/* line 91, ../scss/_labels.scss */
 .tags a:hover:before {
-  border-color: transparent #555555 transparent transparent;
+  border-color: transparent #0089e0 transparent transparent;
 }
-/* line 95, ../scss/_labels.scss */
+/* line 97, ../scss/_labels.scss */
 .tags a:before {
   content: "";
   float: left;
@@ -788,11 +790,11 @@ Small Device Styles
   left: -12px;
   width: 0;
   height: 0;
-  border-color: transparent #0089e0 transparent transparent;
+  border-color: transparent #0069ba transparent transparent;
   border-style: solid;
   border-width: 12px 12px 12px 0;
 }
-/* line 108, ../scss/_labels.scss */
+/* line 110, ../scss/_labels.scss */
 .tags a:after {
   content: "";
   position: absolute;
