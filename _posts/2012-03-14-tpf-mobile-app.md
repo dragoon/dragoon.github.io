@@ -17,7 +17,7 @@ As I work and live in <a href="http://en.wikipedia.org/wiki/Fribourg">Fribourg</
 
 So I decided to create an application that will show how much time is left till the next bust at the bus stops. I immediately fired up with this idea and decided not to postpone it for a long time and try to write a small prototype. Since I don't know **Objective C** and have not developed in **Java** for years, but have a good knowledge of **HTML/Javascript**, my choice fell on a cross-platform framework called <a href="http://phonegap.com/">PhoneGap</a>, which I have heard many positive reviews about.
 
-Very quickly I have found a great book from <a href="http://oreilly.com/">O'Reilly</a>, that at this moment is available for free inside their <i>Open Feedback Publishing System</i>: <a href="http://ofps.oreilly.com/titles/9781449383268/">Building Android Apps with HTML, CSS, and JavaScript</a>. Among other libraries, they also used <a href="http://jqtouch.com/">jQTouch</a>, that I also found really nice, though it is primarily focused on the **iPhone** users.
+Very quickly I have found a great book from <a href="http://oreilly.com/">O'Reilly</a>, that at this moment is available for free inside their *Open Feedback Publishing System*: <a href="http://ofps.oreilly.com/titles/9781449383268/">Building Android Apps with HTML, CSS, and JavaScript</a>. Among other libraries, they also used <a href="http://jqtouch.com/">jQTouch</a>, that I also found really nice, though it is primarily focused on the **iPhone** users.
 
 After nearly week of work in the evenings, I have finally created the working prototype:
 
@@ -27,7 +27,7 @@ After nearly week of work in the evenings, I have finally created the working pr
 You can access it at: <a href="http://prokofyev.ch/tpf/">http://prokofyev.ch/tpf/</a>
 
 The only bad thing about it is that the schedule data is not available online, that makes this app somewhat unusable (I've only added 3 bus stops that are important to me).
-But as I work at the <i>University of Fribourg</i>, we will try to speak with the people from <a href="http://www.tpf.ch/">TPF</a> to make this data available.
+But as I work at the *University of Fribourg*, we will try to speak with the people from <a href="http://www.tpf.ch/">TPF</a> to make this data available.
 
 
 

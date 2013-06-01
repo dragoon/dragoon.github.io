@@ -28,11 +28,11 @@ After doing some research I found that the problem is related to the newly creat
 
 In fact, when django **loads fixtures** for your application, it also **implicitly executes all signals** attached to the models, not just plain database population, and this behavior may seem somewhat odd. There is a a ticket about that in django tracker (<a href="https://code.djangoproject.com/ticket/12610">https://code.djangoproject.com/ticket/12610</a>), but the future of this ticket is undecided yet.
 
-So right now you can use undocumented <i>'raw' </i>parameter in the **signal function** to suppress such behavior if required:
+So right now you can use undocumented *'raw' *parameter in the **signal function** to suppress such behavior if required:
 <pre style="background-color: #eeeeee; border: 1px dashed; margin: 0; padding: 5px;">def my_signal(sender, instance, created, **kwargs):
     if kwargs.get('raw'):
         return
     ....
 models.signals.post_save.connect(my_signal, sender=MyModel)
 </pre>
-<i>'raw' parameter</i> is used in django internals, and it equals <i>True</i> when the fixture is loaded.
+*'raw' parameter* is used in django internals, and it equals *True* when the fixture is loaded.

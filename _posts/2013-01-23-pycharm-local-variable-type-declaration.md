@@ -8,11 +8,11 @@ categories:
 ---
 
 Sometimes is it useful to make **PyCharm **know what type of variable you're using inside the function.
-For example, it enables the <i>auto-complete</i> feature for the variable methods and quick navigation
-to the method source with Ctrl/Cmd + click.
+For example, it enables the *auto-complete* feature for the variable methods and quick navigation
+to the method source with Ctrl/Cmd&nbsp;+&nbsp;click.
 
-While for the <i>function arguments</i> you can easily specify the type using the
-<i>docstring</i> notation like:
+While for the *function arguments* you can easily specify the type using the
+*docstring* notation like:
 {% highlight python %}
 # (reStructured Text notation)
 """
