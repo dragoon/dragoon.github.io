@@ -3,8 +3,15 @@ layout: default
 ---
 
 <h2 class="content">{{page.title}}</h2>
-{{ page.date | date: "%d %B %Y" }}
 
+<div class="ribbon-date" title="{{ page.date | date: '%d %B %Y' }}">
+    <div class="top ribbon-piece">{{ page.date | date: "%d" }}</div>
+    <div class="bottom ribbon-piece">{{ page.date | date: "%b" }}<br>{{ page.date | date: "%Y" }}</div>
+    <div class="tail">
+        <div class="left ribbon-piece"></div>
+        <div class="right ribbon-piece"></div>
+    </div>
+</div>
 {% for cat in page.categories %}
     {{ cat }}
 {% endfor %}
