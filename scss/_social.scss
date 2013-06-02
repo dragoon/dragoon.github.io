@@ -1,6 +1,25 @@
 .social {
-    margin-bottom: -132px;
-    margin-left: 55px;
+    a {
+        display: inline-block;
+        height: 58px;
+        width: 58px;
+    }
+
+    .linkedin {
+         background: sprite($social, linkedin) no-repeat;
+    }
+
+    .twitter {
+         background: sprite($social, twitter) no-repeat;
+    }
+
+    .google {
+         background: sprite($social, google) no-repeat;
+    }
+
+    .github {
+         background: sprite($social, github) no-repeat;
+    }
 }
 
 .hexagon {
