@@ -136,7 +136,7 @@ module Jekyll
       end
 
       def uses_relative_permalinks
-        url && @dir != "" && site.config['relative_permalinks']
+        false
       end
 
       def inspect
