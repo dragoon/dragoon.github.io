@@ -176,14 +176,12 @@ img {
   padding: 5px;
   margin: 10px 0 10px 0;
   border: 1px solid #ebebeb;
-  box-shadow: 0 0 5px #ebebeb;
   -webkit-box-shadow: 0 0 5px #ebebeb;
   -moz-box-shadow: 0 0 5px #ebebeb;
-  -o-box-shadow: 0 0 5px #ebebeb;
-  -ms-box-shadow: 0 0 5px #ebebeb;
+  box-shadow: 0 0 5px #ebebeb;
 }
 
-/* line 104, ../scss/_base.scss */
+/* line 100, ../scss/_base.scss */
 pre, code {
   width: 100%;
   color: #222;
@@ -195,7 +193,7 @@ pre, code {
   -webkit-border-radius: 2px;
 }
 
-/* line 117, ../scss/_base.scss */
+/* line 113, ../scss/_base.scss */
 pre {
   width: 100%;
   padding: 10px;
@@ -203,20 +201,20 @@ pre {
   overflow: auto;
 }
 
-/* line 124, ../scss/_base.scss */
+/* line 120, ../scss/_base.scss */
 code {
   padding: 3px;
   margin: 0 3px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* line 130, ../scss/_base.scss */
+/* line 126, ../scss/_base.scss */
 pre code {
   display: block;
   box-shadow: none;
 }
 
-/* line 135, ../scss/_base.scss */
+/* line 131, ../scss/_base.scss */
 blockquote {
   color: #666;
   margin-bottom: 20px;
@@ -224,41 +222,41 @@ blockquote {
   border-left: 3px solid #bbb;
 }
 
-/* line 142, ../scss/_base.scss */
+/* line 138, ../scss/_base.scss */
 ul, ol, dl {
   margin-bottom: 15px;
 }
 
-/* line 146, ../scss/_base.scss */
+/* line 142, ../scss/_base.scss */
 ul li {
   list-style: inside;
   padding-left: 20px;
 }
 
-/* line 151, ../scss/_base.scss */
+/* line 147, ../scss/_base.scss */
 ol li {
   list-style: decimal inside;
   padding-left: 20px;
 }
 
-/* line 156, ../scss/_base.scss */
+/* line 152, ../scss/_base.scss */
 dl dt {
   font-weight: bold;
 }
 
-/* line 160, ../scss/_base.scss */
+/* line 156, ../scss/_base.scss */
 dl dd {
   padding-left: 20px;
   font-style: italic;
 }
 
-/* line 165, ../scss/_base.scss */
+/* line 161, ../scss/_base.scss */
 dl p {
   padding-left: 20px;
   font-style: italic;
 }
 
-/* line 170, ../scss/_base.scss */
+/* line 166, ../scss/_base.scss */
 hr {
   height: 1px;
   margin-bottom: 5px;
@@ -266,14 +264,14 @@ hr {
   background: url("../images/bg_hr.png") repeat-x center;
 }
 
-/* line 177, ../scss/_base.scss */
+/* line 173, ../scss/_base.scss */
 table {
   border: 1px solid #373737;
   margin-bottom: 20px;
   text-align: left;
 }
 
-/* line 183, ../scss/_base.scss */
+/* line 179, ../scss/_base.scss */
 th {
   font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 10px;
@@ -281,19 +279,19 @@ th {
   color: #fff;
 }
 
-/* line 190, ../scss/_base.scss */
+/* line 186, ../scss/_base.scss */
 td {
   padding: 10px;
   border: 1px solid #373737;
 }
 
-/* line 195, ../scss/_base.scss */
+/* line 191, ../scss/_base.scss */
 form {
   background: #f2f2f2;
   padding: 20px;
 }
 
-/* line 200, ../scss/_base.scss */
+/* line 196, ../scss/_base.scss */
 img {
   width: 100%;
   max-width: 100%;
@@ -302,12 +300,12 @@ img {
 /*******************************************************************************
 Full-Width Styles
 *******************************************************************************/
-/* line 209, ../scss/_base.scss */
+/* line 205, ../scss/_base.scss */
 .outer {
   width: 100%;
 }
 
-/* line 213, ../scss/_base.scss */
+/* line 209, ../scss/_base.scss */
 .inner {
   position: relative;
   max-width: 800px;
@@ -315,7 +313,7 @@ Full-Width Styles
   margin: 0 auto;
 }
 
-/* line 220, ../scss/_base.scss */
+/* line 216, ../scss/_base.scss */
 #forkme_banner {
   display: block;
   position: absolute;
@@ -331,17 +329,17 @@ Full-Width Styles
   border-bottom-right-radius: 2px;
 }
 
-/* line 235, ../scss/_base.scss */
+/* line 231, ../scss/_base.scss */
 #header_wrap {
   background: #212121;
 }
 
-/* line 239, ../scss/_base.scss */
+/* line 235, ../scss/_base.scss */
 #header_wrap .inner {
-  padding: 50px 10px 30px 10px;
+  padding: 50px 10px 10px 10px;
 }
 
-/* line 243, ../scss/_base.scss */
+/* line 239, ../scss/_base.scss */
 #project_title {
   margin: 0;
   color: #fff;
@@ -350,34 +348,35 @@ Full-Width Styles
   text-shadow: #111 0px 0px 10px;
 }
 
-/* line 251, ../scss/_base.scss */
+/* line 247, ../scss/_base.scss */
 #project_tagline {
   color: #fff;
   font-size: 24px;
   font-weight: 300;
   background: none;
   text-shadow: #111 0px 0px 10px;
+  margin-top: 0;
 }
 
-/* line 259, ../scss/_base.scss */
+/* line 256, ../scss/_base.scss */
 #main_content_wrap {
   background: #f2f2f2;
   border-top: 1px solid #111;
   border-bottom: 1px solid #111;
 }
 
-/* line 265, ../scss/_base.scss */
+/* line 262, ../scss/_base.scss */
 #main_content {
   padding-top: 40px;
   z-index: 1;
 }
 
-/* line 270, ../scss/_base.scss */
+/* line 267, ../scss/_base.scss */
 #footer_wrap {
   background: #212121;
 }
 
-/* line 274, ../scss/_base.scss */
+/* line 271, ../scss/_base.scss */
 .clearfix:after {
   content: ".";
   display: block;
@@ -387,17 +386,17 @@ Full-Width Styles
   height: 0;
 }
 
-/* line 283, ../scss/_base.scss */
+/* line 280, ../scss/_base.scss */
 .clearfix {
   display: inline-block;
 }
 
-/* line 287, ../scss/_base.scss */
+/* line 284, ../scss/_base.scss */
 html[xmlns] .clearfix {
   display: block;
 }
 
-/* line 291, ../scss/_base.scss */
+/* line 288, ../scss/_base.scss */
 * html .clearfix {
   height: 1%;
 }
@@ -406,58 +405,58 @@ html[xmlns] .clearfix {
 Small Device Styles
 *******************************************************************************/
 @media screen and (max-width: 480px) {
-  /* line 300, ../scss/_base.scss */
+  /* line 297, ../scss/_base.scss */
   body {
     font-size: 14px;
   }
 
-  /* line 304, ../scss/_base.scss */
+  /* line 301, ../scss/_base.scss */
   #downloads {
     display: none;
   }
 
-  /* line 308, ../scss/_base.scss */
+  /* line 305, ../scss/_base.scss */
   .inner {
     min-width: 320px;
     max-width: 480px;
   }
 
-  /* line 313, ../scss/_base.scss */
+  /* line 310, ../scss/_base.scss */
   #project_title {
     font-size: 32px;
   }
 
-  /* line 317, ../scss/_base.scss */
+  /* line 314, ../scss/_base.scss */
   h1 {
     font-size: 28px;
   }
 
-  /* line 321, ../scss/_base.scss */
+  /* line 318, ../scss/_base.scss */
   h2 {
     font-size: 24px;
   }
 
-  /* line 325, ../scss/_base.scss */
+  /* line 322, ../scss/_base.scss */
   h3 {
     font-size: 21px;
   }
 
-  /* line 329, ../scss/_base.scss */
+  /* line 326, ../scss/_base.scss */
   h4 {
     font-size: 18px;
   }
 
-  /* line 333, ../scss/_base.scss */
+  /* line 330, ../scss/_base.scss */
   h5 {
     font-size: 14px;
   }
 
-  /* line 337, ../scss/_base.scss */
+  /* line 334, ../scss/_base.scss */
   h6 {
     font-size: 12px;
   }
 
-  /* line 341, ../scss/_base.scss */
+  /* line 338, ../scss/_base.scss */
   code, pre {
     min-width: 320px;
     max-width: 480px;
@@ -696,10 +695,36 @@ Small Device Styles
 }
 
 /* line 1, ../scss/main.scss */
+ul.menu {
+  position: relative;
+  padding: 0;
+  white-space: nowrap;
+  margin-bottom: 0;
+  margin-top: 2em;
+}
+/* line 7, ../scss/main.scss */
+ul.menu li {
+  display: inline;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 1em;
+}
+/* line 12, ../scss/main.scss */
+ul.menu li a {
+  display: inline-block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 17, ../scss/main.scss */
+ul.menu li a:hover {
+  color: #43adff;
+}
+
+/* line 24, ../scss/main.scss */
 .recent-entry {
   position: relative;
 }
-/* line 4, ../scss/main.scss */
+/* line 27, ../scss/main.scss */
 .recent-entry .ribbon-date {
   top: 10px;
   left: -50px;

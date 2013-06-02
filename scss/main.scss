@@ -1,3 +1,26 @@
+ul.menu {
+    position: relative;
+    padding: 0;
+    white-space: nowrap;
+    margin-bottom: 0;
+    margin-top: 2em;
+    li {
+        display: inline;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 1em;
+        a {
+            display: inline-block;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+            &:hover {
+                color: #43adff;
+            }
+        }
+    }
+}
+
 .recent-entry {
     position: relative;
 
