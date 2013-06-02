@@ -351,32 +351,33 @@ Full-Width Styles
 /* line 247, ../scss/_base.scss */
 #project_tagline {
   color: #fff;
-  font-size: 24px;
+  font-size: 28px;
+  font-family: "Annie Use Your Telescope";
   font-weight: 300;
   background: none;
   text-shadow: #111 0px 0px 10px;
   margin-top: 0;
 }
 
-/* line 256, ../scss/_base.scss */
+/* line 257, ../scss/_base.scss */
 #main_content_wrap {
   background: #f2f2f2;
   border-top: 1px solid #111;
   border-bottom: 1px solid #111;
 }
 
-/* line 262, ../scss/_base.scss */
+/* line 263, ../scss/_base.scss */
 #main_content {
   padding-top: 40px;
   z-index: 1;
 }
 
-/* line 267, ../scss/_base.scss */
+/* line 268, ../scss/_base.scss */
 #footer_wrap {
   background: #212121;
 }
 
-/* line 271, ../scss/_base.scss */
+/* line 272, ../scss/_base.scss */
 .clearfix:after {
   content: ".";
   display: block;
@@ -386,17 +387,17 @@ Full-Width Styles
   height: 0;
 }
 
-/* line 280, ../scss/_base.scss */
+/* line 281, ../scss/_base.scss */
 .clearfix {
   display: inline-block;
 }
 
-/* line 284, ../scss/_base.scss */
+/* line 285, ../scss/_base.scss */
 html[xmlns] .clearfix {
   display: block;
 }
 
-/* line 288, ../scss/_base.scss */
+/* line 289, ../scss/_base.scss */
 * html .clearfix {
   height: 1%;
 }
@@ -405,58 +406,58 @@ html[xmlns] .clearfix {
 Small Device Styles
 *******************************************************************************/
 @media screen and (max-width: 480px) {
-  /* line 297, ../scss/_base.scss */
+  /* line 298, ../scss/_base.scss */
   body {
     font-size: 14px;
   }
 
-  /* line 301, ../scss/_base.scss */
+  /* line 302, ../scss/_base.scss */
   #downloads {
     display: none;
   }
 
-  /* line 305, ../scss/_base.scss */
+  /* line 306, ../scss/_base.scss */
   .inner {
     min-width: 320px;
     max-width: 480px;
   }
 
-  /* line 310, ../scss/_base.scss */
+  /* line 311, ../scss/_base.scss */
   #project_title {
     font-size: 32px;
   }
 
-  /* line 314, ../scss/_base.scss */
+  /* line 315, ../scss/_base.scss */
   h1 {
     font-size: 28px;
   }
 
-  /* line 318, ../scss/_base.scss */
+  /* line 319, ../scss/_base.scss */
   h2 {
     font-size: 24px;
   }
 
-  /* line 322, ../scss/_base.scss */
+  /* line 323, ../scss/_base.scss */
   h3 {
     font-size: 21px;
   }
 
-  /* line 326, ../scss/_base.scss */
+  /* line 327, ../scss/_base.scss */
   h4 {
     font-size: 18px;
   }
 
-  /* line 330, ../scss/_base.scss */
+  /* line 331, ../scss/_base.scss */
   h5 {
     font-size: 14px;
   }
 
-  /* line 334, ../scss/_base.scss */
+  /* line 335, ../scss/_base.scss */
   h6 {
     font-size: 12px;
   }
 
-  /* line 338, ../scss/_base.scss */
+  /* line 339, ../scss/_base.scss */
   code, pre {
     min-width: 320px;
     max-width: 480px;
@@ -711,7 +712,7 @@ Small Device Styles
   box-shadow: -1px -1px 2px #004977;
 }
 
-/* line 1, ../scss/main.scss */
+/* line 1, ../scss/_main.scss */
 ul.menu {
   position: relative;
   padding: 0;
@@ -719,29 +720,29 @@ ul.menu {
   margin-bottom: 0;
   margin-top: 2em;
 }
-/* line 7, ../scss/main.scss */
+/* line 7, ../scss/_main.scss */
 ul.menu li {
   display: inline;
   text-align: center;
   padding-left: 0;
   padding-right: 1em;
 }
-/* line 12, ../scss/main.scss */
+/* line 12, ../scss/_main.scss */
 ul.menu li a {
   display: inline-block;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 17, ../scss/main.scss */
+/* line 17, ../scss/_main.scss */
 ul.menu li a:hover {
   color: #43adff;
 }
 
-/* line 24, ../scss/main.scss */
+/* line 24, ../scss/_main.scss */
 .recent-entry {
   position: relative;
 }
-/* line 27, ../scss/main.scss */
+/* line 27, ../scss/_main.scss */
 .recent-entry .ribbon-date {
   top: 10px;
   left: -50px;
