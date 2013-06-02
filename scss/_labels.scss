@@ -67,17 +67,18 @@
     padding: 0;
 
     li, a {
-        float: left;
+        display: inline-block;
         height: 24px;
         line-height: 24px;
         position: relative;
         font-size: 14px;
         list-style-type: none;
         padding: 0;
+        margin-bottom: 5px;
     }
 
     a {
-        margin-left: 20px;
+        margin-left: 15px;
         padding: 0 10px 0 12px;
         background: #0069ba;
         color: #fff;
