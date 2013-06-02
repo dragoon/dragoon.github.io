@@ -10,11 +10,6 @@
     width: 110px;
     height: 220px;
     display: inline-block;
-    opacity: 0.7;
-
-    &:hover {
-        opacity: 1;
-    }
 }
 
 .hexagon-in1 {
@@ -30,22 +25,22 @@
     background: #f2f2f2 no-repeat 50%;
     visibility: visible;
     @include transform(rotate(-60deg));
-}
 
-.linkedin {
-    background-image: url(../images/social/linkedin.png);
-}
+    &.linkedin {
+        background-image: url(../images/social/linkedin-hex.png);
+    }
 
-.github {
-    background-image: url(../images/social/github.png);
-}
+    &.github {
+        background-image: url(../images/social/github-hex.png);
+    }
 
-.twitter {
-    background-image: url(../images/social/twitter.png);
-}
+    &.twitter {
+        background-image: url(../images/social/twitter-hex.png);
+    }
 
-.google {
-    background-image: url(../images/social/google.png);
+    &.google {
+        background-image: url(../images/social/google-hex.png);
+    }
 }
 
 .dblp {

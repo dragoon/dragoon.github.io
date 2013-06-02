@@ -507,34 +507,29 @@ Small Device Styles
   -o-transform: rotate(-60deg);
   transform: rotate(-60deg);
 }
-
-/* line 30, ../scss/_social.scss */
-.linkedin {
-  background-image: url(../images/social/linkedin.png);
+/* line 29, ../scss/_social.scss */
+.hexagon-in2.linkedin {
+  background-image: url(../images/social/linkedin-hex.png);
 }
-
-/* line 34, ../scss/_social.scss */
-.github {
-  background-image: url(../images/social/github.png);
+/* line 33, ../scss/_social.scss */
+.hexagon-in2.github {
+  background-image: url(../images/social/github-hex.png);
 }
-
-/* line 38, ../scss/_social.scss */
-.twitter {
-  background-image: url(../images/social/twitter.png);
+/* line 37, ../scss/_social.scss */
+.hexagon-in2.twitter {
+  background-image: url(../images/social/twitter-hex.png);
 }
-
-/* line 42, ../scss/_social.scss */
-.google {
-  background-image: url(../images/social/google.png);
+/* line 41, ../scss/_social.scss */
+.hexagon-in2.google {
+  background-image: url(../images/social/google-hex.png);
 }
 
 /* line 46, ../scss/_social.scss */
 .dblp {
   background-image: url(../images/social/dblp.png);
-  background-size: auto;
 }
 
-/* line 51, ../scss/_social.scss */
+/* line 50, ../scss/_social.scss */
 .careers {
   background-image: url(../images/social/careers.png);
 }
