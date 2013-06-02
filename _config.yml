@@ -2,6 +2,7 @@ permalink:   /:year/:month/:title.html
 timezone:    Europe/Zurich
 pygments:    true
 markdown:    rdiscount
+paginate:    10
 relative_permalinks: false
 
 categories:
