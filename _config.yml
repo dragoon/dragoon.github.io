@@ -2,8 +2,9 @@ permalink:   /:year/:month/:title.html
 timezone:    Europe/Zurich
 pygments:    true
 markdown:    rdiscount
-paginate:    10
+paginate:    20
 relative_permalinks: false
+paginate_path: /blog/page-:num
 
 categories:
   template: _layouts/archive
