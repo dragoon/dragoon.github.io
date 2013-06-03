@@ -3,26 +3,28 @@
         display: inline-block;
         height: 58px;
         width: 58px;
+        @include border-radius(32px);
     }
 
     .linkedin {
-         background: sprite($social, linkedin) no-repeat;
+        background: sprite($social, linkedin) no-repeat;
     }
 
     .twitter {
-         background: sprite($social, twitter) no-repeat;
+        background: sprite($social, twitter) no-repeat;
     }
 
     .google {
-         background: sprite($social, google) no-repeat;
+        background: sprite($social, google) no-repeat;
     }
 
     .github {
-         background: sprite($social, github) no-repeat;
+        background: sprite($social, github) no-repeat;
     }
 
     .dblp {
-         background: sprite($social, dblp) no-repeat;
+        background: sprite($social, dblp) no-repeat;
+        background-color: #fff;
     }
 }
 
