@@ -293,19 +293,20 @@ form {
 
 /* line 196, ../scss/_base.scss */
 img {
-  width: 100%;
-  max-width: 100%;
+  display: inline;
+  margin-right: 1.5em;
+  margin-top: 0;
 }
 
 /*******************************************************************************
 Full-Width Styles
 *******************************************************************************/
-/* line 205, ../scss/_base.scss */
+/* line 206, ../scss/_base.scss */
 .outer {
   width: 100%;
 }
 
-/* line 209, ../scss/_base.scss */
+/* line 210, ../scss/_base.scss */
 .inner {
   position: relative;
   max-width: 800px;
@@ -313,7 +314,7 @@ Full-Width Styles
   margin: 0 auto;
 }
 
-/* line 216, ../scss/_base.scss */
+/* line 217, ../scss/_base.scss */
 #forkme_banner {
   display: block;
   position: absolute;
@@ -329,17 +330,17 @@ Full-Width Styles
   border-bottom-right-radius: 2px;
 }
 
-/* line 231, ../scss/_base.scss */
+/* line 232, ../scss/_base.scss */
 #header_wrap {
   background: #212121;
 }
 
-/* line 235, ../scss/_base.scss */
+/* line 236, ../scss/_base.scss */
 #header_wrap .inner {
   padding: 30px 10px 10px 10px;
 }
 
-/* line 239, ../scss/_base.scss */
+/* line 240, ../scss/_base.scss */
 #project_title {
   margin: 0;
   color: #fff;
@@ -348,7 +349,7 @@ Full-Width Styles
   text-shadow: #111 0px 0px 10px;
 }
 
-/* line 247, ../scss/_base.scss */
+/* line 248, ../scss/_base.scss */
 #project_tagline {
   color: #fff;
   font-size: 28px;
@@ -359,25 +360,25 @@ Full-Width Styles
   margin-top: 0;
 }
 
-/* line 257, ../scss/_base.scss */
+/* line 258, ../scss/_base.scss */
 #main_content_wrap {
   background: #f2f2f2;
   border-top: 1px solid #111;
   border-bottom: 1px solid #111;
 }
 
-/* line 263, ../scss/_base.scss */
+/* line 264, ../scss/_base.scss */
 #main_content {
   padding-top: 40px;
   z-index: 1;
 }
 
-/* line 268, ../scss/_base.scss */
+/* line 269, ../scss/_base.scss */
 #footer_wrap {
   background: #212121;
 }
 
-/* line 272, ../scss/_base.scss */
+/* line 273, ../scss/_base.scss */
 .clearfix:after {
   content: ".";
   display: block;
@@ -387,17 +388,17 @@ Full-Width Styles
   height: 0;
 }
 
-/* line 281, ../scss/_base.scss */
+/* line 282, ../scss/_base.scss */
 .clearfix {
   display: inline-block;
 }
 
-/* line 285, ../scss/_base.scss */
+/* line 286, ../scss/_base.scss */
 html[xmlns] .clearfix {
   display: block;
 }
 
-/* line 289, ../scss/_base.scss */
+/* line 290, ../scss/_base.scss */
 * html .clearfix {
   height: 1%;
 }
@@ -406,58 +407,58 @@ html[xmlns] .clearfix {
 Small Device Styles
 *******************************************************************************/
 @media screen and (max-width: 480px) {
-  /* line 298, ../scss/_base.scss */
+  /* line 299, ../scss/_base.scss */
   body {
     font-size: 14px;
   }
 
-  /* line 302, ../scss/_base.scss */
+  /* line 303, ../scss/_base.scss */
   #downloads {
     display: none;
   }
 
-  /* line 306, ../scss/_base.scss */
+  /* line 307, ../scss/_base.scss */
   .inner {
     min-width: 320px;
     max-width: 480px;
   }
 
-  /* line 311, ../scss/_base.scss */
+  /* line 312, ../scss/_base.scss */
   #project_title {
     font-size: 32px;
   }
 
-  /* line 315, ../scss/_base.scss */
+  /* line 316, ../scss/_base.scss */
   h1 {
     font-size: 28px;
   }
 
-  /* line 319, ../scss/_base.scss */
+  /* line 320, ../scss/_base.scss */
   h2 {
     font-size: 24px;
   }
 
-  /* line 323, ../scss/_base.scss */
+  /* line 324, ../scss/_base.scss */
   h3 {
     font-size: 21px;
   }
 
-  /* line 327, ../scss/_base.scss */
+  /* line 328, ../scss/_base.scss */
   h4 {
     font-size: 18px;
   }
 
-  /* line 331, ../scss/_base.scss */
+  /* line 332, ../scss/_base.scss */
   h5 {
     font-size: 14px;
   }
 
-  /* line 335, ../scss/_base.scss */
+  /* line 336, ../scss/_base.scss */
   h6 {
     font-size: 12px;
   }
 
-  /* line 339, ../scss/_base.scss */
+  /* line 340, ../scss/_base.scss */
   code, pre {
     min-width: 320px;
     max-width: 480px;
@@ -469,29 +470,35 @@ Small Device Styles
   display: inline-block;
   height: 58px;
   width: 58px;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -ms-border-radius: 32px;
+  -o-border-radius: 32px;
+  border-radius: 32px;
 }
-/* line 8, ../scss/_social.scss */
+/* line 9, ../scss/_social.scss */
 .social .linkedin {
   background: url('/images/social-se00b37f423.png') 0 -290px no-repeat;
 }
-/* line 12, ../scss/_social.scss */
+/* line 13, ../scss/_social.scss */
 .social .twitter {
   background: url('/images/social-se00b37f423.png') 0 -174px no-repeat;
 }
-/* line 16, ../scss/_social.scss */
+/* line 17, ../scss/_social.scss */
 .social .google {
   background: url('/images/social-se00b37f423.png') 0 0 no-repeat;
 }
-/* line 20, ../scss/_social.scss */
+/* line 21, ../scss/_social.scss */
 .social .github {
   background: url('/images/social-se00b37f423.png') 0 -116px no-repeat;
 }
-/* line 24, ../scss/_social.scss */
+/* line 25, ../scss/_social.scss */
 .social .dblp {
   background: url('/images/social-se00b37f423.png') 0 -58px no-repeat;
+  background-color: #fff;
 }
 
-/* line 29, ../scss/_social.scss */
+/* line 31, ../scss/_social.scss */
 .hexagon {
   overflow: hidden;
   visibility: hidden;
@@ -505,7 +512,7 @@ Small Device Styles
   display: inline-block;
 }
 
-/* line 38, ../scss/_social.scss */
+/* line 40, ../scss/_social.scss */
 .hexagon-in1 {
   overflow: hidden;
   width: 100%;
@@ -517,7 +524,7 @@ Small Device Styles
   transform: rotate(-60deg);
 }
 
-/* line 45, ../scss/_social.scss */
+/* line 47, ../scss/_social.scss */
 .hexagon-in2 {
   width: 100%;
   height: 100%;
@@ -529,29 +536,29 @@ Small Device Styles
   -o-transform: rotate(-60deg);
   transform: rotate(-60deg);
 }
-/* line 52, ../scss/_social.scss */
+/* line 54, ../scss/_social.scss */
 .hexagon-in2.linkedin {
   background-image: url(../images/social/linkedin-hex.png);
 }
-/* line 56, ../scss/_social.scss */
+/* line 58, ../scss/_social.scss */
 .hexagon-in2.github {
   background-image: url(../images/social/github-hex.png);
 }
-/* line 60, ../scss/_social.scss */
+/* line 62, ../scss/_social.scss */
 .hexagon-in2.twitter {
   background-image: url(../images/social/twitter-hex.png);
 }
-/* line 64, ../scss/_social.scss */
+/* line 66, ../scss/_social.scss */
 .hexagon-in2.google {
   background-image: url(../images/social/google-hex.png);
 }
 
-/* line 69, ../scss/_social.scss */
+/* line 71, ../scss/_social.scss */
 .dblp {
   background-image: url(../images/social/dblp.png);
 }
 
-/* line 73, ../scss/_social.scss */
+/* line 75, ../scss/_social.scss */
 .careers {
   background-image: url(../images/social/careers.png);
 }
