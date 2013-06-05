@@ -31,7 +31,7 @@ layout: default
         </li>
         {% else %}
         <li>
-            <a href="{{paginator.previous_page_path}}">&laquo;</a>
+            <a href="/blog/{{paginator.previous_page_path}}">&laquo;</a>
         </li>
         {% endif %}
         {% else %}
@@ -45,7 +45,7 @@ layout: default
         </li>
         {% else %}
         <li>
-            <a href="/">1</a>
+            <a href="/blog">1</a>
         </li>
         {% endif %}
         {% for count in (2..paginator.total_pages) %}
@@ -55,13 +55,13 @@ layout: default
         </li>
         {% else %}
         <li>
-            <a href="{{ paginator.page.path }}">{{count}}</a>
+            <a href="/blog/page-{{count}}">{{count}}</a>
         </li>
         {% endif %}
         {% endfor %}
         {% if paginator.next_page %}
         <li>
-            <a href="{{paginator.next_page_path}}">&raquo;</a>
+            <a href="/blog/{{paginator.next_page_path}}">&raquo;</a>
         </li>
         {% else %}
         <li class="disabled">
