@@ -1,13 +1,24 @@
 ---
 layout: default
 ---
+{% assign year = paginator.posts[0].date | date: "%Y" %}
+<h3>{{ year }}</h3>
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
-<div class="recent-entry">
-    <h3><a href="{{ post.url }}" rel="bookmark" title="Permanent link to ">{{ post.title }}</a></h3>
-    {% include post-meta.html %}
-</div>
-<br>
+    {% assign post_year = post.date | date: "%Y" %}
+    {% if post_year < year %}
+        {% assign year = post_year %}
+        <h3>{{ year }}</h3>
+    {% endif %}
+    <div class="recent-entry">
+        <h3><a href="{{ post.url }}" rel="bookmark" title="Permanent link to ">{{ post.title }}</a></h3>
+        <ul class="tags clearfix">
+            {% for cat in post.categories %}
+            <li><a href="/categories/{{cat}}.html">{{ cat }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <br>
 {% endfor %}
 
 <!-- Pagination links -->
