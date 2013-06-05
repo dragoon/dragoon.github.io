@@ -754,3 +754,72 @@ ul.menu li a:hover {
   top: 10px;
   left: -50px;
 }
+
+/* ------- pagination -------- */
+/* line 35, ../scss/_main.scss */
+.pagination {
+  height: 36px;
+}
+
+/* line 39, ../scss/_main.scss */
+.pagination ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* line 47, ../scss/_main.scss */
+.pagination li {
+  display: inline;
+}
+
+/* line 51, ../scss/_main.scss */
+.pagination li:first-child a {
+  border-left-width: 1px;
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* line 58, ../scss/_main.scss */
+.pagination li:last-child a {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+
+/* line 62, ../scss/_main.scss */
+.pagination a {
+  float: left;
+  padding: 0 14px;
+  line-height: 34px;
+  border: 1px solid #DDD;
+  border-left-width: 0;
+}
+
+/* line 70, ../scss/_main.scss */
+.pagination a:hover, .active a {
+  background-color: whiteSmoke;
+}
+
+/* line 75, ../scss/_main.scss */
+.disabled a, .disabled a:hover,
+.active a, .active a:hover {
+  color: #999;
+  cursor: default;
+}
+
+/* line 80, ../scss/_main.scss */
+.disabled a:hover {
+  background-color: transparent;
+}
