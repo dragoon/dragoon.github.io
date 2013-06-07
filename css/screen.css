@@ -259,19 +259,18 @@ dl p {
 /* line 166, ../scss/_base.scss */
 hr {
   height: 1px;
-  margin-bottom: 5px;
   border: none;
   background: url("../images/bg_hr.png") repeat-x center;
 }
 
-/* line 173, ../scss/_base.scss */
+/* line 172, ../scss/_base.scss */
 table {
   border: 1px solid #373737;
   margin-bottom: 20px;
   text-align: left;
 }
 
-/* line 179, ../scss/_base.scss */
+/* line 178, ../scss/_base.scss */
 th {
   font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 10px;
@@ -279,19 +278,19 @@ th {
   color: #fff;
 }
 
-/* line 186, ../scss/_base.scss */
+/* line 185, ../scss/_base.scss */
 td {
   padding: 10px;
   border: 1px solid #373737;
 }
 
-/* line 191, ../scss/_base.scss */
+/* line 190, ../scss/_base.scss */
 form {
   background: #f2f2f2;
   padding: 20px;
 }
 
-/* line 196, ../scss/_base.scss */
+/* line 195, ../scss/_base.scss */
 img {
   display: inline;
   margin-right: 1.5em;
@@ -301,12 +300,12 @@ img {
 /*******************************************************************************
 Full-Width Styles
 *******************************************************************************/
-/* line 206, ../scss/_base.scss */
+/* line 205, ../scss/_base.scss */
 .outer {
   width: 100%;
 }
 
-/* line 210, ../scss/_base.scss */
+/* line 209, ../scss/_base.scss */
 .inner {
   position: relative;
   max-width: 800px;
@@ -314,7 +313,7 @@ Full-Width Styles
   margin: 0 auto;
 }
 
-/* line 217, ../scss/_base.scss */
+/* line 216, ../scss/_base.scss */
 #forkme_banner {
   display: block;
   position: absolute;
@@ -330,17 +329,17 @@ Full-Width Styles
   border-bottom-right-radius: 2px;
 }
 
-/* line 232, ../scss/_base.scss */
+/* line 231, ../scss/_base.scss */
 #header_wrap {
   background: #212121;
 }
 
-/* line 236, ../scss/_base.scss */
+/* line 235, ../scss/_base.scss */
 #header_wrap .inner {
   padding: 30px 10px 10px 10px;
 }
 
-/* line 240, ../scss/_base.scss */
+/* line 239, ../scss/_base.scss */
 #project_title {
   margin: 0;
   color: #fff;
@@ -349,7 +348,7 @@ Full-Width Styles
   text-shadow: #111 0px 0px 10px;
 }
 
-/* line 248, ../scss/_base.scss */
+/* line 247, ../scss/_base.scss */
 #project_tagline {
   color: #fff;
   font-size: 28px;
@@ -360,25 +359,25 @@ Full-Width Styles
   margin-top: 0;
 }
 
-/* line 258, ../scss/_base.scss */
+/* line 257, ../scss/_base.scss */
 #main_content_wrap {
   background: #f2f2f2;
   border-top: 1px solid #111;
   border-bottom: 1px solid #111;
 }
 
-/* line 264, ../scss/_base.scss */
+/* line 263, ../scss/_base.scss */
 #main_content {
   padding-top: 40px;
   z-index: 1;
 }
 
-/* line 269, ../scss/_base.scss */
+/* line 268, ../scss/_base.scss */
 #footer_wrap {
   background: #212121;
 }
 
-/* line 273, ../scss/_base.scss */
+/* line 272, ../scss/_base.scss */
 .clearfix:after {
   content: ".";
   display: block;
@@ -388,17 +387,17 @@ Full-Width Styles
   height: 0;
 }
 
-/* line 282, ../scss/_base.scss */
+/* line 281, ../scss/_base.scss */
 .clearfix {
   display: inline-block;
 }
 
-/* line 286, ../scss/_base.scss */
+/* line 285, ../scss/_base.scss */
 html[xmlns] .clearfix {
   display: block;
 }
 
-/* line 290, ../scss/_base.scss */
+/* line 289, ../scss/_base.scss */
 * html .clearfix {
   height: 1%;
 }
@@ -407,58 +406,58 @@ html[xmlns] .clearfix {
 Small Device Styles
 *******************************************************************************/
 @media screen and (max-width: 480px) {
-  /* line 299, ../scss/_base.scss */
+  /* line 298, ../scss/_base.scss */
   body {
     font-size: 14px;
   }
 
-  /* line 303, ../scss/_base.scss */
+  /* line 302, ../scss/_base.scss */
   #downloads {
     display: none;
   }
 
-  /* line 307, ../scss/_base.scss */
+  /* line 306, ../scss/_base.scss */
   .inner {
     min-width: 320px;
     max-width: 480px;
   }
 
-  /* line 312, ../scss/_base.scss */
+  /* line 311, ../scss/_base.scss */
   #project_title {
     font-size: 32px;
   }
 
-  /* line 316, ../scss/_base.scss */
+  /* line 315, ../scss/_base.scss */
   h1 {
     font-size: 28px;
   }
 
-  /* line 320, ../scss/_base.scss */
+  /* line 319, ../scss/_base.scss */
   h2 {
     font-size: 24px;
   }
 
-  /* line 324, ../scss/_base.scss */
+  /* line 323, ../scss/_base.scss */
   h3 {
     font-size: 21px;
   }
 
-  /* line 328, ../scss/_base.scss */
+  /* line 327, ../scss/_base.scss */
   h4 {
     font-size: 18px;
   }
 
-  /* line 332, ../scss/_base.scss */
+  /* line 331, ../scss/_base.scss */
   h5 {
     font-size: 14px;
   }
 
-  /* line 336, ../scss/_base.scss */
+  /* line 335, ../scss/_base.scss */
   h6 {
     font-size: 12px;
   }
 
-  /* line 340, ../scss/_base.scss */
+  /* line 339, ../scss/_base.scss */
   code, pre {
     min-width: 320px;
     max-width: 480px;
