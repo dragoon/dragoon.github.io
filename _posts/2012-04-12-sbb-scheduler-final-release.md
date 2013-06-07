@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SBB Scheduler final release"
+title: "Swiss Stationboards stable release (Obsolete)"
 date: 2012-04-12
 comments: false
 categories:
