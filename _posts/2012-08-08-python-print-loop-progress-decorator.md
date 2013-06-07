@@ -9,5 +9,6 @@ categories:
 ---
 
 
-Posted Q&A on <a href="http://stackoverflow.com/">Stackoverflow</a> about how to write unobtrusive wrapper to print loop progress while doing long-running processing:
+Posted Q&A on <a href="http://stackoverflow.com/">Stackoverflow</a> about how to write unobtrusive wrapper to **print loop progress** while doing long-running processing:
+
 [http://stackoverflow.com/questions/11863537/python-django-print-loop-progress-along-the-way](http://stackoverflow.com/questions/11863537/python-django-print-loop-progress-along-the-way)
