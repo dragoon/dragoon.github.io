@@ -19,8 +19,7 @@ This feature becomes priceless when your phone **always finds nearest station in
 You should definitely try it of you live in Switzerland and use public transport:
 
 <a href="https://play.google.com/store/apps/details?id=com.schedulr">
-  <img alt="Android app on Google Play"
-       src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png" />
+  <img alt="Android app on Google Play" src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png" />
 </a>
 
 Next target - iPhone!
