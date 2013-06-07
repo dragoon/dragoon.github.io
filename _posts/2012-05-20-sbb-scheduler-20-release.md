@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SBB scheduler 2.0 release"
+title: "Swiss Stationboards release 2.0"
 date: 2012-05-20
 comments: false
 categories:
