@@ -13,6 +13,7 @@ categories:
 Few links on django best practices and on creating django reusable apps in particular:
 
 <a href="http://lincolnloop.com/django-best-practices/index.html">http://lincolnloop.com/django-best-practices/index.html</a>
+<br>
 <a href="http://stackoverflow.com/questions/1419442/how-to-model-a-foreign-key-in-a-reusable-django-app">http://stackoverflow.com/questions/1419442/how-to-model-a-foreign-key-in-a-reusable-django-app</a>
 
 The discussion on how to support multiple settings (first link) is especially interesting, because django doesn't give any clue on how to create such configurations.
