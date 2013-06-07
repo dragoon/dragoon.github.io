@@ -17,6 +17,10 @@ In this release we have added one valuable feature - *favorite stations*. Basica
 This feature becomes priceless when your phone **always finds nearest station incorrectly**, like one or two stations farther, and it could be super-annoying, but it no longer is. As soon as you put correct station to favorites list, it will be **always displayed first** when found nearby.
 
 You should definitely try it of you live in Switzerland and use public transport:
-<a href="https://play.google.com/store/apps/details?id=com.schedulr">https://play.google.com/store/apps/details?id=com.schedulr</a>
 
-Next target - *iPhone*!
+<a href="https://play.google.com/store/apps/details?id=com.schedulr">
+  <img alt="Android app on Google Play"
+       src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png" />
+</a>
+
+Next target - iPhone!
