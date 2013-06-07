@@ -11,7 +11,7 @@ categories:
 ---
 
 
-It's been some time since <a href="http://blog.prokofyev.ch/2012/03/tpf-mobile-app.html">I wrote about TPF Scheduler</a>. In the meanwhile, I've attended <a href="http://make.opendata.ch/doku.php?id=event:2012-03">second Swiss OpenData Camp</a> in Geneva with the hope to find information about *Swiss Public Transport API*. And I found it! The API was shown to the public on this event and now anyone can query public transport API (or install by yourself) located at: <a href="http://transport.opendata.ch/">http://transport.opendata.ch/</a>.
+It's been some time since <a href="http://prokofyev.ch/2012/03/tpf-mobile-app.html">I wrote about TPF Scheduler</a>. In the meanwhile, I've attended <a href="http://make.opendata.ch/doku.php?id=event:2012-03">second Swiss OpenData Camp</a> in Geneva with the hope to find information about *Swiss Public Transport API*. And I found it! The API was shown to the public on this event and now anyone can query public transport API (or install by yourself) located at: <a href="http://transport.opendata.ch/">http://transport.opendata.ch/</a>.
 
 This API was exactly what I need to finish my application. So after a week of work I've upgraded my TPF application to work with this API and support *all public transport* across Switzerland.
 
