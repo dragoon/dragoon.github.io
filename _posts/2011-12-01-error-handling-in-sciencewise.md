@@ -9,7 +9,9 @@ categories:
 ---
 
 
-It's not a secret that a lot of scientific projects suck when it comes to user interfaces. I think this usually happens because they can't just hire professional designers and usability experts, they should do a lot of **science**, conduct experiments, obtain data, you know, ****and such irregularity leads to ugly interfaces, if any.
+It's not a secret that a lot of scientific projects suck when it comes to user interfaces.
+I think this usually happens because they can't just hire professional designers and usability experts,
+they should do **a lot of science**, conduct experiments, obtain data, you know, and such irregularity leads to ugly interfaces, if any.
 
 Here, at **<a href="http://sciencewise.info/">ScienceWISE</a>**, we also can't hire professional designers ;), but we always try to make the most of our abilities, try to make the project look attractive and make our visitors feel comfortable using it.
 
