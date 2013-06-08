@@ -3,7 +3,6 @@
         display: inline-block;
         height: 58px;
         width: 58px;
-        @include border-radius(32px);
     }
 
     .linkedin {
@@ -24,7 +23,10 @@
 
     .dblp {
         background: sprite($social, dblp) no-repeat;
-        background-color: #fff;
+    }
+
+    .careers {
+        background: sprite($social, careers) no-repeat;
     }
 }
 

@@ -470,35 +470,33 @@ Small Device Styles
   display: inline-block;
   height: 58px;
   width: 58px;
-  -webkit-border-radius: 32px;
-  -moz-border-radius: 32px;
-  -ms-border-radius: 32px;
-  -o-border-radius: 32px;
-  border-radius: 32px;
 }
-/* line 9, ../scss/_social.scss */
+/* line 8, ../scss/_social.scss */
 .social .linkedin {
-  background: url('/images/social-se00b37f423.png') 0 -290px no-repeat;
+  background: url('/images/social-s8644261f02.png') 0 -290px no-repeat;
 }
-/* line 13, ../scss/_social.scss */
+/* line 12, ../scss/_social.scss */
 .social .twitter {
-  background: url('/images/social-se00b37f423.png') 0 -174px no-repeat;
+  background: url('/images/social-s8644261f02.png') 0 -174px no-repeat;
 }
-/* line 17, ../scss/_social.scss */
+/* line 16, ../scss/_social.scss */
 .social .google {
-  background: url('/images/social-se00b37f423.png') 0 0 no-repeat;
+  background: url('/images/social-s8644261f02.png') 0 0 no-repeat;
 }
-/* line 21, ../scss/_social.scss */
+/* line 20, ../scss/_social.scss */
 .social .github {
-  background: url('/images/social-se00b37f423.png') 0 -116px no-repeat;
+  background: url('/images/social-s8644261f02.png') 0 -116px no-repeat;
 }
-/* line 25, ../scss/_social.scss */
+/* line 24, ../scss/_social.scss */
 .social .dblp {
-  background: url('/images/social-se00b37f423.png') 0 -58px no-repeat;
-  background-color: #fff;
+  background: url('/images/social-s8644261f02.png') 0 -58px no-repeat;
+}
+/* line 28, ../scss/_social.scss */
+.social .careers {
+  background: url('/images/social-s8644261f02.png') 0 -348px no-repeat;
 }
 
-/* line 31, ../scss/_social.scss */
+/* line 33, ../scss/_social.scss */
 .hexagon {
   overflow: hidden;
   visibility: hidden;
@@ -512,7 +510,7 @@ Small Device Styles
   display: inline-block;
 }
 
-/* line 40, ../scss/_social.scss */
+/* line 42, ../scss/_social.scss */
 .hexagon-in1 {
   overflow: hidden;
   width: 100%;
@@ -524,7 +522,7 @@ Small Device Styles
   transform: rotate(-60deg);
 }
 
-/* line 47, ../scss/_social.scss */
+/* line 49, ../scss/_social.scss */
 .hexagon-in2 {
   width: 100%;
   height: 100%;
@@ -536,29 +534,29 @@ Small Device Styles
   -o-transform: rotate(-60deg);
   transform: rotate(-60deg);
 }
-/* line 54, ../scss/_social.scss */
+/* line 56, ../scss/_social.scss */
 .hexagon-in2.linkedin {
   background-image: url(../images/social/linkedin-hex.png);
 }
-/* line 58, ../scss/_social.scss */
+/* line 60, ../scss/_social.scss */
 .hexagon-in2.github {
   background-image: url(../images/social/github-hex.png);
 }
-/* line 62, ../scss/_social.scss */
+/* line 64, ../scss/_social.scss */
 .hexagon-in2.twitter {
   background-image: url(../images/social/twitter-hex.png);
 }
-/* line 66, ../scss/_social.scss */
+/* line 68, ../scss/_social.scss */
 .hexagon-in2.google {
   background-image: url(../images/social/google-hex.png);
 }
 
-/* line 71, ../scss/_social.scss */
+/* line 73, ../scss/_social.scss */
 .dblp {
   background-image: url(../images/social/dblp.png);
 }
 
-/* line 75, ../scss/_social.scss */
+/* line 77, ../scss/_social.scss */
 .careers {
   background-image: url(../images/social/careers.png);
 }
