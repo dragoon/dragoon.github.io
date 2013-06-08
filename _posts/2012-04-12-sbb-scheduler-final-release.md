@@ -17,14 +17,19 @@ This API was exactly what I need to finish my application. So after a week of wo
 
 As usual, application can be access from the same url: <a href="http://prokofyev.ch/tpf/">http://prokofyev.ch/tpf/</a> and also from <a href="http://prokofyev.ch/sbb/">http://prokofyev.ch/sbb/</a>.
 I've also added HTML5 **geolocation **to it, so if you're inside Switzerland, you can try it and see what station are near you. If you're not, there is also a possibility to supply raw coordinates:
+<br>
 <a href="http://prokofyev.ch/sbb/?x=46.802877773762894&amp;y=7.151651249648352">http://prokofyev.ch/sbb/?x=46.802877773762894&amp;y=7.151651249648352</a>.
 
 Current features of the application include:
 
-<ul style="text-align: left;"><li>Automatic geolocation and finding nearest stations</li><li>Buttons to update location and to update schedule for the current station</li><li>Filtration of stations by train-only stations.</li></ul>
+* Automatic geolocation and finding nearest stations
+* Buttons to update location and to update schedule for the current station
+* Filtration of stations by train-only stations.
+
 Description of the project on the make.opendata.ch: <a href="http://make.opendata.ch/doku.php?id=project:transport:swiss-scheduler">http://make.opendata.ch/doku.php?id=project:transport:swiss-scheduler</a>
 
 Here are the final screenshots:
+
 <a href="http://4.bp.blogspot.com/-yMRhCo-bXO4/T4XnoNmDI_I/AAAAAAAADro/HZUL0-N8hSo/s1600/screenshot1.png" imageanchor="1" style="float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="400" src="http://4.bp.blogspot.com/-yMRhCo-bXO4/T4XnoNmDI_I/AAAAAAAADro/HZUL0-N8hSo/s400/screenshot1.png" width="246" /></a><a href="http://4.bp.blogspot.com/-TRXakuFaW8o/T4XnpPNNHNI/AAAAAAAADrw/4FyT_mkRl0Y/s1600/screenshot2.png" imageanchor="1" style="float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="400" src="http://4.bp.blogspot.com/-TRXakuFaW8o/T4XnpPNNHNI/AAAAAAAADrw/4FyT_mkRl0Y/s400/screenshot2.png" width="253" /></a><a href="http://3.bp.blogspot.com/-IBo5kz-E9Hk/T4XnqJ889OI/AAAAAAAADr4/Dk4SO--l0Lo/s1600/screenshot3.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="400" src="http://3.bp.blogspot.com/-IBo5kz-E9Hk/T4XnqJ889OI/AAAAAAAADr4/Dk4SO--l0Lo/s400/screenshot3.png" width="262" /></a>
 
 
