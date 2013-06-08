@@ -18,7 +18,7 @@ categories:
 Рассмотрим следующий показательный дем с главной:
 <a href="http://demotivation.me/dqnjna79u4l9pic.html">http://demotivation.me/dqnjna79u4l9pic.html</a>
 
-<img src="http://demotivation.me/images/20120910/dqnjna79u4l9.jpg" width="600"/>
+<img src="http://demotivation.me/images/20120910/dqnjna79u4l9.jpg"/>
 Значительная часть демов c главной имеет схожую тематику - высмеивание текущей власти в России.
 Большинство комментариев к таким демам преследуют ту же цель, но бывают и исключения, пытающиеся власть защитить.
 Вот например одно них:
