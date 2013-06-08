@@ -175,14 +175,21 @@ img {
   margin: 0 auto;
   max-width: 739px;
   padding: 5px;
-  margin: 10px 0 10px 0;
+  margin-left: 0;
+  margin-bottom: 10px;
+  margin-right: 0;
+  margin-top: 0;
   border: 1px solid #ebebeb;
   -webkit-box-shadow: 0 0 5px #ebebeb;
   -moz-box-shadow: 0 0 5px #ebebeb;
   box-shadow: 0 0 5px #ebebeb;
 }
+/* line 102, ../scss/_base.scss */
+img[align="left"] {
+  margin-right: 25px;
+}
 
-/* line 101, ../scss/_base.scss */
+/* line 107, ../scss/_base.scss */
 pre, code {
   width: 100%;
   color: #222;
@@ -194,7 +201,7 @@ pre, code {
   -webkit-border-radius: 2px;
 }
 
-/* line 114, ../scss/_base.scss */
+/* line 120, ../scss/_base.scss */
 pre {
   width: 100%;
   padding: 10px;
@@ -202,20 +209,20 @@ pre {
   overflow: auto;
 }
 
-/* line 121, ../scss/_base.scss */
+/* line 127, ../scss/_base.scss */
 code {
   padding: 3px;
   margin: 0 3px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* line 127, ../scss/_base.scss */
+/* line 133, ../scss/_base.scss */
 pre code {
   display: block;
   box-shadow: none;
 }
 
-/* line 132, ../scss/_base.scss */
+/* line 138, ../scss/_base.scss */
 blockquote {
   color: #666;
   margin-bottom: 20px;
@@ -223,55 +230,55 @@ blockquote {
   border-left: 3px solid #bbb;
 }
 
-/* line 139, ../scss/_base.scss */
+/* line 145, ../scss/_base.scss */
 ul, ol, dl {
   margin-bottom: 15px;
 }
 
-/* line 143, ../scss/_base.scss */
+/* line 149, ../scss/_base.scss */
 ul li {
   list-style: inside;
   padding-left: 20px;
 }
 
-/* line 148, ../scss/_base.scss */
+/* line 154, ../scss/_base.scss */
 ol li {
   list-style: decimal inside;
   padding-left: 20px;
 }
 
-/* line 153, ../scss/_base.scss */
+/* line 159, ../scss/_base.scss */
 dl dt {
   font-weight: bold;
 }
 
-/* line 157, ../scss/_base.scss */
+/* line 163, ../scss/_base.scss */
 dl dd {
   padding-left: 20px;
   font-style: italic;
 }
 
-/* line 162, ../scss/_base.scss */
+/* line 168, ../scss/_base.scss */
 dl p {
   padding-left: 20px;
   font-style: italic;
 }
 
-/* line 167, ../scss/_base.scss */
+/* line 173, ../scss/_base.scss */
 hr {
   height: 1px;
   border: none;
   background: url("../images/bg_hr.png") repeat-x center;
 }
 
-/* line 173, ../scss/_base.scss */
+/* line 179, ../scss/_base.scss */
 table {
   border: 1px solid #373737;
   margin-bottom: 20px;
   text-align: left;
 }
 
-/* line 179, ../scss/_base.scss */
+/* line 185, ../scss/_base.scss */
 th {
   font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 10px;
@@ -279,23 +286,16 @@ th {
   color: #fff;
 }
 
-/* line 186, ../scss/_base.scss */
+/* line 192, ../scss/_base.scss */
 td {
   padding: 10px;
   border: 1px solid #373737;
 }
 
-/* line 191, ../scss/_base.scss */
+/* line 197, ../scss/_base.scss */
 form {
   background: #f2f2f2;
   padding: 20px;
-}
-
-/* line 196, ../scss/_base.scss */
-img {
-  display: inline;
-  margin-right: 1.5em;
-  margin-top: 0;
 }
 
 /*******************************************************************************

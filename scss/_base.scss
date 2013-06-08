@@ -92,10 +92,16 @@ img {
   margin: 0 auto;
   max-width: 739px;
   padding: 5px;
-  margin: 10px 0 10px 0;
-  border: 1px solid #ebebeb;
+    margin-left: 0;
+    margin-bottom: 10px;
+    margin-right: 0;
+    margin-top: 0;
+    border: 1px solid #ebebeb;
 
   @include box-shadow(0 0 5px #ebebeb);
+    &[align="left"] {
+        margin-right: 25px;
+    }
 }
 
 pre, code {
@@ -191,12 +197,6 @@ td {
 form {
   background: #f2f2f2;
   padding: 20px;
-}
-
-img {
-    display: inline;
-    margin-right: 1.5em;
-    margin-top: 0;
 }
 
 /*******************************************************************************
