@@ -4,10 +4,8 @@ title: "Swiss Stationboards stable release (Obsolete)"
 date: 2012-04-12
 comments: false
 categories:
- - sbb
- - switzerland
  - en
- - transport
+ - stationboards-app
 ---
 
 

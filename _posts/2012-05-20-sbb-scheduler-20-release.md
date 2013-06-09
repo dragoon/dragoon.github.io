@@ -4,10 +4,8 @@ title: "Swiss Stationboards release 2.0"
 date: 2012-05-20
 comments: false
 categories:
- - sbb
- - switzerland
  - en
- - transport
+ - stationboards-app
 ---
 
 
