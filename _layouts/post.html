@@ -2,10 +2,10 @@
 layout: default
 ---
 
-<h2 class="content">{{ page.title }}</h2>
+<h2 itemprop="name headline" class="content">{{ page.title }}</h2>
 {% assign post = page %}
 {% include post-meta.html %}
-<div class='post'>
+<div itemscope="" itemtype="http://schema.org/BlogPosting" itemprop="articleBody" class='post'>
     {{ content }}
 </div>
 
