@@ -14,11 +14,14 @@ layout: post
 
     .canton {
         fill: #fff;
-        stroke-width: 1px;
     }
     .canton:hover {
         stroke: #006400;
         -webkit-svg-shadow: 2px 2px 7px #006400;
+    }
+
+    .municipality {
+        fill: #fff;
     }
 
     .canton-boundary {
@@ -78,8 +81,16 @@ layout: post
 
     var rateById = d3.map();
 
+    var rateByIdMunic = d3.map();
+
     var quantize = d3.scale.quantize()
             .domain([0, 500])
+            .range(d3.range(9).map(function(i){
+                return "q" + i + "-9";
+            }));
+
+    var quantize_munic = d3.scale.quantize()
+            .domain([0, 50])
             .range(d3.range(9).map(function(i){
                 return "q" + i + "-9";
             }));
@@ -87,12 +98,20 @@ layout: post
     var path = d3.geo.path()
             .projection(projection);
 
-    var svg = d3.select("#graph").append("svg")
+    var cantons_svg = d3.select("#graph").append("svg")
             .attr("width", width)
             .attr("height", height);
+
+    var munic_svg = d3.select("#graph").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
     queue().defer(d3.json, "{{ page.topojson }}")
            .defer(d3.csv, "{{ page.csvdata }}", function(d) {
                           rateById.set(d.id, +d.rate);
+                      })
+           .defer(d3.csv, "{{ page.muncsv }}", function(d) {
+                          rateByIdMunic.set(d.id, +d.rate);
                       })
            .await(ready);
     var tooltip = d3.select("body")
@@ -100,7 +119,7 @@ layout: post
             .attr("id", "tooltip");
 
     function ready(error, topology) {
-        svg.append("g")
+        cantons_svg.append("g")
                 .selectAll("path")
                 .data(topojson.feature(topology, topology.objects.cantons).features)
                 .enter().append("path")
@@ -109,7 +128,7 @@ layout: post
                 .on("mouseover", function (d) {
                         tooltip.text(d.properties.name + ": " + rateById.get(d.properties.abbr));
                         tooltip.style("visibility", "visible");
-                        svg.selectAll("path.canton").sort(function (a, b) { // select the parent and sort the path's
+                        cantons_svg.selectAll("path.canton").sort(function (a, b) { // select the parent and sort the path's
                             if (a.properties.no != d.properties.no) return -1;               // a it's not the hovered element, send "a" to the back
                             else return 1;                             // a it's the hovered element, bring "a" to the front
                         });
@@ -121,7 +140,47 @@ layout: post
                         tooltip.style("visibility", "hidden");
                     });
 
-        svg.append("path")
+        cantons_svg.append("path")
+                .datum(topojson.mesh(topology, topology.objects.cantons, function(a, b) { return a.properties.no !== b.properties.no}))
+                .attr("d", path)
+                .attr("class", "canton-boundary");
+
+        munic_svg.append("g")
+                .selectAll("path")
+                .data(topojson.feature(topology, topology.objects["swiss-municipalities"]).features)
+                .enter().append("path")
+                .attr("class", function(d) {
+                                  return quantize_munic(rateByIdMunic.get(d.properties.name))+ " municipality";
+                              })
+                .attr("d", path)
+                .on("mouseover", function (d) {
+                        if (!rateByIdMunic.get(d.properties.name)) {
+                            return;
+                        }
+                        tooltip.text(d.properties.name + ": " + rateByIdMunic.get(d.properties.name));
+                        tooltip.style("visibility", "visible");
+                    })
+                .on("mousemove", function (d) {
+                        tooltip.style("top", (event.pageY - 10) + "px").style("left", (event.pageX + 10) + "px");
+                    })
+                .on("mouseout", function (d) {
+                        tooltip.style("visibility", "hidden");
+                    });
+
+        munic_svg.append("path")
+                .datum(topojson.mesh(topology, topology.objects["swiss-municipalities"], function (a, b) {
+                    return a.properties.bfsNo !== b.properties.bfsNo
+                }))
+                .attr("d", path)
+                .attr("class", "municipality-boundary");
+        munic_svg.append("path")
+                .datum(topojson.mesh(topology, topology.objects["cantons"], function (a, b) {
+                    return a.properties.no === b.properties.no;
+                }))
+                .attr("d", path)
+                .attr("class", "land-boundary");
+
+        munic_svg.append("path")
                 .datum(topojson.mesh(topology, topology.objects.cantons, function(a, b) { return a.properties.no !== b.properties.no}))
                 .attr("d", path)
                 .attr("class", "canton-boundary");
