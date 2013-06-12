@@ -1,7 +1,7 @@
 ---
 layout: d3graph
 title: "Swiss Stationboards usage map"
-date: 2013-06-09
+date: 2013-06-12
 comments: false
 categories:
 - stationboards-app
