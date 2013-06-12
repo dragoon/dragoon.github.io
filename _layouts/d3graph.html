@@ -12,10 +12,6 @@ layout: post
         stroke: #888;
     }
 
-    .cantons {
-        fill: #fff;
-    }
-
     .canton {
         fill: #fff;
         stroke-width: 1px;
@@ -83,7 +79,7 @@ layout: post
     var rateById = d3.map();
 
     var quantize = d3.scale.quantize()
-            .domain([0, 300])
+            .domain([0, 500])
             .range(d3.range(9).map(function(i){
                 return "q" + i + "-9";
             }));
@@ -105,7 +101,6 @@ layout: post
 
     function ready(error, topology) {
         svg.append("g")
-                .attr("class", "cantons")
                 .selectAll("path")
                 .data(topojson.feature(topology, topology.objects.cantons).features)
                 .enter().append("path")
@@ -131,27 +126,5 @@ layout: post
                 .attr("d", path)
                 .attr("class", "canton-boundary");
     }
-
-    /*d3.json("https://dl.dropbox.com/u/7737209/switzerland.json", function(error, topology) {
-        svg.append("path")
-                .datum(topojson.object(topology, topology.objects["cantons"]))
-                .attr("d", path)
-                .attr("class", "cantons");
-
-        svg.append("path")
-                .datum(topojson.mesh(topology, topology.objects["swiss-municipalities"], function(a, b) { return a.properties.bfsNo !== b.properties.bfsNo }))
-                .attr("d", path)
-                .attr("class", "municipality-boundary");
-
-        svg.append("path")
-                .datum(topojson.mesh(topology, topology.objects["cantons"], function(a, b) { return a.properties.no !== b.properties.no}))
-                .attr("d", path)
-                .attr("class", "canton-boundary");
-
-        svg.append("path")
-                .datum(topojson.mesh(topology, topology.objects["swiss-cantons"], function(a, b) { return a.properties.no === b.properties.no; }))
-                .attr("d", path)
-                .attr("class", "land-boundary");
-    });*/
 
 </script>
