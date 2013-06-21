@@ -25,8 +25,15 @@ Each time a user loads some station, we either add this station to the databse w
 or increment the station's count if already exists. 
 But there are two hidden pitfalls here &mdash; unlimited increments for both number of usages per station and the overall count of stations itself.
 
-Nowadays, it's more probable that the end of the world will happen earlier than someone will access some station 2<sup>64</sup> times during his life.
+The number of usages per station is important not because of potential integer/long overflow.
+Nowadays, it's more likely that the end of the world will happen earlier than someone will access some station 2<sup>64</sup> times during his life.
+This number is important because it's very likely that a person can change his home/office many times.
+So we want to set some upper limit for it, and this number should 
 
+The total amount of stations in the database is important just because we don't want to slow down things where it's not necessary.
+SQLite database in Android is quite slow,
+To avoid constant database deletions, I have implemented simple threshold algorithm that allows the total number of stations
+in the table grow to a certain number N, and after reaching this number simply deletes all stations up to a different number M.
 
 
 
