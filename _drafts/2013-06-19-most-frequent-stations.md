@@ -20,8 +20,13 @@ First reason is that something greater than two would probably look to heavy in 
 most people still have two most frequent "natural" locations - home and office, and ability
 to quickly pick any of them should be sufficient for the majority of cases (though we didn't perform any deep study on this).
 
-details of the implementation.
-two hidden pitfalls &mdash; unlimited increments for both number of usages per station and the amount of stations itself. 
+I would like to also go through some implementation details. Initially it's very straightforward.
+Each time a user loads some station, we either add this station to the databse with a count of one,
+or increment the station's count if already exists. 
+But there are two hidden pitfalls here &mdash; unlimited increments for both number of usages per station and the overall count of stations itself.
+
+Nowadays, it's more probable that the end of the world will happen earlier than someone will access some station 2^64 times during his life.
+
 
 
 
