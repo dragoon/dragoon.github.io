@@ -25,7 +25,7 @@ Each time a user loads some station, we either add this station to the databse w
 or increment the station's count if already exists. 
 But there are two hidden pitfalls here &mdash; unlimited increments for both number of usages per station and the overall count of stations itself.
 
-Nowadays, it's more probable that the end of the world will happen earlier than someone will access some station 2^64 times during his life.
+Nowadays, it's more probable that the end of the world will happen earlier than someone will access some station 2<sup>64</sup> times during his life.
 
 
 
