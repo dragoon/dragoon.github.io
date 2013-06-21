@@ -20,6 +20,9 @@ First reason is that something greater than two would probably look to heavy in 
 most people still have two most frequent "natural" locations - home and office, and ability
 to quickly pick any of them should be sufficient for the majority of cases (though we didn't perform any deep study on this).
 
+details of the implementation.
+two hidden pitfalls &mdash; unlimited increments for both number of usages per station and the amount of stations itself. 
+
 
 
 
