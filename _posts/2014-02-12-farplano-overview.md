@@ -7,7 +7,6 @@ categories:
 - stationboards-app
 - en
 ---
-<img src="https://lh4.ggpht.com/BUloY6vAaP6hTGvpN_8ASWJFEW2trFg28aPIy5iBDr407W6_18IJUbgHIKgEakX5Jw=w300-rw">
 This note is going to prelude a series of posts aimed to expose architectural and design decisions
 of the former *Swiss Stationboards* app.
 
@@ -28,3 +27,6 @@ Moving forward, here is the preliminary set of topics for the next posts:
 3. Automatic stationboard updates. (use case: removing manual update button, when to update? saving last update time, canceling timer to prevent unwanted network I/O)
 4. Route prediction (not yet implemented).
 
+<a href="https://play.google.com/store/apps/details?id=com.schedulr">
+  <img alt="Android app on Google Play" src="/images/stationboards/farplano_google_play.png" />
+</a>
