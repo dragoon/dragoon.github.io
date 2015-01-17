@@ -1,3 +1,7 @@
 # dragoon.github.io
 
-bundle exec jekyll serve
+Gemfile to add gems
+
+    bundle install
+    bundle update
+    bundle exec jekyll serve
