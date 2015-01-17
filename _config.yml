@@ -1,13 +1,17 @@
 permalink:   /:year/:month/:title.html
 timezone:    Europe/Zurich
-pygments:    true
+highlighter: pygments    
 markdown:    rdiscount
 paginate:    20
 relative_permalinks: false
 paginate_path: /blog/page-:num
 
-categories:
-  template: _layouts/archive
+gems:
+  - jekyll-archives
 
-archives:
-  template: _layouts/archive
+jekyll-archives:
+  enabled: 
+    - categories
+  layout: archive
+  permalinks:
+    category: '/categories/:name.html'
