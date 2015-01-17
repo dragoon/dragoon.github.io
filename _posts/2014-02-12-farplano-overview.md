@@ -1,19 +1,18 @@
 ---
 layout: post
-title: "Farplano: overview"
+title: "FarPlano: overview"
 date: 2014-02-14
 comments: false
 categories:
-- stationboards-app
-- en
+- farplano
 ---
 This note is going to prelude a series of posts aimed to expose architectural and design decisions
-of the former *Swiss Stationboards* app.
+of the former **Swiss Stationboards** app.
 
 First of all, let me briefly summarize few things that happened since the last update on the topic:
 
-1. The app was renamed to *Faplano* and received a brand new logo for better
-recognition and memorability among other transportation apps (thanks to great 99designs).
+1. The app was renamed to **FarPlano** and received a brand new logo for better
+recognition and memorability among other transportation apps (thanks to great [99designs](https://en.99designs.ch/icon-button-design/contests/transportation-android-app-icon-design-269614)).
 2. We've added the calendar journey planning feature
 which automatically plans a journey from user's current location to
 some destination specified as a location attribute of a calendar event.
