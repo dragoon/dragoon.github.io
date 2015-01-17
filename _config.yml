@@ -15,3 +15,9 @@ jekyll-archives:
   layout: archive
   permalinks:
     category: '/categories/:name.html'
+
+rdiscount:
+  extensions:
+    - autolink      # greedily urlify links
+    - footnotes     # footnotes
+    - smart         # typographic substitutions with SmartyPants
