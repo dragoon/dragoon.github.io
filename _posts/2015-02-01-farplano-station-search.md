@@ -18,7 +18,7 @@ The generic architecture of the whole ecosystem is depicted on the image below:
 <img alt="FarPlano Architecture" src="/images/blog/2015-02-01-farplano-station-search/architecture.svg" />
 
 The use of the HAFAS API has its obvious advantages, such as the low implementation and maintenance costs, i.e. one just needs to implement a proxy interface that will interact with an API.
-However, there are also a number of disadvantages of the proxy architecture, including the impossibility to alter location search process, longer response times and peculiarities of the HAFAS API (which deserve a separate post).
+However, there are also a number of disadvantages of the proxy architecture, including the impossibility to alter location search process, longer response times and various peculiarities of the HAFAS API (that deserve a separate post).
 
 The impossibility of changing the HAFAS's location search algorithm became the most crucial problem as we think it is possible to provide a better user satisfaction with other approaches.
 For example, HAFAS search algorithm does not use the information about user's current location to search on the stations closes to him first.
@@ -53,16 +53,25 @@ Given the indexes, the search algorithm proceeds as follows:
 After new search algorithm was deployed, we decided to analyze the changes in response times and user's typing patterns, e.g. if users now type less characters to search for locations.
 The graphs for response times are presented below.
 
-<img width="385" alt="Geolocation XY response" src="/images/blog/2015-02-01-farplano-station-search/geolocation_response.svg" />
-<img width="385" alt="Geolocation query response" src="/images/blog/2015-02-01-farplano-station-search/geolocation_query_response.svg" />
+<figure style="width: 385px; margin-right: 25px;">
+	<img alt="Geolocation XY response" src="/images/blog/2015-02-01-farplano-station-search/geolocation_response.svg" />
+	<figcaption>Response times for retrieving top K stations closest to a given a (latitude, longitude) pair.</figcaption>
+</figure>
+<figure style="width: 385px;">
+<img alt="Geolocation query response" src="/images/blog/2015-02-01-farplano-station-search/geolocation_query_response.svg" />
+<figcaption>Response times for retrieving top K stations matching a given query + a (latitude, longitude) pair.</figcaption>
+</figure>
 
-As can be seen, both plain geolocational and search-based requests are now processed **100ms faster** on average.
+As can be seen, both location- and query-based requests are now processed **~100ms faster** on average.
 
-For the analysis of user's typing patterns, we have filtered the lengths of longest search queries that increase 1-2 characters at once, otherwise it was probably autocompleted by a device.
+To perform the analysis of users' typing patterns, we have gathered the lengths of the longest search queries during a single search session, with an extra condition that a query has to increase one character at a time, for example, a sequence of queries ``f, fr, fri, frib`` will result in the **length of 4**.
+The distribution of lengths before and after deploying the new search algorithm are shown on the figure below:
 
 <img alt="Geolocation query length" src="/images/blog/2015-02-01-farplano-station-search/query_length.svg" />
 
-Finally, what is left is also need to implement spelling correction which is currently supported by HAFAS API.
+Unfortunately, we didn't find any significant decrease in a number of characters required to complete a search query.
+We will continue to evaluate our algorithm by sampling and manually checking the long queries and designing ways to improve them.
+We might also decreasing the minimum character threshold on search queries, which currently equals 3 characters.
 
 [^1]: For example, the data provided by Swiss Federal Railways (SBB) can be found on [gtfs.geops.ch](http://gtfs.geops.ch/). Google also maintains a list of publicly available feeds on [code.google.com/p/.../PublicFeeds](https://code.google.com/p/googletransitdatafeed/wiki/PublicFeeds).
 [^2]: For example, when searching for station ``Pont de Fayot``, user might start typing just ``Pont Fay..``.
