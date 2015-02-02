@@ -91,6 +91,7 @@ img {
     position: relative;
     margin: 0 auto;
     max-width: 790px;
+    width: inherit;
     padding: 5px;
     margin-left: 0;
     margin-bottom: 10px;
@@ -202,6 +203,16 @@ form {
 sup {
     font-size: smaller;
     vertical-align: super;
+}
+
+figure {
+    display: inline-block;
+}
+
+figcaption {
+    margin: -10px 0 0 0;
+    font-weight: bold;
+    text-align: center;
 }
 
 /*******************************************************************************
