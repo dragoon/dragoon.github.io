@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "FarPlano: station search achritecture"
+title: "FarPlano: station search architecture"
 date: 2015-02-01
 comments: true
 published: true
@@ -31,6 +31,8 @@ As a backend database, we decided to use [MongoDB](http://www.mongodb.org/) for 
 * MongoDB natively supports [geo-spatial indexes](http://docs.mongodb.org/manual/core/geospatial-indexes/), which allows to efficiently perform nearest location searches;
 * as in any document-oriented DB, data schema is flexible, which means we can add new fields or completely change document structure without hassle if necessary.
 
+### Search algorithm
+
 Now, efficient implementation of **location search algorithm** requires an efficient **autocomplete search** over the set of location names.
 The state-of-the-art solution to this problem is a [Prefix Tree](http://en.wikipedia.org/wiki/Trie) or a similar data structure.
 However, MongoDB does not support prefix trees natively, but we can implement it by generating prefixes ourselves.
@@ -46,6 +48,7 @@ Given the indexes, the search algorithm proceeds as follows:
 2. Search large-weight stations for matches on ``full_index``. Large-weight stations are big stations in the cities, such as ``Zurich HB`` or ``Geneva``.
 4. Query for everything else using first ``full_index``, then ``second_index`` and finally ``word_index`` to handle word skips.
 
+### Result analysis
 
 After new search algorithm was deployed, we decided to analyze the changes in response times and user's typing patterns, e.g. if users now type less characters to search for locations.
 The graphs for response times are presented below.
@@ -53,11 +56,11 @@ The graphs for response times are presented below.
 <img width="385" alt="Geolocation XY response" src="/images/blog/2015-02-01-farplano-station-search/geolocation_response.svg" />
 <img width="385" alt="Geolocation query response" src="/images/blog/2015-02-01-farplano-station-search/geolocation_query_response.svg" />
 
-As can be seen, both plain geolocational and search-based requests are now processed 100ms faster on average.
+As can be seen, both plain geolocational and search-based requests are now processed **100ms faster** on average.
 
 For the analysis of user's typing patterns, we have filtered the lengths of longest search queries that increase 1-2 characters at once, otherwise it was probably autocompleted by a device.
 
-![Geolocation query response](/images/blog/2015-02-01-farplano-station-search/query_length.svg)
+<img alt="Geolocation query length" src="/images/blog/2015-02-01-farplano-station-search/query_length.svg" />
 
 Finally, what is left is also need to implement spelling correction which is currently supported by HAFAS API.
 

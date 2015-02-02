@@ -1551,24 +1551,24 @@ L54 28.8" style="fill:none;stroke:#bcbcbc;"/>
    <g id="legend_1">
     <g id="patch_67">
      <path d="
-M250.959 72.06
-L380.4 72.06
-Q382.8 72.06 382.8 69.66
+M301.104 69.8025
+L380.4 69.8025
+Q382.8 69.8025 382.8 67.4025
 L382.8 37.2
 Q382.8 34.8 380.4 34.8
-L250.959 34.8
-Q248.559 34.8 248.559 37.2
-L248.559 69.66
-Q248.559 72.06 250.959 72.06
+L301.104 34.8
+Q298.704 34.8 298.704 37.2
+L298.704 67.4025
+Q298.704 69.8025 301.104 69.8025
 z
 " style="fill:#eeeeee;stroke:#bcbcbc;stroke-width:0.5;"/>
     </g>
     <g id="patch_68">
      <path d="
-M253.359 48.015
-L277.359 48.015
-L277.359 39.615
-L253.359 39.615
+M303.504 48.015
+L327.504 48.015
+L327.504 39.615
+L303.504 39.615
 z
 " style="fill:#348abd;opacity:0.7;stroke:#eeeeee;stroke-width:0.5;"/>
     </g>
@@ -1621,7 +1621,7 @@ Q23.6875 62.3125 27 66.2188
 Q30.3281 70.125 38.4844 70.125
 Q43.75 70.125 50.2031 68.1094" id="AndaleMono-66"/>
      </defs>
-     <g transform="translate(286.959375 48.015)scale(0.12 -0.12)">
+     <g transform="translate(337.104375 48.015)scale(0.12 -0.12)">
       <use xlink:href="#AndaleMono-62"/>
       <use x="60.009765625" xlink:href="#AndaleMono-65"/>
       <use x="120.01953125" xlink:href="#AndaleMono-66"/>
@@ -1632,29 +1632,21 @@ Q43.75 70.125 50.2031 68.1094" id="AndaleMono-66"/>
     </g>
     <g id="patch_69">
      <path d="
-M253.359 64.845
-L277.359 64.845
-L277.359 56.445
-L253.359 56.445
+M303.504 64.845
+L327.504 64.845
+L327.504 56.445
+L303.504 56.445
 z
 " style="fill:#f08080;opacity:0.7;stroke:#eeeeee;stroke-width:0.5;"/>
     </g>
     <g id="text_19">
-     <!-- response (ms) -->
-     <g transform="translate(286.959375 64.845)scale(0.12 -0.12)">
-      <use xlink:href="#AndaleMono-72"/>
-      <use x="60.009765625" xlink:href="#AndaleMono-65"/>
-      <use x="120.01953125" xlink:href="#AndaleMono-73"/>
-      <use x="180.029296875" xlink:href="#AndaleMono-70"/>
-      <use x="240.0390625" xlink:href="#AndaleMono-6f"/>
-      <use x="300.048828125" xlink:href="#AndaleMono-6e"/>
-      <use x="360.05859375" xlink:href="#AndaleMono-73"/>
-      <use x="420.068359375" xlink:href="#AndaleMono-65"/>
-      <use x="480.078125" xlink:href="#AndaleMono-20"/>
-      <use x="540.087890625" xlink:href="#AndaleMono-28"/>
-      <use x="600.09765625" xlink:href="#AndaleMono-6d"/>
-      <use x="660.107421875" xlink:href="#AndaleMono-73"/>
-      <use x="720.1171875" xlink:href="#AndaleMono-29"/>
+     <!-- after -->
+     <g transform="translate(337.104375 64.845)scale(0.12 -0.12)">
+      <use xlink:href="#AndaleMono-61"/>
+      <use x="60.009765625" xlink:href="#AndaleMono-66"/>
+      <use x="120.01953125" xlink:href="#AndaleMono-74"/>
+      <use x="180.029296875" xlink:href="#AndaleMono-65"/>
+      <use x="240.0390625" xlink:href="#AndaleMono-72"/>
      </g>
     </g>
    </g>
