@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "FarPlano: station search algorithm"
-date: 2015-01-19
+title: "FarPlano: station search achritecture"
+date: 2015-02-01
 comments: true
-published: false
+published: true
 categories:
 - farplano
 tags:
@@ -15,7 +15,7 @@ Since its advent, all the functionality in **FarPlano** relied exclusively on th
 
 The generic architecture of the whole ecosystem is depicted on the image below:
 
-<img alt="FarPlano Architecture" src="/images/blog/farplano-station-search/architecture.svg" />
+<img alt="FarPlano Architecture" src="/images/blog/2015-02-01-farplano-station-search/architecture.svg" />
 
 The use of the HAFAS API has its obvious advantages, such as the low implementation and maintenance costs, i.e. one just needs to implement a proxy interface that will interact with an API.
 However, there are also a number of disadvantages of the proxy architecture, including the impossibility to alter location search process, longer response times and peculiarities of the HAFAS API (which deserve a separate post).
@@ -48,7 +48,16 @@ Given the indexes, the search algorithm proceeds as follows:
 
 
 After new search algorithm was deployed, we decided to analyze the changes in response times and user's typing patterns, e.g. if users now type less characters to search for locations.
-We have filtered the queries that increase 1-2 characters at once, otherwise it was probably autocompleted by a device. The graphs are presented below.
+The graphs for response times are presented below.
+
+<img width="385" alt="Geolocation XY response" src="/images/blog/2015-02-01-farplano-station-search/geolocation_response.svg" />
+<img width="385" alt="Geolocation query response" src="/images/blog/2015-02-01-farplano-station-search/geolocation_query_response.svg" />
+
+As can be seen, both plain geolocational and search-based requests are now processed 100ms faster on average.
+
+For the analysis of user's typing patterns, we have filtered the lengths of longest search queries that increase 1-2 characters at once, otherwise it was probably autocompleted by a device.
+
+![Geolocation query response](/images/blog/2015-02-01-farplano-station-search/query_length.svg)
 
 Finally, what is left is also need to implement spelling correction which is currently supported by HAFAS API.
 
