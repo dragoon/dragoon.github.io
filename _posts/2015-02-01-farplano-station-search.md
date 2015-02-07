@@ -64,14 +64,19 @@ The graphs for response times are presented below.
 
 As can be seen, both location- and query-based requests are now processed **~100ms faster** on average.
 
-To perform the analysis of users' typing patterns, we have gathered the lengths of the longest search queries during a single search session, with an extra condition that a query has to increase one character at a time, for example, a sequence of queries ``f, fr, fri, frib`` will result in the **length of 4**.
+To perform the analysis of users' typing patterns, we have gathered the lengths of the search queries during a single search session that were followed by either a stationboard or a connection request (i.e. a user has completed his search task).
 The distribution of lengths before and after deploying the new search algorithm are shown on the figure below:
 
+<figure>
 <img alt="Geolocation query length" src="/images/blog/2015-02-01-farplano-station-search/query_length.svg" />
+<figcaption>Avg. query length: 8.09 (before)/7.32 (after). </figcaption>
+</figure>
 
-Unfortunately, we didn't find any significant decrease in a number of characters required to complete a search query.
-We will continue to evaluate our algorithm by sampling and manually checking the long queries and designing ways to improve them.
-We might also decreasing the minimum character threshold on search queries, which currently equals 3 characters.
+As can be seen from the distribution, after deploying new search algorithm which takes into account position of a user, the average search query length has decreased by a approximately one character.
+Furthermore, now we can see that 3- and 4- length queries now constitute ~32% of all queries as compared to merely 22% before!
+
+To conclude, by deploying the search algorithm locally, we have improved both the response time and users' satisfaction (by means of reducing query length).
+We will continue monitoring the result and report updates on the search algorithm improvements.
 
 [^1]: For example, the data provided by Swiss Federal Railways (SBB) can be found on [gtfs.geops.ch](http://gtfs.geops.ch/). Google also maintains a list of publicly available feeds on [code.google.com/p/.../PublicFeeds](https://code.google.com/p/googletransitdatafeed/wiki/PublicFeeds).
 [^2]: For example, when searching for station ``Pont de Fayot``, user might start typing just ``Pont Fay..``.
