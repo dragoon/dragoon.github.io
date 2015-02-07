@@ -11,9 +11,6 @@ body {
     box-sizing: border-box;
     color: #373737;
     background: #212121;
-    font-size: 16px;
-    font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -21,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 10px 0;
     font-weight: 700;
     color: #222222;
-    font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+    font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
     letter-spacing: -1px;
 }
 
@@ -53,7 +50,7 @@ h6 {
 }
 
 p {
-    margin: 10px 0 15px 0;
+    margin: 0 0 15px 0;
 }
 
 footer p {
@@ -71,7 +68,7 @@ a {
 
 a:hover {
     color: #0069ba;
-    text-shadow: #0090ff 0px 0px 2px;
+    text-shadow: #0090ff 0px 0px 1px;
 }
 
 footer a:hover {
@@ -91,7 +88,6 @@ img {
     position: relative;
     margin: 0 auto;
     max-width: 790px;
-    width: inherit;
     padding: 5px;
     margin-left: 0;
     margin-bottom: 10px;
@@ -207,12 +203,22 @@ sup {
 
 figure {
     display: inline-block;
+    vertical-align: top;
+
+    img {
+        width: inherit;
+    }
 }
 
 figcaption {
+    font-size: 70%;
     margin: -10px 0 0 0;
     font-weight: bold;
     text-align: center;
+}
+
+.footnotes {
+    font-size: 70%;
 }
 
 /*******************************************************************************
@@ -272,6 +278,11 @@ Full-Width Styles
 }
 
 #main_content_wrap {
+    font-family: "freight-text-pro",Georgia,Cambria,"Times New Roman",Times,serif;
+    letter-spacing: 0.01rem;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.5;
     background: #fff;
     border-top: 1px solid #111;
     border-bottom: 1px solid #111;

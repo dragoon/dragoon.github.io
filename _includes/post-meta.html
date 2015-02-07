@@ -1,13 +1,8 @@
-<div class="ribbon-date" title="{{ post.date | date: '%d %B %Y' }}">
-    <div class="top ribbon-piece">{{ post.date | date: "%d" }}</div>
-    <div class="bottom ribbon-piece">{{ post.date | date: "%b" }}<br>{{ post.date | date: "%Y" }}</div>
-    <div class="tail">
-        <div class="left ribbon-piece"></div>
-        <div class="right ribbon-piece"></div>
-    </div>
-</div>
-<ul class="tags clearfix">
+<span class="date">
+	{{ post.date | date: '%-d %B %Y' }} •
+</span>
+<span class="tags">
     {% for cat in post.categories %}
-    <li><a href="/categories/{{cat}}.html">{{ cat }}</a></li>
+    <a href="/categories/{{cat}}.html">{{ cat }}</a>{% unless forloop.last %},{% endunless %}
     {% endfor %}
-</ul>
+</span>

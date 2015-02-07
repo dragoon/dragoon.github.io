@@ -53,7 +53,7 @@ Given the indexes, the search algorithm proceeds as follows:
 After new search algorithm was deployed, we decided to analyze the changes in response times and user's typing patterns, e.g. if users now type less characters to search for locations.
 The graphs for response times are presented below.
 
-<figure style="width: 385px; margin-right: 25px;">
+<figure style="width: 385px; margin-right: 20px;">
 	<img alt="Geolocation XY response" src="/images/blog/2015-02-01-farplano-station-search/geolocation_response.svg" />
 	<figcaption>Response times for retrieving top K stations closest to a given a (latitude, longitude) pair.</figcaption>
 </figure>
