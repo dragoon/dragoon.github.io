@@ -27,14 +27,14 @@ Luckily, many public transport companies provide their data in the standard [Gen
 
 As a backend database, we decided to use [MongoDB](http://www.mongodb.org/) for the following reasons:
 
-* the data is only meant to be consumed by a service and updated by a script one a week or so, hence we don't really need transaction support which will only slow things down;
+* the data is only meant to be consumed by a service and updated by a script once a week, hence we don't really need transaction support which will only slow things down;
 * MongoDB natively supports [geo-spatial indexes](http://docs.mongodb.org/manual/core/geospatial-indexes/), which allows to efficiently perform nearest location searches;
 * as in any document-oriented DB, data schema is flexible, which means we can add new fields or completely change document structure without hassle if necessary.
 
 ### Search algorithm
 
 Now, efficient implementation of **location search algorithm** requires an efficient **autocomplete search** over the set of location names.
-The state-of-the-art solution to this problem is a [Prefix Tree](http://en.wikipedia.org/wiki/Trie) or a similar data structure.
+The state-of-the-art solution to this problem is [Prefix Tree](http://en.wikipedia.org/wiki/Trie) or a similar data structure.
 However, MongoDB does not support prefix trees natively, but we can implement it by generating prefixes ourselves.
 At the core of the search algorithm there are the following three indexes:
 
