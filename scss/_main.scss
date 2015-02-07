@@ -40,6 +40,13 @@ ul.menu {
     }
 }
 
+.share-buttons > * {
+    margin-right: 20px !important;
+    padding-top: 2px;
+    height: 30px !important;
+    float: left !important;
+}
+
 /* ------- pagination -------- */
 
 .pagination {

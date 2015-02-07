@@ -234,7 +234,7 @@ ul, ol, dl {
 
 /* line 146, ../scss/_base.scss */
 ul li {
-  list-style: inside;
+  list-style: initial;
 }
 
 /* line 150, ../scss/_base.scss */
@@ -653,15 +653,23 @@ ul.menu li a:hover {
   line-height: 1.4;
 }
 
+/* line 43, ../scss/_main.scss */
+.share-buttons > * {
+  margin-right: 20px !important;
+  padding-top: 2px;
+  height: 30px !important;
+  float: left !important;
+}
+
 /* ------- pagination -------- */
-/* line 45, ../scss/_main.scss */
+/* line 52, ../scss/_main.scss */
 .pagination {
   height: 36px;
   background: #212121;
   margin-bottom: 40px;
 }
 
-/* line 51, ../scss/_main.scss */
+/* line 58, ../scss/_main.scss */
 .pagination ul {
   display: inline-block;
   margin: 0;
@@ -674,13 +682,13 @@ ul.menu li a:hover {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* line 59, ../scss/_main.scss */
+/* line 66, ../scss/_main.scss */
 .pagination li {
   display: inline;
   padding: 0;
 }
 
-/* line 64, ../scss/_main.scss */
+/* line 71, ../scss/_main.scss */
 .pagination li:first-child a {
   border-left-width: 1px;
   -webkit-border-radius: 3px 0 0 3px;
@@ -688,14 +696,14 @@ ul.menu li a:hover {
   border-radius: 3px 0 0 3px;
 }
 
-/* line 71, ../scss/_main.scss */
+/* line 78, ../scss/_main.scss */
 .pagination li:last-child a {
   -moz-border-radius: 0 3px 3px 0;
   -webkit-border-radius: 0;
   border-radius: 0 3px 3px 0;
 }
 
-/* line 76, ../scss/_main.scss */
+/* line 83, ../scss/_main.scss */
 .pagination a {
   float: left;
   color: #CCC;
@@ -717,14 +725,14 @@ ul.menu li a:hover {
   background: -webkit-linear-gradient(top, #444444 0%, #222222 100%);
   background: linear-gradient(to bottom, #444444 0%, #222222 100%);
 }
-/* line 92, ../scss/_main.scss */
+/* line 99, ../scss/_main.scss */
 .pagination a:hover {
   text-decoration: none;
   background: #444;
   text-shadow: none;
   color: #CCC;
 }
-/* line 100, ../scss/_main.scss */
+/* line 107, ../scss/_main.scss */
 .pagination .disabled a, .pagination .disabled a:hover {
   cursor: default;
   background-color: transparent;
@@ -732,14 +740,14 @@ ul.menu li a:hover {
   color: #999 !important;
   box-shadow: none;
 }
-/* line 108, ../scss/_main.scss */
+/* line 115, ../scss/_main.scss */
 .pagination .active a {
   background: #111;
   border-color: #000;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 1px 1px rgba(0, 0, 0, 0.1) inset;
   cursor: default;
 }
-/* line 113, ../scss/_main.scss */
+/* line 120, ../scss/_main.scss */
 .pagination .active a:hover {
   background: #111;
 }
