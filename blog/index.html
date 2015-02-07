@@ -12,10 +12,10 @@ layout: default
     {% endif %}
     <div class="recent-entry">
         <h3><a href="{{ post.url }}" rel="bookmark" title="Permanent link to ">{{ post.title }}</a></h3>
-        <ul class="tags clearfix">
+        <span class="tags">
             {% for cat in post.categories %}
-            <li><a href="/categories/{{cat}}.html">{{ cat }}</a></li>
+            <a href="/categories/{{cat}}.html">{{ cat }}</a>{% unless forloop.last %},{% endunless %}
             {% endfor %}
-        </ul>
+        </span>
     </div>
 {% endfor %}

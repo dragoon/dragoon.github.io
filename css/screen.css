@@ -235,47 +235,52 @@ ul, ol, dl {
 /* line 146, ../scss/_base.scss */
 ul li {
   list-style: inside;
-  padding-left: 20px;
 }
 
-/* line 151, ../scss/_base.scss */
+/* line 150, ../scss/_base.scss */
 ol li {
-  list-style: decimal inside;
-  padding-left: 20px;
+  list-style: decimal;
 }
 
-/* line 156, ../scss/_base.scss */
+/* line 153, ../scss/_base.scss */
+li {
+  margin-left: 30px;
+  padding-top: 2px;
+  margin-bottom: 12px;
+}
+
+/* line 159, ../scss/_base.scss */
 dl dt {
   font-weight: bold;
 }
 
-/* line 160, ../scss/_base.scss */
+/* line 163, ../scss/_base.scss */
 dl dd {
   padding-left: 20px;
   font-style: italic;
 }
 
-/* line 165, ../scss/_base.scss */
+/* line 168, ../scss/_base.scss */
 dl p {
   padding-left: 20px;
   font-style: italic;
 }
 
-/* line 170, ../scss/_base.scss */
+/* line 173, ../scss/_base.scss */
 hr {
   height: 1px;
   border: none;
   background: url("../images/bg_hr.png") repeat-x center;
 }
 
-/* line 176, ../scss/_base.scss */
+/* line 179, ../scss/_base.scss */
 table {
   border: 1px solid #373737;
   margin-bottom: 20px;
   text-align: left;
 }
 
-/* line 182, ../scss/_base.scss */
+/* line 185, ../scss/_base.scss */
 th {
   font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 10px;
@@ -283,35 +288,35 @@ th {
   color: #fff;
 }
 
-/* line 189, ../scss/_base.scss */
+/* line 192, ../scss/_base.scss */
 td {
   padding: 10px;
   border: 1px solid #373737;
 }
 
-/* line 194, ../scss/_base.scss */
+/* line 197, ../scss/_base.scss */
 form {
   background: #f2f2f2;
   padding: 20px;
 }
 
-/* line 199, ../scss/_base.scss */
+/* line 202, ../scss/_base.scss */
 sup {
   font-size: smaller;
   vertical-align: super;
 }
 
-/* line 204, ../scss/_base.scss */
+/* line 207, ../scss/_base.scss */
 figure {
   display: inline-block;
   vertical-align: top;
 }
-/* line 208, ../scss/_base.scss */
+/* line 211, ../scss/_base.scss */
 figure img {
   width: inherit;
 }
 
-/* line 213, ../scss/_base.scss */
+/* line 216, ../scss/_base.scss */
 figcaption {
   font-size: 70%;
   margin: -10px 0 0 0;
@@ -319,7 +324,7 @@ figcaption {
   text-align: center;
 }
 
-/* line 220, ../scss/_base.scss */
+/* line 223, ../scss/_base.scss */
 .footnotes {
   font-size: 70%;
 }
@@ -327,12 +332,12 @@ figcaption {
 /*******************************************************************************
 Full-Width Styles
 *******************************************************************************/
-/* line 228, ../scss/_base.scss */
+/* line 231, ../scss/_base.scss */
 .outer {
   width: 100%;
 }
 
-/* line 232, ../scss/_base.scss */
+/* line 235, ../scss/_base.scss */
 .inner {
   position: relative;
   max-width: 800px;
@@ -340,7 +345,7 @@ Full-Width Styles
   margin: 0 auto;
 }
 
-/* line 239, ../scss/_base.scss */
+/* line 242, ../scss/_base.scss */
 #forkme_banner {
   display: block;
   position: absolute;
@@ -356,17 +361,17 @@ Full-Width Styles
   border-bottom-right-radius: 2px;
 }
 
-/* line 254, ../scss/_base.scss */
+/* line 257, ../scss/_base.scss */
 #header_wrap {
   background: #212121;
 }
 
-/* line 258, ../scss/_base.scss */
+/* line 261, ../scss/_base.scss */
 #header_wrap .inner {
   padding: 30px 10px 10px 10px;
 }
 
-/* line 262, ../scss/_base.scss */
+/* line 265, ../scss/_base.scss */
 #project_title {
   margin: 0;
   color: #fff;
@@ -375,7 +380,7 @@ Full-Width Styles
   text-shadow: #111 0px 0px 10px;
 }
 
-/* line 270, ../scss/_base.scss */
+/* line 273, ../scss/_base.scss */
 #project_tagline {
   color: #fff;
   font-size: 28px;
@@ -386,7 +391,7 @@ Full-Width Styles
   margin-top: 0;
 }
 
-/* line 280, ../scss/_base.scss */
+/* line 283, ../scss/_base.scss */
 #main_content_wrap {
   font-family: "freight-text-pro",Georgia,Cambria,"Times New Roman",Times,serif;
   letter-spacing: 0.01rem;
@@ -398,18 +403,18 @@ Full-Width Styles
   border-bottom: 1px solid #111;
 }
 
-/* line 291, ../scss/_base.scss */
+/* line 294, ../scss/_base.scss */
 #main_content {
   padding-top: 40px;
   z-index: 1;
 }
 
-/* line 296, ../scss/_base.scss */
+/* line 299, ../scss/_base.scss */
 #footer_wrap {
   background: #212121;
 }
 
-/* line 300, ../scss/_base.scss */
+/* line 303, ../scss/_base.scss */
 .clearfix:after {
   content: ".";
   display: block;
@@ -419,17 +424,17 @@ Full-Width Styles
   height: 0;
 }
 
-/* line 309, ../scss/_base.scss */
+/* line 312, ../scss/_base.scss */
 .clearfix {
   display: inline-block;
 }
 
-/* line 313, ../scss/_base.scss */
+/* line 316, ../scss/_base.scss */
 html[xmlns] .clearfix {
   display: block;
 }
 
-/* line 317, ../scss/_base.scss */
+/* line 320, ../scss/_base.scss */
 * html .clearfix {
   height: 1%;
 }
@@ -438,58 +443,58 @@ html[xmlns] .clearfix {
 Small Device Styles
 *******************************************************************************/
 @media screen and (max-width: 480px) {
-  /* line 326, ../scss/_base.scss */
+  /* line 329, ../scss/_base.scss */
   body {
     font-size: 14px;
   }
 
-  /* line 330, ../scss/_base.scss */
+  /* line 333, ../scss/_base.scss */
   #downloads {
     display: none;
   }
 
-  /* line 334, ../scss/_base.scss */
+  /* line 337, ../scss/_base.scss */
   .inner {
     min-width: 320px;
     max-width: 480px;
   }
 
-  /* line 339, ../scss/_base.scss */
+  /* line 342, ../scss/_base.scss */
   #project_title {
     font-size: 32px;
   }
 
-  /* line 343, ../scss/_base.scss */
+  /* line 346, ../scss/_base.scss */
   h1 {
     font-size: 28px;
   }
 
-  /* line 347, ../scss/_base.scss */
+  /* line 350, ../scss/_base.scss */
   h2 {
     font-size: 24px;
   }
 
-  /* line 351, ../scss/_base.scss */
+  /* line 354, ../scss/_base.scss */
   h3 {
     font-size: 21px;
   }
 
-  /* line 355, ../scss/_base.scss */
+  /* line 358, ../scss/_base.scss */
   h4 {
     font-size: 18px;
   }
 
-  /* line 359, ../scss/_base.scss */
+  /* line 362, ../scss/_base.scss */
   h5 {
     font-size: 14px;
   }
 
-  /* line 363, ../scss/_base.scss */
+  /* line 366, ../scss/_base.scss */
   h6 {
     font-size: 12px;
   }
 
-  /* line 367, ../scss/_base.scss */
+  /* line 370, ../scss/_base.scss */
   code, pre {
     min-width: 320px;
     max-width: 480px;

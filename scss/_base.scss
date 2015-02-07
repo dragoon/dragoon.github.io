@@ -144,13 +144,16 @@ ul, ol, dl {
 }
 
 ul li {
-    list-style: inside;
-    padding-left: 20px;
+    list-style: initial;
 }
 
 ol li {
-    list-style: decimal inside;
-    padding-left: 20px;
+    list-style: decimal;
+}
+li {
+    margin-left: 30px;
+    padding-top: 2px;
+    margin-bottom: 12px;
 }
 
 dl dt {

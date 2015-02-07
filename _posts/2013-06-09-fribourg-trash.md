@@ -3,6 +3,7 @@ layout: post
 title: "Мусор во Фрибурге (Швейцария)"
 date: 2013-06-09
 comments: false
+published: false
 categories:
 - fribourg
 - switzerland
