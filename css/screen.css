@@ -170,7 +170,7 @@ strong {
 img {
   position: relative;
   margin: 0 auto;
-  max-width: 790px;
+  max-width: 100%;
   padding: 5px;
   margin-left: 0;
   margin-bottom: 10px;
@@ -460,46 +460,41 @@ Small Device Styles
   }
 
   /* line 342, ../scss/_base.scss */
-  img {
-    max-width: 470px;
-  }
-
-  /* line 346, ../scss/_base.scss */
   #project_title {
     font-size: 32px;
   }
 
-  /* line 350, ../scss/_base.scss */
+  /* line 346, ../scss/_base.scss */
   h1 {
     font-size: 28px;
   }
 
-  /* line 354, ../scss/_base.scss */
+  /* line 350, ../scss/_base.scss */
   h2 {
     font-size: 24px;
   }
 
-  /* line 358, ../scss/_base.scss */
+  /* line 354, ../scss/_base.scss */
   h3 {
     font-size: 21px;
   }
 
-  /* line 362, ../scss/_base.scss */
+  /* line 358, ../scss/_base.scss */
   h4 {
     font-size: 18px;
   }
 
-  /* line 366, ../scss/_base.scss */
+  /* line 362, ../scss/_base.scss */
   h5 {
     font-size: 14px;
   }
 
-  /* line 370, ../scss/_base.scss */
+  /* line 366, ../scss/_base.scss */
   h6 {
     font-size: 12px;
   }
 
-  /* line 374, ../scss/_base.scss */
+  /* line 370, ../scss/_base.scss */
   code, pre {
     min-width: 320px;
     max-width: 480px;

@@ -87,7 +87,7 @@ strong {
 img {
     position: relative;
     margin: 0 auto;
-    max-width: 790px;
+    max-width: 100%;
     padding: 5px;
     margin-left: 0;
     margin-bottom: 10px;
@@ -337,10 +337,6 @@ Small Device Styles
     .inner {
         min-width: 320px;
         max-width: 480px;
-    }
-
-    img {
-        max-width: 470px;
     }
 
     #project_title {
