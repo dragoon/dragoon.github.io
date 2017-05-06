@@ -33,6 +33,6 @@ layout: default
 <div class="recent-entry">
     <h3><a href="{{ post.url }}" rel="bookmark" title="Permanent link to ">{{ post.title }}</a></h3>
     {% include post-meta.html %}
-    {{ post.excerpt | replace:'<img src=','' | replace: 'align="left">', '' }} &hellip;
+    {{ post.excerpt | replace:'<img src=','' | replace: 'align="left">', '' | replace: "</p>","&hellip;</p>"}}
 </div>
 {% endfor %}
