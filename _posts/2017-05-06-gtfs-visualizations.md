@@ -8,12 +8,20 @@ categories:
  - visualization
 ---
 
-Recently I came across a GitHub repo for visualizing GTFS data: [github.com/cmichi/gtfs-visualizations](https://github.com/cmichi/gtfs-visualizations). The project looked very interesting and promising, and I wanted to apply it on my own GTFS datasets of Hamburg, Berlin, etc. It turned out there were several issues.
+Recently I came across a GitHub repo for visualizing GTFS data: [github.com/cmichi/gtfs-visualizations](https://github.com/cmichi/gtfs-visualizations)
+(specifically public transport routes on the map).
+The project looked very interesting and promising, so I wanted to apply it on my own GTFS datasets for Hamburg, Berlin and others.
 
-However, the code was not able to process large GTFS dataset, not only it loaded GTFS files themselves into memory, it also generated large intermediate shape files, which [Processing](https://processing.org/) framework was not able to process and generate visualizations.
+Turned out there were several issues with the data processing scripts.
+First, the code was not able to process large GTFS datasets.
+Not only it loaded all GTFS files into memory (sometimes more than couple Gb), it also generated large intermediate shape files,
+which [Processing](https://processing.org/) framework was not able to process and generate visualizations.
 
-After several nights of work, I was able to address the large file issue by reworking the process of generating intermediate files. The output now has a small footprint not much larger than a ``shapes.txt`` file from the GTFS source. I have also reworked the visualization code by iterating over the intermediate file instead of loading it again completely into memory.
-Then I added some parametrization to the script and a possibility to restrict the visualization area by specifying the maximum allowed distance from the center.
+After several nights of work, I was able to address the large file issue by reworking the process of generating intermediate files.
+The output now has a much smaller footprint, not larger than a ``shapes.txt`` file from the GTFS data.
+I have also reworked the visualization code by iterating over the intermediate file instead of loading it completely into memory.
+
+As extra perks, I've added some parametrization and a possibility to restrict the map area by specifying the maximum allowed distance from the center.
 
 The fork is located here:
 [https://github.com/dragoon/gtfs-visualizations](https://github.com/dragoon/gtfs-visualizations)
