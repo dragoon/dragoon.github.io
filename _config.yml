@@ -1,6 +1,6 @@
 permalink:   /:year/:month/:title.html
 timezone:    Europe/Zurich
-highlighter: pygments    
+highlighter: rouge
 paginate:    20
 relative_permalinks: false
 paginate_path: /blog/page-:num
