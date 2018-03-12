@@ -30,5 +30,7 @@ In my case I'm using [Anki](https://apps.ankiweb.net).
 For starters I've generated French and German pairs from English and Russian: en-fr, en-de, en-ru and ru-fr, ru-de:
 <https://github.com/dragoon/hearthstone-cards>.
 
+<img alt="Anki" src="/images/blog/2018-03-11-hearthstone-flashcards/anki.png" />
+
 Enjoy!
 
