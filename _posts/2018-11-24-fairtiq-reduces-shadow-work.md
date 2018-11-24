@@ -37,7 +37,7 @@ The goal is to remove barriers on the way to use public transport, and encourage
 Give it a try at:
 
 <a href="https://play.google.com/store/apps/details?id=com.fairtiq.android" style="display:inline-block;overflow:hidden;background: url(&quot;https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png&quot;) no-repeat center 0;width: 145px;background-size: cover;height: 60px;"></a>
-<a href="https://itunes.apple.com/us/app/fairtiq/id1094360403?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2016-04-27&kind=iossoftware&bubble=ios_apps) no-repeat;width:135px;height:40px;"></a>
+<a href="https://itunes.apple.com/us/app/fairtiq/id1094360403?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2016-04-27&kind=iossoftware&bubble=ios_apps) no-repeat;width:135px;height:50px;"></a>
 
 Use promocode **M749PGF2E** to get **3CHF off** your first ride.
 
