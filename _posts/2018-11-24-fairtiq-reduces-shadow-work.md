@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Language learning flashcards from hearthstone"
+title: "Reducing shadow work with FAIRTIQ"
 date: 2018-11-24
 comments: true
 categories:
@@ -36,7 +36,7 @@ You get the best[^1] possible ticket with a swipe of a finger, always.
 The goal is to remove barriers on the way to use public transport, and encourage people to use it more often.
 Give it a try at:
 
-<a href='https://play.google.com/store/apps/details?id=com.fairtiq.android&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+<a href="https://play.google.com/store/apps/details?id=com.fairtiq.android" style="display:inline-block;overflow:hidden;background:url(https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png) no-repeat;width:135px;height:40px;"></a>
 
 <a href="https://itunes.apple.com/us/app/fairtiq/id1094360403?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2016-04-27&kind=iossoftware&bubble=ios_apps) no-repeat;width:135px;height:40px;"></a>
 
