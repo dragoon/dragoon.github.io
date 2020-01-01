@@ -1,5 +1,7 @@
-.idea/
-.sass-cache/
-_site/
+_site
+.sass-cache
+.jekyll-metadata
+*backup/
 *.lock
+.idea/
 .DS_Store

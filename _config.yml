@@ -1,19 +1,74 @@
+title: Faraway Technologies
+description: Faraway Technologies
+author: Roman Prokofyev
+github: https://github.com/dragoon/dragoon.github.io
+about: Chief Scientist at FAIRTIQ. I work on making public transport accessible for everyone.
+disqus_shortname: prokofyev
+google_analytics: UA-XXXXXXXX-Y
+
+collections:
+  project:
+    output: true
+    permalink: /project/:path/
+
+social:
+    - icon: fa-facebook
+      link: "#"
+    - icon: fa-twitter
+      link: "http://twitter.com/rprokofyev"
+    - icon: fa-linkedin
+      link: "https://www.linkedin.com/in/rprokofyev"
+    - icon: fa-stack-exchange
+      link: "#"
+    - icon: fa-github
+      link: "https://github.com/dragoon"
+
+share:
+  twitter_username: rprokofyev
+  fb_appid: 1749788565247320
+
+urls:
+    - text: About Me
+      url: /about/
+    - text: My Projects
+      url: /projects/
+    - text: XML Feed
+      url: /feed.xml
+
+url: "https://prokofyev.ch"
+baseurl: ""
+paginate: 20
+per_page: 20
+relative_permalinks: false
+paginate_path: "/blog/page-:num"
 permalink:   /:year/:month/:title.html
 timezone:    Europe/Zurich
-highlighter: rouge
-paginate:    20
-relative_permalinks: false
-paginate_path: /blog/page-:num
-
-gems:
+markdown: kramdown
+plugins:
+  - jekyll-paginate
+  - jekyll-gist
   - jekyll-archives
 
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: ['development']
+
+
+category_archive:
+  type: jekyll-archives
+  path: /category/
+
 jekyll-archives:
-  enabled: 
+  enabled:
     - categories
-  layout: archive
+  layouts:
+    category: archive
   permalinks:
-    category: '/categories/:name.html'
+    category: '/category/:name.html'
+
 
 rdiscount:
   extensions:

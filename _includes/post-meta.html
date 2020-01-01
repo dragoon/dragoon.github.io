@@ -1,8 +1,0 @@
-<span class="date">
-	{{ post.date | date: '%-d %B %Y' }} •
-</span>
-<span class="tags">
-    {% for cat in post.categories %}
-    <a href="/categories/{{cat}}.html">{{ cat }}</a>{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-</span>
