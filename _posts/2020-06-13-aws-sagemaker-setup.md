@@ -98,7 +98,8 @@ Below is the description of the purpose of each file that we’ll need:
 * ``requirements.txt``: requirements file for packages needed specifically for training.
 
 Let’s now look at the files and their purpose in detail.
-The repository with all the files from this guide is also available at: https://github.com/fairtiq/sagemaker-templates/tree/master/sagemaker-docker-basic.
+The repository with all the files from this guide is also available at:
+<https://github.com/fairtiq/sagemaker-templates/tree/master/sagemaker-docker-basic>.
 
 ### Building a docker image
 
@@ -168,5 +169,60 @@ docker tag ${repo_name} ${fullname}
 
 docker push ${fullname}
 {% endhighlight %}
+
+Whenever you push an image to the ECR with the same tag, the previous image will become untagged, but remain in the repository.
+If you want to clean untagged images automatically, you can set up a lifecycle policy as described here:
+<https://aws.amazon.com/blogs/compute/clean-up-your-container-images-with-amazon-ecr-lifecycle-policies/>
+
+### Building an image on Circle-CI
+
+[Circle-CI](https://circleci.com/) is a Continuous Integration cloud service.
+As we use it at FAIRTIQ, I have created a job to build and push image to ECR with it.
+Circle-CI provides a convenient [aws-ecr orb](https://circleci.com/orbs/registry/orb/circleci/aws-ecr)
+that already has the ``build-and-push-image`` command that we need.
+
+{% highlight yaml %}
+
+orbs:
+  aws-ecr: circleci/aws-ecr@6.8.2
+...
+
+sagemaker_build:
+  docker:
+    - image: circleci/python:3.7
+  steps:
+    - setup_remote_docker:
+        docker_layer_caching: true
+    - add_ssh_keys # SSH keys for git clone your dependencies
+    - checkout
+    - run:
+        name: Prepare setup
+        command: ./sagemaker/prepare.sh
+    - aws-ecr/build-and-push-image:
+        account-url: AWS_ECR_ACCOUNT_URL
+        aws-access-key-id: AWS_ACCESS_KEY_ID
+        aws-secret-access-key: AWS_SECRET_ACCESS_KEY
+        create-repo: true
+        dockerfile: ./sagemaker/Dockerfile
+        path: .
+        region: AWS_REGION
+        repo: REPO_NAME
+        tag: $CIRCLE_BRANCH
+        
+{% endhighlight %}
+
+The config reads the branch name you are working on via the ``$CIRCLE_BRANCH`` variable and uses it as an image tag,
+so that you can have separate images for each branch/pull request.
+
+Make sure to provide the following context variables to the job: `AWS_ECR_ACCOUNT_URL`, `AWS_ACCESS_KEY_ID`,
+`AWS_SECRET_ACCESS_KEY` and `AWS_REGION`. Then replace the `REPO_NAME` and `MY_ML_PACKAGE` placeholders with your values.
+
+The `AWS_ACCESS_KEY_ID` should belong to a user with permissions to push images to ECR.
+I have created a user `circleci-aws-ecr-push` and attached an existing policy called `AmazonEC2ContainerRegistryPowerUser`:
+
+<img alt="aws circle ci push permissions" src="/images/blog/2020-06-13-aws-sagemaker-setup/aws_circleci_user.png" />
+
+### Dockerfile
+
 
 *Originally published at [fairtiq.com](https://fairtiq.com/en-ch/tech/training-ml-models-in-the-cloud-with-aws-sagemaker)*
