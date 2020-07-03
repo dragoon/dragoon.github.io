@@ -592,4 +592,9 @@ Uploading - Uploading generated training model
 Completed - Training job completed
 {% endhighlight %}
 
+When running in detached mode (via CI), you can see the same logs in **AWS CloudWatch** under `/aws/sagemaker/TrainingJobs` log group.
+After the job is completed, the model will be stored on S3 at `s3://MY_BUCKET/sagemaker/model/JOB_NAME/output/model.tar.gz`
+
+The setup is quite involved, and I may have forgotten something along the way, so let me know in the comments if something doesn't work for you.
+
 *Originally published at [fairtiq.com](https://fairtiq.com/en-ch/tech/training-ml-models-in-the-cloud-with-aws-sagemaker)*
