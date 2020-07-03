@@ -483,5 +483,113 @@ tf_estimator.fit(
 
 This is the `run_sagemaker.py` script. Let’s break it down:
 
+* To import Sagemaker lib, you need to `pip install sagemaker` first.
+* `SAGEMAKER_ROLE` is the role we created in the previous step.
+* `AWS_ECR_ACCOUNT_URL` - url of form `{company_id}.dkr.ecr.{region}.amazonaws.com`. You can see it on your Amazon ECR repositories page.
+* `train_instance_type` – the Sagemaker instance type you want to do the training on3. Full list: <https://aws.amazon.com/sagemaker/pricing/instance-types/>.
+* `output_path` - Where Sagemaker will store training artifacts (such as model file and debug output).
+* `hyperparameters` – any parameters that you’d like to pass to your training job. They will be stored in a json file and copied to the docker image as discussed before.
+* inputs argument in `fit()`: each key specifies a dataset directory that the training job needs. These will be set as `SM_CHANNEL_XXX` variables described earlier. The values have to be directories, not files, otherwise Sagemaker will throw an exception. Read more here: <https://sagemaker.readthedocs.io/en/stable/using_tf.html#call-the-fit-method>.
+
+
+### Setting up a role to launch training jobs
+
+The Sagemaker execution role we defined above is assumed by Sagemaker **after starting the training job**:
+it is used to download the docker image, access and store data on S3, etc.
+But to call the `run_sagemaker.py` script we also need a user with another set of permissions.
+
+Here is the the basic policy that needs to be attached to the user running the script:
+
+{% highlight json %}
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "iam:GetRole",
+                "iam:PassRole"
+            ],
+            "Resource": "arn:aws:iam::ACCOUNT_ID/service-role/AmazonSageMaker-ExecutionRole-XXX"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": "sagemaker:CreateTrainingJob",
+            "Resource": "*"
+        }
+    ]
+}
+{% endhighlight %}
+
+
+### Launching training from Circle-CI
+
+As before, our goal is to automate the tasks as much as possible, so we also want to run the training script from a CI service.
+
+The `run_sagemaker.py` script needs a couple adjustments:
+
+{% highlight python %}
+...
+tag = os.environ.get("CIRCLE_BRANCH") or "latest"
+...
+tf_estimator.fit(
+    ...
+    wait=False # exit without waiting
+)
+{% endhighlight %}
+
+And here is our Circle CI job definition:
+
+{% highlight yaml %}
+orbs:
+  aws-cli: circleci/aws-cli@1.0.0
+....
+
+sagemaker_training:
+  docker:
+    - image: circleci/python:3.7
+  steps:
+    - setup_remote_docker:
+        docker_layer_caching: true
+    - checkout
+    - aws-cli/setup:
+        aws-region: AWS_REGION
+    - run: pip install sagemaker
+    - run:
+        name: Run training script
+        command: python ./sagemaker/run_sagemaker.py
+        
+{% endhighlight %}
+
+## Putting it all together
+
+Running the `run_sagemaker.py` script will create a training job with the name `REPO_NAME-YYYY-MM-DD-HH-mm-ss-SSS`,
+You should be able to see the status and the meta information about the job under the **Training/Training jobs** link in AWS Sagemaker console. 
+
+The output should look like the following:
+
+
+{% highlight plaintext %}
+Starting - Starting the training job...
+Starting - Launching requested ML instances.........
+Starting - Preparing the instances for training...
+Downloading - Downloading input data
+Training - Downloading the training image.........
+Training - Training image download completed.
+Training in progress.
+sagemaker-containers INFO     Invoking user script
+...
+Invoking script with the following command:
+
+/usr/local/bin/python entrypoint_train.py --batch_size 25 --dropout_rate 0.3 --epochs 10
+...
+...
+sagemaker-containers INFO     Reporting training SUCCESS
+
+Uploading - Uploading generated training model
+Completed - Training job completed
+{% endhighlight %}
 
 *Originally published at [fairtiq.com](https://fairtiq.com/en-ch/tech/training-ml-models-in-the-cloud-with-aws-sagemaker)*
