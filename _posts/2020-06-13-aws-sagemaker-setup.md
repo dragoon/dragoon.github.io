@@ -41,7 +41,7 @@ I chose Sagemaker for a couple of reasons:
 
 Below you can see the overall pipeline architecture that we are going to implement:
 
-<img alt="Sagemaker workflow" src="/images/blog/2020-06-13-aws-sagemaker-setup/Sagemamer_workflow.png" />
+<img alt="Sagemaker workflow" src="/images/blog/2020-06-13-aws-sagemaker-setup/Sagemamer workflow.jpg" />
 
 **What’s not (yet) covered**:
 
