@@ -338,4 +338,150 @@ if __name__ == "__main__":
         
 {% endhighlight %}
 
+## Train.py
+
+As you saw from the entrypoint file, `train.py` should provide the `train_model()` function that accepts model,
+data directories, and hyperparameters as arguments. Below is an example of such file:
+
+{% highlight python %}
+#!/usr/bin/env python
+
+import argparse
+import os
+import tensorflow as tf
+
+
+def parse_args(args=None):
+
+    parser = argparse.ArgumentParser()
+
+    # hyperparameters sent by the client are passed as command-line arguments to the script
+    parser.add_argument("--epochs", type=int, default=1)
+    parser.add_argument("--batch_size", type=int, default=25)
+    parser.add_argument("--dropout_rate", type=float, default=0.5)
+
+    # data directories
+    parser.add_argument("--train", type=str, default=os.environ.get("SM_CHANNEL_TRAIN"))
+    parser.add_argument("--test", type=str, default=os.environ.get("SM_CHANNEL_TEST"))
+
+    # where to store model for export: SM_MODEL_DIR is always set by Sagemaker to /opt/ml/model
+    parser.add_argument("--model_dir", type=str, default=os.environ.get("SM_MODEL_DIR"))
+
+    return parser.parse_known_args(args=args)
+
+
+def load_data(*args):
+    raise NotImplementedError()
+
+
+def get_model(filename):
+    raise NotImplementedError()
+
+
+def get_train_data(train_dir):
+    return load_data(train_dir + "/training.ndjson")
+
+
+def get_test_data(test_dir):
+    return load_data(test_dir + "/validation.ndjson")
+
+
+def train_model(args):
+    model = get_model(args.dropout_rate, ...)
+
+    train = get_train_data(args.train)
+    val = get_test_data(args.test)
+
+    model.fit(
+        x=train,
+        epochs=args.epochs,
+        validation_data=val,
+        callbacks=model.callbacks,
+        verbose=2,  # print one log line per epoch -- important for parsing by sagemaker
+    )
+
+    tf.keras.models.save_model(model, args.model_dir)
+
+
+if __name__ == "__main__":
+    args, _ = parse_args()
+
+    train_model(args)
+    
+ {% endhighlight %}
+
+
+This file can be both run locally by providing the necessary arguments,
+and inside Sagemaker by reading some arguments from the environment variables.
+That’s why we separated it from the Sagemaker-specific entrypoint file.
+The `SM_CHANNEL_XXXX` variables specify the location of the datasets that you need during training.
+These variables are set by Sagemaker when you submit a training job.
+
+See this document for more details on the environment variables in Sagemaker: <https://sagemaker.readthedocs.io/en/stable/using_tf.html>
+
+With all the files ready, you can go ahead and build and push image by running:
+
+`sh ./MY_ML_PACKAGE/sagemaker/build_and_push_image.sh`
+
+You need to run this script each time you modify your ML package (including dependencies),
+so I would really advise to setup an automated job on a CI service of your choice.
+
+
+## Launching training on Sagemaker
+
+In the next sections we look how to finally start Sagemaker training jobs with the Docker image we built.
+
+
+### Setting up Sagemaker execution role in AWS IAM
+
+The starting point is to create the necessary role to run training jobs on Sagemaker.
+
+The easiest way is to create it as a by-product of the notebook instance:
+in AWS Console, go to **Sagemaker → Notebook Instances**, and click on **"Create notebook instance"**.
+Go down to the **"Permissions and Encryption"** section, and select **"Create new role"**, then follow the workflow.
+AWS will create a role named **"AmazonSageMaker-ExecutionRole-YYYYMMDDT…"**.
+You can cancel the notebook instance creation after the role is created.
+
+
+### Python script to submit a job
+
+To submit a job to AWS Sagemaker, we create an `Estimator` object and call the `fit()` method on it:
+
+{% highlight python %}
+import os
+from sagemaker.estimator import Estimator
+import sagemaker
+
+# TODO: change me
+BUCKET_NAME = "MY_BUCKET"
+REPO_NAME = "REPO_NAME"
+
+
+sess = sagemaker.Session(default_bucket=BUCKET_NAME)
+role = os.environ["SAGEMAKER_ROLE"]
+tag = "latest"
+account_url = os.environ["AWS_ECR_ACCOUNT_URL"]
+
+tf_estimator = Estimator(
+    role=role,
+    train_instance_count=1,
+    train_instance_type="ml.m5.large",
+    sagemaker_session=sess,
+    output_path=f"s3://{BUCKET_NAME}/sagemaker/model",
+    image_name=f"{account_url}/{REPO_NAME}:{tag}",
+    hyperparameters={"epochs": 200, "batch_size": 25, "dropout_rate": 0.5}
+)
+
+# creates ENV variables based on keys -- SM_CHANNEL_XXX
+tf_estimator.fit(
+    inputs={
+        "train": f"s3://{BUCKET_NAME}/sagemaker/train",
+        "test": f"s3://{BUCKET_NAME}/sagemaker/validation",
+    }
+)
+{% endhighlight %}
+
+This is the `run_sagemaker.py` script. Let’s break it down:
+
+
 *Originally published at [fairtiq.com](https://fairtiq.com/en-ch/tech/training-ml-models-in-the-cloud-with-aws-sagemaker)*
