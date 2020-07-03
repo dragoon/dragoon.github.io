@@ -41,7 +41,7 @@ I chose Sagemaker for a couple of reasons:
 
 Below you can see the overall pipeline architecture that we are going to implement:
 
-<img alt="Sagemaker workflow" src="/images/blog/2020-06-13-aws-sagemaker-setup/Sagemamer workflow.jpg" />
+<img alt="Sagemaker workflow" src="/images/blog/2020-06-13-aws-sagemaker-setup/Sagemaker workflow.jpg" />
 
 **What’s not (yet) covered**:
 
@@ -224,5 +224,52 @@ I have created a user `circleci-aws-ecr-push` and attached an existing policy ca
 
 ### Dockerfile
 
+Both `build_and_push_image.sh` and Circle-CI job call the `docker build` command with a Dockerfile as an argument.
+[Dockerfile](https://docs.docker.com/engine/reference/builder/) describes how to build the container and what to package in it.
+Below is the file I am using for our ML system with the comments explaining the purpose of operations:
+
+{% highlight Docker %}
+
+FROM tensorflow/tensorflow:2.2.0-gpu
+
+RUN pip install sagemaker-containers
+
+RUN apt-get update && apt-get install -y MY_EXTRA_LIBS
+
+# /opt/ml and all subdirectories are used by SageMaker,
+# we use the /opt/ml/code subdirectory to store our ML package code.
+
+# copy the private dependencies that we downloaded with git clone to the container
+COPY ./tmp/my-private-package /tmp/my-private-package
+# I keep a separate sagemaker sub-package to separate the requirements file 
+COPY ./sagemaker/requirements.txt /tmp/requirements.txt
+
+# install private and public dependencies
+RUN pip install /tmp/my-private-package -r /tmp/requirements.txt
+
+#` -- /opt/ml/code
+#    `-- your-ml-package
+#    |-- entrypoint_train.py
+
+COPY ./MY_ML_PACKAGE /opt/ml/code/your-ml-package
+# copy the entrypoint file to the code directory
+COPY ./sagemaker/entrypoint_train.py /opt/ml/code/entrypoint_train.py
+WORKDIR /opt/ml/code
+
+# add working directory to PYTHONPATH to make imports from your ML package
+ENV PYTHONPATH="/opt/ml/code:${PYTHONPATH}"
+
+# argument to sagemaker what we want to run
+ENV SAGEMAKER_PROGRAM entrypoint_train.py
+
+{% endhighlight %}
+
+The process here is very straightforward. We first install the necessary system libs with apt-get,
+copy and install private and public python dependencies, copy your ML package
+into `/opt/ml/code` (but it can be anything really), and set the special `SAGEMAKER_PROGRAM` variable for Sagemaker to specify the entrypoint file.
+
+⚠ Tensorflow images on DockerHub use Python 3.6, so if you need 3.7 – you’ll need to build an image from another base.
+
+## Entrypoint
 
 *Originally published at [fairtiq.com](https://fairtiq.com/en-ch/tech/training-ml-models-in-the-cloud-with-aws-sagemaker)*
