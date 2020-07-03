@@ -12,6 +12,8 @@ categories:
 <link rel="canonical" href="https://fairtiq.com/en-ch/tech/training-ml-models-in-the-cloud-with-aws-sagemaker"/>
 *Originally published at [fairtiq.com](https://fairtiq.com/en-ch/tech/training-ml-models-in-the-cloud-with-aws-sagemaker)*
 
+---
+
 At some point, when a startup outgrows its first office (which also happens to be the apartment of one of the founders),
 it becomes challenging to continue training Machine Learning (ML) models on your laptop, because:
 
