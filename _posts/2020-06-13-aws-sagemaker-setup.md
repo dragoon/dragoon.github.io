@@ -10,7 +10,7 @@ categories:
 ---
 
 <link rel="canonical" href="https://fairtiq.com/en-ch/tech/training-ml-models-in-the-cloud-with-aws-sagemaker"/>
-*Originally published at [fairtiq.com](https://fairtiq.com/en-ch/tech/training-ml-models-in-the-cloud-with-aws-sagemaker)*
+*Originally published on [FAIRTIQ Tech Blog](https://fairtiq.com/en-ch/tech/training-ml-models-in-the-cloud-with-aws-sagemaker)*
 
 ---
 
