@@ -72,7 +72,7 @@ Sagemaker offers two ways to spawn training jobs: using a pre-built image or shi
 * Not being dependent on the supported library versions for pre-built images. Pre-built Sagemaker images typically lag behind the latest library versions. With Docker you can ship any version you want, for example Tensorflow latest dev build.
 * Building a custom Docker image allows to include both public and private dependencies in an easy way.
 
-This guide assumes the following directory structure of your ML project:
+This guide assumes the following directory structure of your ML project[^1]:
 
 {% highlight plaintext %}
 MY_ML_PROJECT/
@@ -599,3 +599,6 @@ When running in detached mode (via CI), you can see the same logs in **AWS Cloud
 After the job is completed, the model will be stored on S3 at `s3://MY_BUCKET/sagemaker/model/JOB_NAME/output/model.tar.gz`
 
 The setup is quite involved, and I may have forgotten something along the way, so let me know in the comments if something doesn't work for you.
+
+[^1]: I was using this guide from Amazon as a starting point: <https://github.com/awslabs/amazon-sagemaker-examples/blob/master/advanced_functionality/tensorflow_bring_your_own/tensorflow_bring_your_own.ipynb>.
+      It also describes how to set up the inference, which we don’t cover here.
