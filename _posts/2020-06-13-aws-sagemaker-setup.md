@@ -439,7 +439,7 @@ In the next sections we look how to finally start Sagemaker training jobs with t
 
 The starting point is to create the necessary role to run training jobs on Sagemaker.
 
-The easiest way is to create it as a by-product of the notebook instance:
+The easiest way is to create it as a by-product of the notebook instance[^2]:
 in AWS Console, go to **Sagemaker → Notebook Instances**, and click on **"Create notebook instance"**.
 Go down to the **"Permissions and Encryption"** section, and select **"Create new role"**, then follow the workflow.
 AWS will create a role named **"AmazonSageMaker-ExecutionRole-YYYYMMDDT…"**.
@@ -489,7 +489,7 @@ This is the `run_sagemaker.py` script. Let’s break it down:
 * To import Sagemaker lib, you need to `pip install sagemaker` first.
 * `SAGEMAKER_ROLE` is the role we created in the previous step.
 * `AWS_ECR_ACCOUNT_URL` - url of form `{company_id}.dkr.ecr.{region}.amazonaws.com`. You can see it on your Amazon ECR repositories page.
-* `train_instance_type` – the Sagemaker instance type you want to do the training on3. Full list: <https://aws.amazon.com/sagemaker/pricing/instance-types/>.
+* `train_instance_type` – the Sagemaker instance type you want to do the training on[^3]. Full list: <https://aws.amazon.com/sagemaker/pricing/instance-types/>.
 * `output_path` - Where Sagemaker will store training artifacts (such as model file and debug output).
 * `hyperparameters` – any parameters that you’d like to pass to your training job. They will be stored in a json file and copied to the docker image as discussed before.
 * inputs argument in `fit()`: each key specifies a dataset directory that the training job needs. These will be set as `SM_CHANNEL_XXX` variables described earlier. The values have to be directories, not files, otherwise Sagemaker will throw an exception. Read more here: <https://sagemaker.readthedocs.io/en/stable/using_tf.html#call-the-fit-method>.
@@ -498,7 +498,7 @@ This is the `run_sagemaker.py` script. Let’s break it down:
 ### Setting up a role to launch training jobs
 
 The Sagemaker execution role we defined above is assumed by Sagemaker **after starting the training job**:
-it is used to download the docker image, access and store data on S3, etc.
+it is used to download the docker image, access and store data on S3, etc[^4].
 But to call the `run_sagemaker.py` script we also need a user with another set of permissions.
 
 Here is the the basic policy that needs to be attached to the user running the script:
@@ -600,5 +600,18 @@ After the job is completed, the model will be stored on S3 at `s3://MY_BUCKET/sa
 
 The setup is quite involved, and I may have forgotten something along the way, so let me know in the comments if something doesn't work for you.
 
+## Notes
+
 [^1]: I was using this guide from Amazon as a starting point: <https://github.com/awslabs/amazon-sagemaker-examples/blob/master/advanced_functionality/tensorflow_bring_your_own/tensorflow_bring_your_own.ipynb>.
       It also describes how to set up the inference, which we don’t cover here.
+      
+[^2]: I have also tried to create the role myself with **SageMakerFullAccess** and **S3FullAccess** permissions,
+      but this role didn't work later when starting training jobs.
+      I didn't find any differences in permissions between my role and the one created through a workflow.
+      
+[^3]: To run this script in local mode, use `train_instance_type="local"` and remove `sagemaker_session` argument.
+      This will emulate the whole Sagemaker pipeline, but will run the Docker image on your local machine instead.
+      
+[^4]: Read more here: <https://botocore.amazonaws.com/v1/documentation/api/latest/reference/services/sagemaker.html#SageMaker.Client.create_training_job>.
+      Search to the `RoleArn` argument.
+
