@@ -8,7 +8,7 @@ categories:
  - en
 ---
 
-Sometimes is it useful to make **PyCharm** know what type of variable you're using inside the function.
+Sometimes it is useful to make **PyCharm** know what type of variable you're using inside the function.
 For example, it enables the *auto-complete* feature for the variable methods and quick navigation
 to the method source with Ctrl/Cmd&nbsp;+&nbsp;click.
 

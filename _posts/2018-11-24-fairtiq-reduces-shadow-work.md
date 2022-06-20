@@ -22,11 +22,11 @@ So many love it and give us great feedback about it, but what exactly makes peop
 The idea came while I was reading an [article on work automation by Guardian](https://www.theguardian.com/lifeandstyle/2018/oct/12/shadow-work-automation-tedious-jobs-oliver-burkeman) - FAIRTIQ relieves us from **shadow work**.
 Shadow work is essentially a kind of work that ordinary people (like me) have to do because somebody else’s work has been automated.
 
-Think travel industry. How do you plan a vacation now?
+Think travel industry. How do you usually plan vacation nowadays?
 You start by checking _kayak_, _skyscanner_ or your favorite airline for flights,
-then _booking_ and _airbnb_ for accommodation, maybe look for car rental, you name it.
-And you can spend days doing this! Just some decades ago this job was done by personal travel agents,
-who would find you the best possible deals that even match your taste.
+then _booking_ and _airbnb_ for accommodation, maybe also car rental, you name it.
+And you can spend days researching different combinations. Just some decades ago this job was done by personal travel agents,
+who would find you the best possible deals that match your preferences.
 You have much more choice now, but you are also completely overwhelmed by it.
 
 Public transport tickets are the same.
