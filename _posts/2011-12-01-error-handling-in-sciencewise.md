@@ -9,8 +9,8 @@ categories:
 ---
 
 
-It's not a secret that a lot of scientific projects suck when it comes to user interfaces.
-I think this usually happens because they can't just hire professional designers and usability experts,
+A lot of scientific projects suck when it comes to user interfaces.
+I think this usually happens because they can't just hire professional designers and usability experts, and project managers,
 they should do **a lot of science**, conduct experiments, obtain data, you know, and such irregularity leads to ugly interfaces, if any.
 
 Here, at **<a href="http://sciencewise.info/">ScienceWISE</a>**, we also can't hire professional designers ;), but we always try to make the most of our abilities, try to make the project look attractive and make our visitors feel comfortable using it.
@@ -23,4 +23,6 @@ So, here we have our main page, and now let's try to process article with some b
 <a href="http://3.bp.blogspot.com/-74hFyTC8u_4/TtdCMkcHXGI/AAAAAAAADFY/l2SmEMvlHUc/s1600/Screen+shot+2011-12-01+at+9.59.10+.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="116" src="http://3.bp.blogspot.com/-74hFyTC8u_4/TtdCMkcHXGI/AAAAAAAADFY/l2SmEMvlHUc/s640/Screen+shot+2011-12-01+at+9.59.10+.png" width="640" /></a>
 <a href="http://4.bp.blogspot.com/--DiQSo-KS_Y/TtdCNISBkcI/AAAAAAAADFk/4ybd9sM796A/s1600/Screen+shot+2011-12-01+at+9.59.28+.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="118" src="http://4.bp.blogspot.com/--DiQSo-KS_Y/TtdCNISBkcI/AAAAAAAADFk/4ybd9sM796A/s640/Screen+shot+2011-12-01+at+9.59.28+.png" width="640" /></a>
 
-Ah, we got an error that is shown in the same field as a watermark text. And this error will disappear when we try to enter another article ID. Quite good? I definitely say yes, because this way we can save screen space comparing to the standard way of showing errors separate near input fields.
+Here, we have an error that is shown in the same field as a watermark text.
+The error will disappear when we try to enter another article ID. 
+This way we save screen space comparing to the standard way of showing errors separate near input fields.
