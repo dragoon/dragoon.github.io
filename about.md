@@ -4,6 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I'm Programmer for Python & Django. I've made quite a few web apps, especially on Django. Now, I am doing more on backend.
+Software Engineer in Python, Java and C#. Currently working in New-Based Trading at LGT Capital Partners.
+Tech Advisor at FAIRTIQ.
 
-email: agus[at]python.web.id
+email: roman[at]prokofyev.ch
