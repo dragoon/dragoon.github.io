@@ -35,7 +35,7 @@ urls:
     - text: XML Feed
       url: /feed.xml
 
-url: "https://prokofyev.ch"
+url: "https://old.prokofyev.ch"
 baseurl: ""
 paginate: 20
 per_page: 20

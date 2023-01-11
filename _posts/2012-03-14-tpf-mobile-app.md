@@ -25,7 +25,7 @@ After nearly week of work in the evenings, I have finally created the working pr
 
 <a href="http://2.bp.blogspot.com/-4dZK6IkLt04/T2DAy3UK8cI/AAAAAAAADYk/DZObugjm24I/s1600/Screen+shot+2012-03-14+at+17.00.37+.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="400" src="http://2.bp.blogspot.com/-4dZK6IkLt04/T2DAy3UK8cI/AAAAAAAADYk/DZObugjm24I/s400/Screen+shot+2012-03-14+at+17.00.37+.png" width="328" /></a>
 
-You can access it at: <a href="http://prokofyev.ch/tpf/">http://prokofyev.ch/tpf/</a>
+You can access it at: <a href="http://old.prokofyev.ch/tpf/">/tpf/</a>
 
 The only bad thing about it is that the schedule data is not available online, that makes this app somewhat unusable (I've only added 3 bus stops that are important to me).
 But as I work at the *University of Fribourg*, we will try to speak with the people from <a href="http://www.tpf.ch/">TPF</a> to make this data available.

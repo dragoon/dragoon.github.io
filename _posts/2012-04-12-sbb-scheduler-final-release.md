@@ -16,7 +16,7 @@ This API was exactly what I need to finish my application. So after a week of wo
 As usual, application can be access from the same url: <a href="http://prokofyev.ch/tpf/">http://prokofyev.ch/tpf/</a> and also from <a href="http://prokofyev.ch/sbb/">http://prokofyev.ch/sbb/</a>.
 I've also added HTML5 **geolocation **to it, so if you're inside Switzerland, you can try it and see what station are near you. If you're not, there is also a possibility to supply raw coordinates:
 <br>
-<a href="http://prokofyev.ch/sbb/?x=46.802877773762894&amp;y=7.151651249648352">http://prokofyev.ch/sbb/?x=46.802877773762894&amp;y=7.151651249648352</a>.
+<a href="http://old.prokofyev.ch/sbb/?x=46.802877773762894&amp;y=7.151651249648352">http://prokofyev.ch/sbb/?x=46.802877773762894&amp;y=7.151651249648352</a>.
 
 Current features of the application include:
 
