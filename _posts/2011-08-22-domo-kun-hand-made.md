@@ -9,10 +9,10 @@ categories:
 ---
 
 
-Пока отдыхал в родной Пензе, уговорил маму помочь мне сшить персонажа, изображённого на следующей картинке:
+Пока был в Пензе, уговорил маму помочь мне сшить персонажа, изображённого на следующей картинке:
 <a href="http://3.bp.blogspot.com/-aZBtd55w0Zo/TlFlLoedqJI/AAAAAAAAC_s/Rf8puH-0U3I/s1600/domo%2Bkun.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="360" src="http://3.bp.blogspot.com/-aZBtd55w0Zo/TlFlLoedqJI/AAAAAAAAC_s/Rf8puH-0U3I/s640/domo%2Bkun.jpg" width="640" /></a>
 <br>
-Как позже выснилось, это персонаж-талисман японского телевизионного канала NHK - <a href="http://en.wikipedia.org/wiki/Domo_%28NHK%29">Domo Kun</a>. Нравятся мне такие забавные монстры, ничего не поделаешь :)  В общем нарисовал я выкройку, подобрали ткань и вот что получилось в итоге:
+Как позже выяснилось, это персонаж-талисман японского телевизионного канала NHK - <a href="http://en.wikipedia.org/wiki/Domo_%28NHK%29">Domo Kun</a>. Нравятся мне такие забавные монстры, ничего не поделаешь :)  В общем нарисовал я выкройку, подобрали ткань и вот что получилось в итоге:
 <a href="http://3.bp.blogspot.com/-c1M9kscFuCM/TlFpsYg5uLI/AAAAAAAAC_w/M7Thx-7w8ec/s1600/domokun.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="434" src="http://3.bp.blogspot.com/-c1M9kscFuCM/TlFpsYg5uLI/AAAAAAAAC_w/M7Thx-7w8ec/s640/domokun.png" width="640" /></a>
 <br>
 Не супер близко к оригиналу, но всем понравилось.
