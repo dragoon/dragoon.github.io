@@ -23,6 +23,7 @@ The only available devices currently are Adidas Headphones and Bike Helmet by PO
 [https://www.adidasheadphones.com/ch/en/rpt-02-sol-rising.html](https://www.adidasheadphones.com/ch/en/rpt-02-sol-rising.html)
 <br>
 <img src="/images/blog/2023/2023-02-24-top-futuristic-gadgets-2022/RPT02SOL_img_slide_desktop_2.jpeg" width="400">
+<br><br>
 [https://www.pocsports.com/products/omne-eternal](https://www.pocsports.com/products/omne-eternal?variant=41964188696728)
 <br>
 <img src="/images/blog/2023/2023-02-24-top-futuristic-gadgets-2022/OMNE_Eternal_1002_uraniumBlack_0006_1200x.webp" width="400">
