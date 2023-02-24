@@ -20,7 +20,11 @@ This is my opinionated list of the most interesting gadgets, technologies, and e
 Powerfoyle is some sort of a solar cell built in the device such that you don't have to charge it at all via cable.
 The only available devices currently are Adidas Headphones and Bike Helmet by POC:
 
+* https://www.adidasheadphones.com/ch/en/rpt-02-sol-rising.html
+  ![](/images/blog/2023-02-24-top-futuristic-gadgets-2022/RPT02SOL_img_slide_desktop_2.jpeg)
 * https://www.pocsports.com/products/omne-eternal?variant=41964188696728
   ![](/images/blog/2023-02-24-top-futuristic-gadgets-2022/OMNE_Eternal_1002_uraniumBlack_0006_1200x.webp)
+
+Both devices are pretty expensive at the moment.
 
 ### 1. Parallel Reality by Delta: A screen customized for you
